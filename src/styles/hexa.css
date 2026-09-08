@@ -17,6 +17,9 @@
   --hai-img-max: 720px;
   --hai-img-max-wide: 1100px;
   --hai-img-max-narrow: 380px;
+
+  /* Largeur du sommaire de droite. */
+  --hai-toc-width: 13rem;
 }
 
 /* --- Palette sombre (theme par defaut) ---------------------------------- */
@@ -180,10 +183,50 @@ pre, h1, h2, h3, h4, h5, h6, .starlight-aside, .expressive-code) {
    Finitions
    ========================================================================== */
 
-/* Barre de navigation translucide, comme le header du site. */
-.header {
+/* Barre de navigation translucide, comme le header du site.
+   Attention : deux elements portent la classe .header dans Starlight — la
+   balise <header> et son conteneur interne. Cibler `.header` tout court
+   dessine un filet parasite au ras du logo, sur toute la largeur. On vise
+   donc la balise, et on laisse Starlight gerer sa bordure basse. */
+header.header {
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* Sommaire de droite : Starlight lui donne la meme largeur qu'au menu
+   principal (18.75rem), et s'en sert en plus pour centrer le contenu — d'ou
+   une colonne qui atteint 637 px sur un 4K. On lui fixe une largeur franche,
+   et on recentre le contenu nous-memes.
+   Le point de rupture 72rem est celui ou Starlight affiche ce sommaire. */
+@media (min-width: 72rem) {
+  .right-sidebar-container {
+    width: var(--hai-toc-width);
+  }
+
+  /* Le panneau interne est en position: fixed avec width: 100% — donc cale
+     sur le viewport, pas sur son conteneur. Sans cette ligne, le texte du
+     sommaire deborde de la page. */
+  .right-sidebar {
+    width: var(--hai-toc-width);
+  }
+
+  /* Sans cela, la largeur reprise au sommaire finirait en espace mort le long
+     du bord droit : le panneau principal ne s'etire pas de lui-meme. */
+  .main-pane {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  /* Le conteneur interne du sommaire garde une largeur calee sur l'ancienne
+     barre de 300 px : on le laisse suivre son panneau, sinon les titres
+     longs debordent hors de la page. */
+  .right-sidebar-panel .sl-container {
+    max-width: 100%;
+  }
+
+  /* Le centrage assure jusqu'ici par la marge du sommaire. */
+  .content-panel > .sl-container {
+    margin-inline: auto;
+  }
 }
 
 /* Lien actif de la sidebar : filet accent plutot qu'un aplat. */
