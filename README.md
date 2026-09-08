@@ -82,8 +82,29 @@ Les plafonds se reglent en un seul endroit, dans `src/styles/hexa.css`
 
 ### Ou ranger les fichiers
 
-Dans `src/assets/`, jamais dans `public/` : seules les images de `src/assets/`
-sont optimisees. Gain constate sur le schema Tailscale : **1655 kB -> 62 kB**.
+Deux emplacements possibles, jamais `public/` (les images qui y sont deposees
+ne sont pas optimisees).
+
+**1. A cote de la page — a privilegier.** Deposez le fichier dans le meme
+dossier que le `.md` et appelez-le avec `./` :
+
+```
+src/content/docs/demarrage/
+├── mise-en-service.md
+└── ecran-accueil.png       <- ![...](./ecran-accueil.png)
+```
+
+Pas de `../../../` a compter, et quand la page est supprimee ou deplacee ses
+images suivent.
+
+**2. Dans `src/assets/`** pour une image utilisee par plusieurs pages (logo,
+schema d'architecture partage FR/EN). L'appel se fait alors en relatif :
+`../../../assets/mon-schema.png`.
+
+Dans les deux cas Astro convertit en WebP, genere plusieurs resolutions,
+renseigne `width`/`height` et ajoute `loading="lazy"`. Gain constate sur le
+schema Tailscale : **1655 kB -> 62 kB**. Une meme image utilisee deux fois
+n'est stockee qu'une seule fois.
 
 ### Largeur reellement disponible
 
@@ -93,6 +114,17 @@ plafonne a environ 780 px : `wide` y sera donc moins large que sur un 4K, c'est
 normal. Pour une figure qui a vraiment besoin de toute la page, ajouter
 `tableOfContents: false` dans l'en-tete : le sommaire de droite disparait et
 libere sa colonne.
+
+## Au quotidien
+
+1. `npm run dev` une fois pour toutes ; la page se recharge a chaque
+   sauvegarde du `.md`.
+2. On ecrit, on depose ses images a cote, on relit dans le navigateur.
+3. `git commit` puis `git push` : le workflow reconstruit et publie tout seul.
+
+Une correction ponctuelle peut aussi se faire directement depuis l'interface
+web de GitHub (crayon sur le fichier `.md`) — sans installer quoi que ce soit.
+La publication se declenche de la meme facon.
 
 ## Traductions
 
