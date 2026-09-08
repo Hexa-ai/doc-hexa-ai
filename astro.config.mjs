@@ -17,13 +17,13 @@ export default defineConfig({
       },
 
       favicon: '/favicon.ico',
-      description: 'Documentation de la passerelle industrielle HAI-P200-4G et du systeme HAI-OS.',
+      description: 'Documentation de la passerelle industrielle HAI-P200-4G et du système HAI-OS.',
 
       // FR a la racine (docs.hexa-ai.fr/), EN sous /en/ : meme convention
       // que le site vitrine edge.hexa-ai.fr.
       defaultLocale: 'root',
       locales: {
-        root: { label: 'Francais', lang: 'fr' },
+        root: { label: 'Français', lang: 'fr' },
         en: { label: 'English', lang: 'en' },
       },
 
@@ -46,7 +46,7 @@ export default defineConfig({
       // { label, items: [{ autogenerate }] }. collapsed: false => deplie.
       sidebar: [
         {
-          label: 'Demarrage',
+          label: 'Démarrage',
           translations: { en: 'Getting started' },
           collapsed: false,
           items: [{ autogenerate: { directory: 'demarrage' } }],
@@ -58,7 +58,7 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'protocoles' } }],
         },
         {
-          label: 'Materiel',
+          label: 'Matériel',
           translations: { en: 'Hardware' },
           collapsed: false,
           items: [{ autogenerate: { directory: 'materiel' } }],

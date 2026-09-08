@@ -236,6 +236,20 @@ header.header {
   font-weight: 600;
 }
 
+/* Les deux selecteurs du header dimensionnent leur largeur en em a partir du
+   nombre de caracteres du libelle le plus long. L'estimation est trop juste
+   pour Inter : « Français » s'affichait « Franc... ». Le padding reserve au
+   globe et au chevron mange 58 px sur les 114 px du controle. */
+starlight-lang-select > label {
+  /* Starlight pose --sl-select-width en style inline sur le label : seul un
+     !important passe devant. */
+  --sl-select-width: 8.5em !important;
+}
+
+starlight-theme-select > label {
+  --sl-select-width: 8em !important;
+}
+
 /* Titres un peu resserres, dans l'esprit du site. */
 .sl-markdown-content :is(h1, h2, h3) {
   letter-spacing: -0.015em;

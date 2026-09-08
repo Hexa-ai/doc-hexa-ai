@@ -1,18 +1,18 @@
 ---
 title: Modbus TCP
-description: Declarer un equipement Modbus TCP et mapper ses registres en variables historisees.
+description: Déclarer un équipement Modbus TCP et mapper ses registres en variables historisées.
 sidebar:
   order: 2
 ---
 
 :::caution[Page d'exemple]
-Squelette de mise en page — a remplacer par la procedure reelle.
+Squelette de mise en page — à remplacer par la procédure réelle.
 :::
 
-## Types de donnees
+## Types de données
 
-17 types de donnees sont disponibles, avec byte order configurable en
-16, 32 ou 64 bits, ainsi qu'une echelle et une unite par variable.
+17 types de données sont disponibles, avec byte order configurable en
+16, 32 ou 64 bits, ainsi qu'une échelle et une unité par variable.
 
 ## Zones adressables
 
@@ -41,6 +41,6 @@ variables:
 
 ## Passerelle RTU vers TCP
 
-Un equipement Modbus RTU raccorde sur l'un des 4 ports serie du bornier est
-expose en TCP par la passerelle integree — la configuration cote acquisition
-est alors identique a celle d'un equipement TCP natif.
+Un équipement Modbus RTU raccordé sur l'un des 4 ports série du bornier est
+exposé en TCP par la passerelle intégrée — la configuration côté acquisition
+est alors identique à celle d'un équipement TCP natif.
