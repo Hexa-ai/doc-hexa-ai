@@ -1,0 +1,47 @@
+---
+title: Accueil
+description: Passerelle industrielle HAI-P200-4G — acquisition, monitoring, telemaintenance et astreinte.
+template: splash
+hero:
+  title: Documentation HAI-OS
+  tagline: Raccorder vos automates, historiser vos variables et intervenir a distance — sans VPN a monter.
+  image:
+    file: ../../assets/hai-p200-4g.webp
+  actions:
+    - text: Mettre en service une box
+      link: /demarrage/mise-en-service/
+      icon: right-arrow
+      variant: primary
+    - text: Protocoles supportes
+      link: /protocoles/
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Demarrage" icon="rocket">
+    Raccordement electrique, premier acces a l'interface web et declaration
+    du premier equipement.
+
+    [Mise en service →](/demarrage/mise-en-service/)
+  </Card>
+  <Card title="Protocoles" icon="setting">
+    Modbus TCP et RTU, S7, OPC-UA, BACnet/IP, NMEA 0183 et MQTT via Node-RED.
+
+    [Vue d'ensemble →](/protocoles/)
+  </Card>
+  <Card title="Materiel" icon="laptop">
+    Caracteristiques du HAI-P200-4G : coeur, connectivite, robustesse,
+    alimentation et montage.
+
+    [Specifications →](/materiel/specifications/)
+  </Card>
+  <Card title="Besoin d'aide ?" icon="email">
+    Pas de commercial : vous parlez directement a l'ingenieur qui suit votre
+    projet.
+
+    [contact@hexa-ai.fr](mailto:contact@hexa-ai.fr)
+  </Card>
+</CardGrid>

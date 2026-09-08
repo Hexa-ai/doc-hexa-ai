@@ -1,0 +1,47 @@
+---
+title: Home
+description: HAI-P200-4G industrial gateway — acquisition, monitoring, remote maintenance and on-call alerting.
+template: splash
+hero:
+  title: HAI-OS Documentation
+  tagline: Connect your PLCs, historise your tags and intervene remotely — with no VPN to set up.
+  image:
+    file: ../../../assets/hai-p200-4g.webp
+  actions:
+    - text: Commission a gateway
+      link: /en/demarrage/mise-en-service/
+      icon: right-arrow
+      variant: primary
+    - text: Supported protocols
+      link: /en/protocoles/
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+<CardGrid stagger>
+  <Card title="Getting started" icon="rocket">
+    Power wiring, first access to the web interface and declaring your first
+    device.
+
+    [Commissioning →](/en/demarrage/mise-en-service/)
+  </Card>
+  <Card title="Protocols" icon="setting">
+    Modbus TCP and RTU, S7, OPC-UA, BACnet/IP, NMEA 0183 and MQTT through
+    Node-RED.
+
+    [Overview →](/en/protocoles/)
+  </Card>
+  <Card title="Hardware" icon="laptop">
+    HAI-P200-4G specifications: core, connectivity, ruggedness, power supply
+    and mounting.
+
+    [Specifications →](/en/materiel/specifications/)
+  </Card>
+  <Card title="Need help?" icon="email">
+    No sales layer: you talk directly to the engineer following your project.
+
+    [contact@hexa-ai.fr](mailto:contact@hexa-ai.fr)
+  </Card>
+</CardGrid>

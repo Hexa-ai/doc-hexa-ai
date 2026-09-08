@@ -1,0 +1,5 @@
+{
+  "$schema": "../../../.astro/collections/i18n.schema.json",
+  "search.label": "Search",
+  "themeSelect.accessibleLabel": "Theme"
+}

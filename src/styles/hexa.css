@@ -1,0 +1,210 @@
+/* ==========================================================================
+   Theme Hexa-AI pour Starlight
+   Reprend la palette du site vitrine edge.hexa-ai.fr :
+   fond #0a0f14, accent #00d4aa, texte #e6edf3, bordures #2a3a47.
+   ========================================================================== */
+
+:root {
+  --sl-font: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* La COLONNE est large : c'est elle qui donne sa place aux figures.
+     Le TEXTE, lui, est bride separement plus bas a --hai-text-width, car
+     au-dela de ~78 caracteres par ligne la lecture se degrade. */
+  --sl-content-width: 68rem;
+  --hai-text-width: 50rem;
+
+  /* Plafonds d'image, regroupes ici pour etre ajustes en un seul endroit. */
+  --hai-img-max: 720px;
+  --hai-img-max-wide: 1100px;
+  --hai-img-max-narrow: 380px;
+}
+
+/* --- Palette sombre (theme par defaut) ---------------------------------- */
+:root,
+::backdrop {
+  --sl-color-white: #e6edf3;
+  --sl-color-gray-1: #d6dee6;
+  --sl-color-gray-2: #b9c4cd;
+  --sl-color-gray-3: #9aa8b3;
+  --sl-color-gray-4: #6b7884;
+  --sl-color-gray-5: #2a3a47;
+  --sl-color-gray-6: #1d2832;
+  --sl-color-gray-7: #11181f;
+  --sl-color-black: #0a0f14;
+
+  --sl-color-accent-low: #06352c;
+  --sl-color-accent: #00d4aa;
+  --sl-color-accent-high: #7ff0da;
+
+  --sl-color-bg: #0a0f14;
+  --sl-color-bg-nav: rgba(13, 19, 25, 0.85);
+  --sl-color-bg-sidebar: #0a0f14;
+  --sl-color-bg-inline-code: #11181f;
+  --sl-color-text-accent: #00d4aa;
+
+  --sl-color-hairline: #1d2832;
+  --sl-color-hairline-light: #2a3a47;
+  --sl-color-hairline-shade: #131c24;
+}
+
+/* --- Palette claire ------------------------------------------------------ */
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop {
+  --sl-color-white: #0a0f14;
+  --sl-color-gray-1: #1c2731;
+  --sl-color-gray-2: #33424e;
+  --sl-color-gray-3: #5a6b78;
+  --sl-color-gray-4: #8494a1;
+  --sl-color-gray-5: #ccd6de;
+  --sl-color-gray-6: #e6ecf1;
+  --sl-color-gray-7: #f2f6f9;
+  --sl-color-black: #ffffff;
+
+  /* #00d4aa ne passe pas le contraste sur fond blanc : on assombrit. */
+  --sl-color-accent-low: #d3f5ed;
+  --sl-color-accent: #007a63;
+  --sl-color-accent-high: #00503f;
+
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: rgba(255, 255, 255, 0.85);
+  --sl-color-bg-sidebar: #fbfdfe;
+  --sl-color-bg-inline-code: #eef3f7;
+  --sl-color-text-accent: #007a63;
+
+  --sl-color-hairline: #e2e9ef;
+  --sl-color-hairline-light: #ccd6de;
+  --sl-color-hairline-shade: #eef3f7;
+}
+
+/* ==========================================================================
+   IMAGES
+   Principe : width:100% gere le petit ecran, max-width EN PIXELS gere le
+   grand. Jamais de pourcentage — un pourcentage grandit avec le conteneur,
+   c'est exactement le probleme rencontre sur Odoo.
+   ========================================================================== */
+
+.sl-markdown-content img {
+  display: block;
+  width: 100%;
+  max-width: var(--hai-img-max);
+  height: auto;
+  margin-inline: auto;
+  border-radius: 10px;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-7);
+}
+
+/* Echappatoires. S'appliquent sur l'image elle-meme ou sur son <figure>. */
+.sl-markdown-content .wide img,
+.sl-markdown-content img.wide {
+  max-width: var(--hai-img-max-wide);
+}
+
+.sl-markdown-content .narrow img,
+.sl-markdown-content img.narrow {
+  max-width: var(--hai-img-max-narrow);
+}
+
+/* Schemas et logos a fond transparent : ni cadre ni fond. */
+.sl-markdown-content .plain img,
+.sl-markdown-content img.plain {
+  border: 0;
+  background: none;
+  border-radius: 0;
+}
+
+/* Picto au fil du texte (statut, icone de protocole). */
+.sl-markdown-content img.inline {
+  display: inline-block;
+  width: auto;
+  max-width: 1.4em;
+  margin: 0 0.15em;
+  vertical-align: -0.22em;
+  border: 0;
+  background: none;
+  border-radius: 0;
+}
+
+/* Le texte est bride a une mesure lisible, alors que la colonne, elle,
+   reste large. Les figures ci-dessous ne sont pas dans cette liste : elles
+   recuperent donc toute la largeur disponible. */
+.sl-markdown-content > :is(p, ul, ol, dl, blockquote, details, hr, table,
+pre, h1, h2, h3, h4, h5, h6, .starlight-aside, .expressive-code) {
+  max-width: var(--hai-text-width);
+}
+
+/* Figure large : prend la colonne entiere, dans la limite du plafond. */
+.sl-markdown-content .wide {
+  width: min(var(--hai-img-max-wide), 100%);
+}
+
+/* Legende */
+.sl-markdown-content figure {
+  margin: 1.75rem auto;
+}
+
+.sl-markdown-content figcaption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--sl-color-gray-3);
+}
+
+/* Deux images cote a cote sur grand ecran, empilees sur petit. */
+.sl-markdown-content .img-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+  margin: 1.75rem 0;
+  width: min(var(--hai-img-max-wide), 100%);
+}
+
+.sl-markdown-content .img-row figure {
+  margin: 0;
+}
+
+/* Le zoom au clic doit se voir : curseur + leger relief au survol. */
+.sl-markdown-content img[data-zoomable],
+.sl-markdown-content .medium-zoom-image {
+  cursor: zoom-in;
+  transition: border-color 0.15s ease;
+}
+
+.sl-markdown-content img[data-zoomable]:hover {
+  border-color: var(--sl-color-accent);
+}
+
+/* ==========================================================================
+   Finitions
+   ========================================================================== */
+
+/* Barre de navigation translucide, comme le header du site. */
+.header {
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--sl-color-hairline);
+}
+
+/* Lien actif de la sidebar : filet accent plutot qu'un aplat. */
+.sidebar-content a[aria-current='page'] {
+  color: var(--sl-color-text-accent);
+  background: var(--sl-color-accent-low);
+  font-weight: 600;
+}
+
+/* Titres un peu resserres, dans l'esprit du site. */
+.sl-markdown-content :is(h1, h2, h3) {
+  letter-spacing: -0.015em;
+}
+
+/* Tableaux : lisibles meme longs. */
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.sl-markdown-content :is(th, td) {
+  border-color: var(--sl-color-hairline-light);
+}
