@@ -157,17 +157,13 @@ Ces ouvertures ne sont pas un reliquat : ce sont celles sans lesquelles la remis
 
 Ces règles ne dépendent pas de l'état du partage de connexion : elles sont posées à chaque remise à plat, sans condition.
 
-:::note[Le DNS d'eth1 part chez Google]
-Une règle de traduction d'adresses, posée au même moment, redirige vers **8.8.8.8** toute requête DNS venant du port eth1. Le port 53 y est donc bien ouvert au sens du pare-feu, mais c'est Google qui répond, pas le boîtier. À savoir si votre politique interne impose un résolveur maîtrisé.
+:::note[Résolution DNS sur eth1]
+Une règle de traduction d'adresses, posée au même moment, redirige vers **8.8.8.8** toute requête DNS venant du port eth1. Le port 53 y est donc bien ouvert au sens du pare-feu, mais c'est Google qui répond, pas le boîtier. À prendre en compte si votre politique interne impose un résolveur maîtrisé.
 :::
 
 Aucune de ces ouvertures n'expose vos équipements : elles desservent le boîtier et les appareils qu'il héberge sur ses propres réseaux. Vos automates restent derrière la politique _DROP_ tant que vous n'ouvrez pas explicitement un port pour eux.
 
-:::caution[La boîte de dialogue annonce une désactivation qui n'a pas lieu]
-Avant de confirmer, l'application affiche « DHCP/DNS Sharing disabled ». C'est inexact : **la remise à plat ne désactive pas le partage de connexion, elle le réapplique** tel qu'il est configuré — immédiatement pour le point d'accès Wi-Fi, une vingtaine de secondes plus tard pour le partage filaire. Cette mention est un reste d'un comportement antérieur.
-:::
-
-![](./security-7.png)
+Le partage de connexion configuré est réappliqué dans la foulée : le point d'accès Wi-Fi immédiatement, le partage filaire une vingtaine de secondes plus tard.
 
 ## 4. Audits et Journaux (Audit & Logs)
 
