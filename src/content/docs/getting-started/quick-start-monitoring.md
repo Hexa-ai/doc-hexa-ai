@@ -2,7 +2,7 @@
 title: "Démarrage rapide pour le monitoring"
 description: Configurer un HAI-P200-4G de bout en bout — première connexion, réseau, acquisition d'une première variable et visualisation en temps réel.
 sidebar:
-  order: 1
+  order: 2
 ---
 
 Bienvenue sur votre contrôleur **HAI-P200-4G** propulsé par **HAI-OS**. Ce guide a pour but de vous accompagner pas à pas pour configurer votre boîtier, collecter votre première donnée industrielle et la visualiser en quelques minutes seulement.

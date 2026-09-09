@@ -2,7 +2,7 @@
 title: "Monitoring quick start"
 description: Set up a HAI-P200-4G end to end — first connection, networking, acquiring your first tag and watching it live.
 sidebar:
-  order: 1
+  order: 2
 ---
 
 Welcome to your **HAI-P200-4G** controller, powered by **HAI-OS**. This guide walks you through configuring the gateway, collecting your first industrial data point and visualising it — in a matter of minutes.

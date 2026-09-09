@@ -78,6 +78,13 @@ export default defineConfig({
           collapsed: false,
           items: [{ autogenerate: { directory: 'hardware' } }],
         },
+        // Page seule, hors groupe : les notes de version ne relevent d'aucune
+        // des trois sections. Le lien est localise automatiquement en /en/.
+        {
+          label: 'Notes de version',
+          translations: { en: 'Release notes' },
+          link: '/release-notes/',
+        },
       ],
 
       lastUpdated: true,

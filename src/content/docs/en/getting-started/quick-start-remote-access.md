@@ -2,7 +2,7 @@
 title: "Remote access quick start"
 description: Turn a HAI-P200-4G into a secure remote-access gateway — Internet uplink, Tailscale VPN tunnel and reaching your PLCs from anywhere.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 Welcome to your **HAI-P200-4G** controller, powered by **HAI-OS**. This guide walks you through turning the gateway into a secure remote-access bridge (VPN). Within minutes you will be able to reach your industrial equipment — PLCs, HMIs — from anywhere, as if you were on site with a cable.

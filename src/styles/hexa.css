@@ -18,6 +18,10 @@
   --hai-img-max-wide: 1100px;
   --hai-img-max-narrow: 380px;
 
+  /* Hauteur maximale d'une image, quelle que soit sa classe. Une capture tres
+     verticale est reduite pour tenir dans l'ecran plutot que de le remplir. */
+  --hai-img-max-height: 70vh;
+
   /* Largeur du sommaire de droite. */
   --hai-toc-width: 13rem;
 }
@@ -81,15 +85,22 @@
 
 /* ==========================================================================
    IMAGES
-   Principe : width:100% gere le petit ecran, max-width EN PIXELS gere le
-   grand. Jamais de pourcentage — un pourcentage grandit avec le conteneur,
-   c'est exactement le probleme rencontre sur Odoo.
+   Trois regles, dans cet ordre d'importance :
+
+   1. width: auto — une image n'est JAMAIS affichee plus grande que sa taille
+      reelle. Un width:100% etirerait une capture de 279 px sur 720, et le
+      flou serait garanti. C'est le navigateur qui s'arrete a la taille native.
+   2. max-width EN PIXELS, jamais en pourcentage : un pourcentage grandit avec
+      le conteneur, c'est exactement le defaut rencontre sous Odoo.
+   3. max-height — sans quoi une capture en 443x1179 occuperait pres de deux
+      ecrans de haut. Le zoom au clic reste la pour l'inspecter en detail.
    ========================================================================== */
 
 .sl-markdown-content img {
   display: block;
-  width: 100%;
-  max-width: var(--hai-img-max);
+  width: auto;
+  max-width: min(100%, var(--hai-img-max));
+  max-height: var(--hai-img-max-height);
   height: auto;
   margin-inline: auto;
   border-radius: 10px;

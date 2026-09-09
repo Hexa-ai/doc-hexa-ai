@@ -2,7 +2,7 @@
 title: "Démarrage rapide pour la télémaintenance"
 description: Transformer un HAI-P200-4G en passerelle d'accès distant sécurisée — accès Internet, tunnel VPN Tailscale et prise en main de vos automates.
 sidebar:
-  order: 2
+  order: 3
 ---
 
 Bienvenue sur votre contrôleur **HAI-P200-4G** propulsé par **HAI-OS**. Ce guide a pour but de vous accompagner pas à pas pour transformer votre boîtier en une passerelle d'accès distant sécurisée (VPN). En quelques minutes, vous pourrez vous connecter à distance à vos équipements industriels (automates, IHM) comme si vous étiez sur place avec un câble.
