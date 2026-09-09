@@ -10,7 +10,7 @@ intermédiaire — et toujours **en lecture seule**.
 
 | Protocole | Statut | Portée |
 | --- | --- | --- |
-| [Modbus TCP](/protocols/modbus-tcp/) | Production | Holding & input registers, coils, discrete inputs |
+| Modbus TCP | Production | Holding & input registers, coils, discrete inputs |
 | Modbus RTU | Production | RS232 / RS485 sur les 4 ports du bornier |
 | S7 · ISO-on-TCP | Production | Blocs de données sur S7-300/400/1200/1500 |
 | OPC-UA | Production | Navigateur de nodes, anonyme / mot de passe / certificat |
