@@ -1,7 +1,11 @@
 // Importe un article Odoo Knowledge (sauvegarde en HTML depuis le navigateur)
 // vers une page Markdown Starlight, images comprises.
 //
-//   npm run import -- <fichier.html> <dossier-cible> [options]
+//   node tools/import-odoo.mjs <fichier.html> <dossier-cible> [options]
+//
+// A lancer avec « node », PAS avec « npm run » : npm interprete les options
+// inconnues comme sa propre configuration et les avale silencieusement — les
+// --slug et --ordre n'arriveraient jamais jusqu'ici.
 //
 // Options :
 //   --slug <nom>        nom du fichier .md produit (defaut : deduit du titre)
@@ -39,12 +43,14 @@ const [source, target] = positionals;
 
 if (!source || !target) {
   console.error(`
-Usage : npm run import -- <fichier.html> <dossier-cible> [options]
+Usage : node tools/import-odoo.mjs <fichier.html> <dossier-cible> [options]
 
 Exemple :
-  npm run import -- "C:/Users/moi/Downloads/OPC-UA.html" src/content/docs/protocols --ordre 3
+  node tools/import-odoo.mjs "C:/Users/moi/Downloads/OPC-UA.html" src/content/docs/protocols --slug opc-ua --ordre 3
 
 Options : --slug, --titre, --ordre, --selecteur, --force
+
+A lancer avec « node » et non « npm run » : npm avale les options inconnues.
 `);
   process.exit(1);
 }
@@ -131,6 +137,26 @@ if (!title) {
 // Starlight affiche deja le titre depuis le frontmatter : on evite le doublon.
 const firstH1 = root.querySelector('h1');
 if (firstH1 && firstH1.textContent.trim() === title) firstH1.remove();
+
+// Odoo laisse volontiers des <h1> pour decouper l'article. Or Starlight rend
+// deja le titre en <h1>, et son sommaire ne liste que les niveaux 2 et 3 : des
+// sections en <h1> donneraient une page a plusieurs <h1> et un sommaire vide.
+// On redescend donc toute la hierarchie d'un cran, en partant du bas pour ne
+// pas ecraser un niveau au passage.
+let demoted = 0;
+if (root.querySelector('h1')) {
+  for (let level = 5; level >= 1; level--) {
+    for (const el of Array.from(root.querySelectorAll(`h${level}`))) {
+      const replacement = doc.createElement(`h${level + 1}`);
+      for (const attr of Array.from(el.attributes)) {
+        replacement.setAttribute(attr.name, attr.value);
+      }
+      while (el.firstChild) replacement.appendChild(el.firstChild);
+      el.parentNode.replaceChild(replacement, el);
+      demoted++;
+    }
+  }
+}
 
 const slug = flag('slug') ? slugify(flag('slug')) : slugify(title);
 
@@ -258,6 +284,9 @@ const rel = (p) => path.relative(process.cwd(), p).replace(/\\/g, '/');
 console.log(`\n  Page   ${rel(outFile)}`);
 console.log(`  Titre  ${title}`);
 console.log(`  Images ${copied.length} copiee(s)${copied.length ? ' : ' + copied.join(', ') : ''}`);
+if (demoted) {
+  console.log(`  Titres ${demoted} niveau(x) redescendu(s) d'un cran (l'article decoupait en <h1>)`);
+}
 
 const todo = [];
 if (!ordre) todo.push('Ajouter sidebar.order pour fixer la position dans le menu.');

@@ -224,8 +224,13 @@ pas : les images d'Odoo sont derrière un login.
 ### 2. Convertir
 
 ```bash
-npm run import -- "C:/Users/moi/Downloads/OPC-UA.html" src/content/docs/protocols --slug opc-ua --ordre 3
+node tools/import-odoo.mjs "C:/Users/moi/Downloads/OPC-UA.html" src/content/docs/protocols --slug opc-ua --ordre 3
 ```
+
+> **Lancez-le avec `node`, pas avec `npm run`.** npm interprète les options
+> qu'il ne connaît pas comme sa propre configuration et les avale : `--slug` et
+> `--ordre` n'arriveraient jamais au script, sans le moindre message d'erreur.
+> Le dossier de travail doit être la racine du dépôt.
 
 | Option | Effet |
 | --- | --- |
@@ -240,6 +245,10 @@ Le script s'occupe de :
 - retirer l'interface d'Odoo (barre de navigation, fil d'Ariane, boutons) ;
 - convertir titres, listes, **tableaux** et blocs de code ;
 - retirer le `<h1>`, que Starlight affiche déjà depuis le frontmatter ;
+- **redescendre la hiérarchie des titres d'un cran** si l'article découpait ses
+  sections en `<h1>` — ce que fait Odoo. Sans ça, la page aurait plusieurs
+  `<h1>` et le sommaire « Sur cette page », qui ne liste que les niveaux 2 et
+  3, resterait vide ;
 - **copier les images** à côté de la page et les renommer `<slug>-1.png`,
   `<slug>-2.png`… en réécrivant les chemins en `./` ;
 - reconstituer en fichiers les images embarquées en base64 ;
