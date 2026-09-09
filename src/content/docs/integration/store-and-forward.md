@@ -17,9 +17,7 @@ Le Data-Plug ne se contente pas de faire transiter les données ; il les sauvega
 
 Dans la section **Store & Forward Configuration**, vous pouvez gérer la stratégie d'archivage :
 
-- **DB Path** : Indique l'emplacement du fichier de base de données. Ce chemin est défini automatiquement et n'est pas modifiable. Si une carte microSD est insérée dans l'appareil, la base de données y sera stockée prioritairement.
-
-    - **Note importante :** La prise en compte de la carte microSD se fait au démarrage. Si vous insérez une carte, **un redémarrage de l'appareil est nécessaire** pour que le stockage bascule dessus. En l'absence de carte (ou avant redémarrage), le stockage se fait sur la mémoire interne.
+- **DB Path** : champ automatique, non modifiable.
 
 - **Rétention (Retention Days)** : Ce paramètre définit la durée de conservation des données. Les archives plus anciennes que le nombre de jours spécifié seront automatiquement purgées pour libérer de l'espace.
 
@@ -68,7 +66,7 @@ Quel que soit le format choisi :
 - **Username** et **Password** : identifiants d'authentification. Ils ne sont utilisés que si les deux champs sont renseignés.
 - **Use TLS** : chiffre les échanges avec le broker. Activé par défaut. Le certificat du broker doit être émis par une autorité de certification reconnue ; un certificat auto-signé n'est pas accepté.
 
-Cliquez sur **Save** pour appliquer : le connecteur se reconnecte immédiatement avec les nouveaux paramètres, sans redémarrage. L'état de la connexion est visible en haut de la page du Data-Plug.
+Cliquez sur **Save** pour appliquer. Le format de sortie, l'hôte, le port, les identifiants Scorp-IO, le base topic et la QoS sont pris en compte immédiatement. Un changement de Client ID, de Username, de Password ou de l'option Use TLS, ainsi que le passage à None, ne prennent effet qu'après un redémarrage du boîtier. L'état de la connexion est visible en haut de la page du Data-Plug.
 
 ## 3. Format Scorp-IO
 
@@ -96,7 +94,7 @@ Le préfixe `mqtts` est fixe. `TYPE_MESSAGE` vaut `DBIRTH` pour le message de co
 
 Publié à chaque connexion ou reconnexion au broker, avec le flag **Retained**, sur le topic `mqtts/{PROJECT_ID}/DBIRTH/{EDGE_NODE_ID}/{DEVICE_ID}`.
 
-Dans la version actuelle, ce message ne déclare pas la liste des variables : le tableau `metrics` est vide. Scorp-IO découvre les variables à réception des trames DDATA, qui portent chacune le nom et le type de chaque valeur.
+Dans la version actuelle, le tableau `metrics` de ce message est vide : la liste des variables n'y est pas déclarée.
 
 ```json
 {
