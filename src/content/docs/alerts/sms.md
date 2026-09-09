@@ -1,5 +1,5 @@
 ---
-title: "Envoyer & recevoir des SMS"
+title: "SMS"
 description: "Envoyer et recevoir des SMS depuis le HAI-P200-4G, via son modem 4G."
 sidebar:
   order: 2

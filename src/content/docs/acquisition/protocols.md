@@ -1,5 +1,5 @@
 ---
-title: Vue d'ensemble
+title: "Protocoles supportés"
 description: Les protocoles d'acquisition supportés par HAI-OS et leur niveau de maturité.
 sidebar:
   order: 2

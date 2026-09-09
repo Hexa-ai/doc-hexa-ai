@@ -1,5 +1,5 @@
 ---
-title: "Configuration Store & Forward (MQTT & Historisation)"
+title: "Store & Forward"
 description: "Stockage local en SQLite et relais MQTT vers le cloud : structure des topics, format des messages et reprise après coupure."
 sidebar:
   order: 4

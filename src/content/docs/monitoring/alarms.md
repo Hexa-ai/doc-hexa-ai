@@ -1,5 +1,5 @@
 ---
-title: "Suivi des Alarmes"
+title: "Alarmes"
 description: "Suivre les alarmes en direct ou dans l'historique, filtrer, analyser la cause racine et ouvrir un accès invité."
 sidebar:
   order: 3

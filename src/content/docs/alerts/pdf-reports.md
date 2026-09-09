@@ -1,5 +1,5 @@
 ---
-title: "PDF Reports (Rapports PDF)"
+title: "Rapports PDF"
 description: "Consulter et gérer les rapports PDF générés : navigation par type, recherche, actions individuelles et groupées."
 sidebar:
   order: 3

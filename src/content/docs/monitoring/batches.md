@@ -1,5 +1,5 @@
 ---
-title: "Batches (Gestion des Lots)"
+title: "Gestion des lots"
 description: "Découper la production en lots : définition de la variable de lot, suivi des lots et analyse dans le Data-Explorer."
 sidebar:
   order: 2

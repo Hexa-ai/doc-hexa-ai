@@ -1,5 +1,5 @@
 ---
-title: "Notifications et Rapports"
+title: "Notifications"
 description: "Configurer l'envoi des notifications : serveur SMTP, destinataires, déclenchement sur alarme, escalade par paliers et limitation du débit."
 sidebar:
   order: 1

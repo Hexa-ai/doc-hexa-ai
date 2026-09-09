@@ -307,6 +307,24 @@ starlight-theme-select > label {
   --sl-select-width: 8em !important;
 }
 
+/* Listes.
+   Odoo separe ses puces par une ligne vide. En Markdown cela produit une
+   liste « lache » : chaque item est enveloppe dans un <p>, dont la marge
+   basse de 20 px ouvre un trou entre des puces qui ne font que 28 px de
+   haut. On annule cette marge pour les items simples, en la conservant
+   quand l'item contient reellement plusieurs blocs. */
+.sl-markdown-content li > p {
+  margin-block: 0;
+}
+
+.sl-markdown-content li > :is(p, ul, ol, pre, blockquote) + :is(p, ul, ol, pre, blockquote) {
+  margin-block-start: 0.5rem;
+}
+
+.sl-markdown-content li + li {
+  margin-block-start: 0.4rem;
+}
+
 /* Titres un peu resserres, dans l'esprit du site. */
 .sl-markdown-content :is(h1, h2, h3) {
   letter-spacing: -0.015em;

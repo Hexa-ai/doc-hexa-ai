@@ -1,5 +1,5 @@
 ---
-title: "Acquisition et historisation de données"
+title: "Configurer l'acquisition"
 description: "Configurer l'acquisition et l'historisation des variables : prérequis, paramétrage des entrées, sauvegarde et lecture des journaux."
 sidebar:
   order: 3
