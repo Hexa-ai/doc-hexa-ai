@@ -54,13 +54,19 @@ avec l'écran, c'est exactement le défaut rencontré sous Odoo.
 
 ### Quand le défaut ne suffit pas
 
-| Classe | Largeur max | Usage |
+| Classe | Plafond | Usage |
 | --- | --- | --- |
-| _(aucune)_ | 720 px | Cas général |
+| _(aucune)_ | 720 × 416 px | Cas général, captures d'écran |
 | `wide` | 1100 px | Schémas larges, captures d'UI complète |
 | `narrow` | 380 px | Photos produit, vues mobiles |
+| `detail` | 260 × 260 px | Brochage, connecteur, port isolé |
 | `plain` | — | Retire cadre et fond (visuels déjà détourés) |
 | `inline` | 1.4em | Picto au fil du texte |
+
+`detail` mérite un mot : un plafond global ne peut pas servir à la fois une
+capture d'interface dense, qu'il faut pouvoir lire, et un détail de bornier,
+qui n'a rien à gagner à occuper toute la largeur. Dès qu'une figure montre un
+seul connecteur, un brochage ou un port, mettez-lui cette classe.
 
 On les pose sur un `<figure>`, en laissant une **ligne vide** avant et après
 l'image pour que le Markdown reste interprété :

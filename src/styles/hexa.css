@@ -17,6 +17,7 @@
   --hai-img-max: 720px;
   --hai-img-max-wide: 1100px;
   --hai-img-max-narrow: 380px;
+  --hai-img-max-detail: 260px;
 
   /* Hauteur maximale d'une image, quelle que soit sa classe.
      416 px est choisi pour qu'une capture 16/9 affichee sur 720 px de large
@@ -116,6 +117,15 @@
 .sl-markdown-content .wide img,
 .sl-markdown-content img.wide {
   max-width: var(--hai-img-max-wide);
+}
+
+/* Figure de detail : brochage, connecteur, port isole. Ces vues n'ont rien a
+   gagner a occuper la largeur d'une capture d'ecran — un plafond global ne
+   peut pas servir a la fois une interface dense et un detail de bornier. */
+.sl-markdown-content .detail img,
+.sl-markdown-content img.detail {
+  max-width: var(--hai-img-max-detail);
+  max-height: var(--hai-img-max-detail);
 }
 
 .sl-markdown-content .narrow img,

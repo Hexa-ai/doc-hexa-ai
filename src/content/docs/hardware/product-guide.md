@@ -39,12 +39,9 @@ Description des fonctions et définitions des interfaces sur chaque face.
 | **4** | 1 indicateur 4G (vert) pour vérifier le statut du signal 4G. |
 | **5** | 4 indicateurs UART (verts) pour vérifier le statut de communication des ports UART. |
 | **6** | Entrée DC (9–36 V) : borniers 2 broches (espacement 3,5 mm). Broches définies comme VIN+/GND. |
-| **7**
- | 2 ports RS232 (borniers 6 broches) |
-| **8**
- | 2 ports RS485 (borniers 6 broches). |
-| **9**
- | 1 port Ethernet 10/100/1000 M (RJ45) avec indicateur LED |
+| **7** | 2 ports RS232 (borniers 6 broches) |
+| **8** | 2 ports RS485 (borniers 6 broches). |
+| **9** | 1 port Ethernet 10/100/1000 M (RJ45) avec indicateur LED |
 | **10** | 1 port Ethernet 10/100 M (RJ45) avec indicateur LED |
 
 ### 1.3.2 Face arrière
@@ -81,61 +78,22 @@ Présentation des différents états et significations des indicateurs de l’ap
 | **Indicateur** | **Statut** | **Description** |
 | --- | --- | --- |
 | **PWR** (Alimentation) | Allumé | L’appareil est sous tension. |
-|
-
-
- | Clignote | Alimentation anormale. Débranchez immédiatement. |
-|
-
-
-
- | Éteint | L’appareil n’est pas alimenté. |
+| | Clignote | Alimentation anormale. Débranchez immédiatement. |
+| | Éteint | L’appareil n’est pas alimenté. |
 | **ACT** (Activité) | Clignote | Le système a démarré et lit/écrit des données. |
-|
-
-
-
- | Éteint | L’appareil est éteint ou inactif. |
+| | Éteint | L’appareil est éteint ou inactif. |
 | **USER** (Utilisateur) | Allumé | Statut personnalisable par l’utilisateur. |
-|
-
-
-
- | Éteint | Non défini ou appareil éteint. |
+| | Éteint | Non défini ou appareil éteint. |
 | **4G** | Allumé | Connexion 4G active. |
-|
-
-
-
- | Éteint | Pas de signal 4G ou appareil éteint. |
+| | Éteint | Pas de signal 4G ou appareil éteint. |
 | **Ethernet (Jaune)** | Allumé | Transmission de données anormale. |
-|
-
-
-
- | Clignote | Données en cours de transmission. |
-|
-
-
-
- | Éteint | Pas de connexion Ethernet. |
+| | Clignote | Données en cours de transmission. |
+| | Éteint | Pas de connexion Ethernet. |
 | **Ethernet (Vert)** | Allumé | Connexion Ethernet normale. |
-|
-
-
-
- | Clignote | Connexion Ethernet anormale. |
-|
-
-
-
- | Éteint | Pas de connexion Ethernet. |
+| | Clignote | Connexion Ethernet anormale. |
+| | Éteint | Pas de connexion Ethernet. |
 | **COM1~COM4** | Allumé/Clignote | Données en transmission. |
-|
-
-
-
- | Éteint | Aucune transmission ou appareil éteint. |
+| | Éteint | Aucune transmission ou appareil éteint. |
 
 ## 1.6 Interfaces
 
@@ -160,7 +118,11 @@ Le slot Nano SIM, permet d’installer une carte SIM pour recevoir le signal 4G.
 
 L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant continu (9–36 V) via des borniers Phoenix 2 broches (espacement 3,5 mm). Les broches sont définies comme suit :
 
+<figure class="detail">
+
 ![Brochage du bornier d'alimentation Phoenix à 2 broches](./product-guide-4.png)
+
+</figure>
 
 | **Broche** | **Nom** |
 | --- | --- |
@@ -173,7 +135,11 @@ L’appareil inclut 2 ports RS485 et 2 ports RS232 (borniers 6 broches). Confi
 
 ![Borniers série RS485 et RS232 du HAI-P200-4G](./product-guide-5.png)
 
+<figure class="detail">
+
 ![Brochage du bornier série, broches numérotées de 1 à 12](./product-guide-6.png)
+
+</figure>
 
 | **N°** | **Fonction** |
 | --- | --- |
@@ -204,7 +170,11 @@ Le schéma de câblage du RS232 est le suivant :
 
 L’appareil **HAI-P200-4G** inclut un port Ethernet 10/100/1000M adaptatif. Le connecteur est de type **RJ45** et prend en charge le **PoE** avec module d’extension. Utilisez un câble réseau **Cat6** ou supérieur.
 
+<figure class="detail">
+
 ![Port Ethernet 10/100/1000M, connecteur RJ45](./product-guide-9.png)
+
+</figure>
 
 | **Broche** | **Nom** |
 | --- | --- |
@@ -221,7 +191,11 @@ L’appareil **HAI-P200-4G** inclut un port Ethernet 10/100/1000M adaptatif. Le 
 
 Port Ethernet 10/100M adaptatif (connecteur **RJ45**). Utilisez un câble réseau **Cat6** ou supérieur.
 
+<figure class="detail">
+
 ![Port Ethernet 10/100M, connecteur RJ45](./product-guide-10.png)
+
+</figure>
 
 | **Broche** | **Nom** |
 | --- | --- |
@@ -277,7 +251,6 @@ L’appareil **HAI-P200-4G** est livré avec un **support Rail-DIN** préinsta
 
 2.  Appuyez sur la **languette de verrouillage** située sur la partie inférieure du support jusqu’à ce qu’elle s’enclenche sur le rail.
     ![Montage sur rail DIN, étape 2 : appuyer sur la languette de verrouillage jusqu'à l'enclenchement](./product-guide-13.png)
-
 
 **Remarque** :
 
