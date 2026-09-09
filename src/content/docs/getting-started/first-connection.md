@@ -13,3 +13,5 @@ Voici un tour d’horizon pour une première connexion au HAI-P200-4G. Alimentez
 Les deux interfaces Ethernet du HAI-P200-4G sont réglées par défaut en DHCP pour le port du haut et en IP statique pour le port du bas (Adresse: 192.168.1.16).
 
 Pour se connecter, saisissez l’adresse IP, 192.168.1.16 dans la barre d’adresse de votre navigateur et identifiez vous (utilisateur admin et mot de passe hai1@). La connexion étant en HTTPS lors du premier accès un message de sécurité (certificat) devrait apparaitre dans votre navigateur, confirmez pour vous connecter.  Le boîtier ouvre un écran de configuration et vous demande de définir votre mot de passe administrateur.
+
+[Voir la vidéo de mise en route](https://www.youtube.com/watch?v=arMbBaHQpJU)

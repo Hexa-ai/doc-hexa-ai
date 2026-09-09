@@ -85,6 +85,10 @@ const CHROME = [
   // droite. Le garder ferait doublon, et la conversion l'aplatit de toute
   // facon en un pave de titres colles les uns aux autres.
   '[data-embedded="tableOfContent"]',
+  // Index d'articles : de la navigation entre articles voisins, que la barre
+  // laterale assure deja. La conversion n'en gardait que des libelles a puces,
+  // meme plus cliquables.
+  '[data-embedded="articleIndex"]',
 ];
 
 // NE JAMAIS ajouter [contenteditable="false"] a la liste ci-dessus. Odoo rend
@@ -278,11 +282,33 @@ turndown.addRule('bloc-de-code-odoo', {
   },
 });
 
-// Bloc depliant d'Odoo : titre et contenu sont dans deux conteneurs distincts.
-// Il devient un <details>, que Starlight sait presenter.
+// Video : l'iframe est retire avec le reste du mobilier, la video disparaissait
+// donc sans laisser de trace. On la remet sous forme de lien — un lien ne
+// depose pas de traceur tiers sur la documentation, contrairement a un embed.
+turndown.addRule('video-odoo', {
+  filter: (node) =>
+    node.nodeType === 1 && node.getAttribute && node.getAttribute('data-embedded') === 'video',
+  replacement: (_content, node) => {
+    let props = {};
+    try {
+      props = JSON.parse(node.getAttribute('data-embedded-props') || '{}');
+    } catch {
+      /* props illisibles : on laisse le lien generique */
+    }
+    if (props.platform === 'youtube' && props.videoId) {
+      return `\n\n[Voir la vidéo](https://www.youtube.com/watch?v=${props.videoId})\n\n`;
+    }
+    return '\n\n<!-- VIDEO A REPRENDRE : source non reconnue -->\n\n';
+  },
+});
+
+// Blocs depliants d'Odoo — deux variantes, meme structure : titre et contenu
+// dans deux conteneurs distincts. Ils deviennent des <details>.
 turndown.addRule('bloc-depliant-odoo', {
   filter: (node) =>
-    node.nodeType === 1 && node.getAttribute && node.getAttribute('data-embedded') === 'toggleBlock',
+    node.nodeType === 1 &&
+    node.getAttribute &&
+    ['toggleBlock', 'foldableSection'].includes(node.getAttribute('data-embedded')),
   replacement: (_content, node) => {
     const titre = node.querySelector('[data-embedded-editable="title"]');
     const corps = node.querySelector('[data-embedded-editable="content"]');

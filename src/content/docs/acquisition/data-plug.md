@@ -4,14 +4,8 @@ description: "Le Data-Plug, moteur d'acquisition de HAI-OS : lecture multi-proto
 sidebar:
   order: 1
 ---
+
 ![](./data-plug-1.webp)
-Index
-
-- 🔙 Configurer l'acquisition de données
-
-- 🔝 Configuration Store & Forward
-
-- 🗨️ Envoyer & recevoir des SMS
 
 ## Qu'est-ce que le Data-Plug ?
 

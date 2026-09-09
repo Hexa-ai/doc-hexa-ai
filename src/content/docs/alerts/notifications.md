@@ -66,9 +66,12 @@ Le calcul du RCA peut être désactivé individuellement pour une variable d'ala
 
 Ce fonctionnement est celui de la notification immédiate. Si vous activez l'escalade pour un niveau d'alarme donné, les alarmes de ce niveau ne sont plus envoyées ainsi : elles suivent la chaîne de paliers (voir _**Escalade**_).
 
-Exemple de notification
+<details>
+<summary>Exemple de notification</summary>
 
 ![](./notifications-3.png)
+
+</details>
 
 ## Escalade (paliers)
 
@@ -154,9 +157,12 @@ L'e-mail de rapport (au format HTML) contiendra un tableau récapitulatif avec l
 
 Une variable favorite de catégorie Position dont l'option _Map in reports_ est activée dans le Data-Plug apparaît sous forme de carte avec la trace parcourue sur la période, à la place d'une courbe. Le fond de carte est téléchargé à la génération ; sans internet, le tracé reste dessiné sur fond neutre.
 
-Exemple de rapport
+<details>
+<summary>Exemple de rapport</summary>
 
 ![](./notifications-6.png)
+
+</details>
 
 Les rapports générés sont archivés sur le contrôleur et consultables depuis la page **PDF Reports** : filtrage par type et par date, consultation dans le navigateur, téléchargement et suppression, y compris par lot.
 

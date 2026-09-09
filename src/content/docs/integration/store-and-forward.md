@@ -2,7 +2,7 @@
 title: "Store & Forward"
 description: "Stockage local en SQLite et relais MQTT vers le cloud : structure des topics, format des messages et reprise après coupure."
 sidebar:
-  order: 4
+  order: 1
 ---
 
 Le Data-Plug intègre une architecture **Store & Forward** robuste. Cette double fonctionnalité permet d'assurer la continuité des données : il **historise** localement les informations reçues tout en étant capable de les **relayer** vers le cloud ou un système central.
@@ -10,6 +10,7 @@ Le Data-Plug intègre une architecture **Store & Forward** robuste. Cette double
 En cliquant sur le bouton **Configuration** en haut de la page du Data-Plug, vous accédez à l'interface de gestion de ces deux mécanismes.
 
 ![](./store-and-forward-1.png)
+
 ## 1. Stockage Local (Store) : Base de données SQLite
 
 Le Data-Plug ne se contente pas de faire transiter les données ; il les sauvegarde localement dans une base de données **SQLite** embarquée. Cela garantit qu'aucune donnée n'est perdue en cas de coupure réseau.

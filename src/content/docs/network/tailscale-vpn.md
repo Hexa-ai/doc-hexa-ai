@@ -6,6 +6,7 @@ sidebar:
 ---
 
 ![Un opérateur devant son ordinateur portable, relié par le nuage Tailscale à une passerelle HAI-P200-4G installée près d'une ligne de production](./tailscale-vpn-1.webp)
+
 ## Qu'est-ce que Tailscale ?
 
 Tailscale est une solution de réseau privé virtuel (VPN) moderne et sécurisée qui permet de connecter facilement des appareils entre eux, où qu'ils se trouvent dans le monde. Contrairement aux VPN traditionnels, Tailscale utilise le protocole WireGuard et une approche « zero-config » qui simplifie considérablement la mise en place et la gestion du réseau.

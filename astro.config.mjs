@@ -67,8 +67,8 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'getting-started' } }],
         },
         {
-          label: 'Réseau',
-          translations: { en: 'Network' },
+          label: 'Réseau & accès',
+          translations: { en: 'Network & access' },
           collapsed: false,
           items: [{ autogenerate: { directory: 'network' } }],
         },
@@ -92,6 +92,12 @@ export default defineConfig({
           translations: { en: 'Alerts & reports' },
           collapsed: false,
           items: [{ autogenerate: { directory: 'alerts' } }],
+        },
+        {
+          label: 'Intégration',
+          translations: { en: 'Integration' },
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'integration' } }],
         },
         {
           label: 'Matériel',
