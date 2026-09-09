@@ -25,9 +25,9 @@ Trois usages principaux :
 
 Le contrôleur ne possède **qu'une seule radio Wi-Fi**. Elle peut soit se connecter à un réseau existant (mode **Client**), soit diffuser son propre réseau (mode **Hotspot**), mais **jamais les deux en même temps**.
 
-_⚠️_
-
+:::caution
 **Conséquence à bien anticiper** : si le contrôleur est actuellement connecté à Internet **par le Wi-Fi**, activer le point d'accès va couper cette connexion. Si vous êtes vous-même en train d'administrer le contrôleur à distance via ce Wi-Fi, vous perdrez l'accès. Assurez-vous d'avoir une autre voie d'accès (Ethernet, 4G ou Tailscale) avant de basculer.
+:::
 
 Le basculement est automatique dans les deux sens : activer le point d'accès déconnecte le Wi-Fi client, et repasser en mode Client arrête le point d'accès puis tente de rejoindre le réseau précédent.
 
@@ -59,9 +59,9 @@ Renseignez les champs dans l'ordre :
 
 Le bloc **Current status** confirme alors l'activation : nom du réseau diffusé, mode de sécurité et source Internet retenue. L'icône Wi-Fi en bas de l'interface passe au vert lorsque le point d'accès est actif.
 
-_💡_
-
+:::tip
 **Réglages figés** : la bande (2,4 GHz), le chiffrement (WPA2), l'adresse du contrôleur (**10.42.0.1**) et la plage d'adresses distribuées (10.42.0.10 à 10.42.0.254, baux de 24 h) ne sont pas configurables. C'est volontaire : ces valeurs couvrent la quasi-totalité des usages et évitent les erreurs de configuration radio.
+:::
 
 ## Se connecter au point d'accès
 
@@ -85,8 +85,6 @@ Le comportement dépend de la source Internet choisie :
 - **Avec une source Internet** (Ethernet ou 4G) : l'utilisateur voit une page d'accueil lui indiquant qu'il est connecté, avec l'adresse du contrôleur, un bouton pour ouvrir l'interface dans son vrai navigateur, et un bouton **Continue to the internet** qui débloque son accès Internet. C'est le fonctionnement classique du « clic pour accepter ».
 - **Sans source Internet** (None) : le portail devient un réseau fermé permanent. Toute navigation ramène sur la page du contrôleur, sans possibilité de sortir. Idéal pour une borne de consultation.
 
-_⚠️_
-
 Trois points à connaître sur le portail captif :
 
 - La fenêtre qui s'ouvre automatiquement sur les téléphones est un mini-navigateur limité. Il affichera un **avertissement de certificat** en accédant au contrôleur en HTTPS : c'est normal, le contrôleur utilise un certificat auto-signé. Utilisez le bouton **Open in my browser** pour basculer sur le navigateur complet du téléphone.
@@ -104,9 +102,9 @@ Le bloc **Connected devices** liste les appareils présents sur votre point d'ac
 - le **volume de données** échangées (↓ reçu, ↑ envoyé), s'il y a eu du trafic
 - un badge **internet** s'il a été autorisé à sortir via le portail captif, ou **blocked** s'il est bloqué
 
-_⚠️_
-
+:::caution
 Cette liste **ne se rafraîchit pas automatiquement**. Utilisez le bouton de rafraîchissement pour l'actualiser.
+:::
 
 La force du signal n'est pas affichée : le matériel ne la remonte pas lorsqu'il fonctionne en point d'accès.
 

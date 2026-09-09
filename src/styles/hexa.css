@@ -27,8 +27,9 @@
      reste la pour les inspecter. */
   --hai-img-max-height: 26rem;
 
-  /* Largeur du sommaire de droite. */
-  --hai-toc-width: 13rem;
+  /* Largeur du sommaire de droite. 15rem plutot que 13 : en dessous, les
+     titres francais passent tous a la ligne et le sommaire devient illisible. */
+  --hai-toc-width: 15rem;
 }
 
 /* --- Palette sombre (theme par defaut) ---------------------------------- */
@@ -254,6 +255,29 @@ header.header {
      longs debordent hors de la page. */
   .right-sidebar-panel .sl-container {
     max-width: 100%;
+  }
+
+  /* Lisibilite du sommaire.
+     Starlight le compose en 13 px, interligne 1,25, sans separation entre les
+     entrees. Tant que les titres tiennent sur une ligne cela passe ; en
+     francais ils passent tous a la ligne, et l'ensemble se lit alors comme un
+     seul bloc de mots. On agrandit, on aere, et on separe. */
+  .right-sidebar-panel a {
+    font-size: var(--sl-text-sm);
+    line-height: 1.45;
+    padding-block: 0.3rem;
+  }
+
+  /* Sous-entrees : un filet leur donne un rang, au lieu de les noyer dans la
+     liste principale. */
+  .right-sidebar-panel ul ul a {
+    padding-inline-start: 0.7rem;
+    margin-inline-start: 0.1rem;
+    border-inline-start: 1px solid var(--sl-color-hairline);
+  }
+
+  .right-sidebar-panel h2 {
+    margin-bottom: 0.75rem;
   }
 
   /* Le centrage assure jusqu'ici par la marge du sommaire. */

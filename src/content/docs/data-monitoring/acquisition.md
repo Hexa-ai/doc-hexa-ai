@@ -5,16 +5,14 @@ sidebar:
   order: 3
 ---
 
+
+
 Bienvenue dans ce guide de prise en main du **DataPlug**, la nouvelle fonctionnalité de votre contrôleur HAI-P200-4G. Ce tutoriel vous montrera comment utiliser notre configurateur graphique pour collecter, structurer et publier en quelques clics des données issues de vos équipements industriels en **OPC-UA, Modbus TCP, Modbus RTU, S7-Com, BACnet/IP, NMEA 0183, ou publiées par vos propres flux Node-RED.** À la fin de ce guide, vos données seront disponibles sur le broker MQTT interne, prêtes à être utilisées par le Data-Explorer, Node-RED ou vos propres applications.
 
 ## Prérequis
 
 - Le contrôleur HAI-P200-4G
 - HAI-OS
-
-Table des matières
-
-Acquisition et historisation de donnéesPrérequisConfigurationParamétrage des InputsModbus TCPOPC-UAExplorer le serveur depuis l'interface (Browse server)CertificatsS7BACnetDéclarer un équipementTrouver vos équipements automatiquement (Discover devices)Ajouter des variables (Browse objects)Diagnostics par équipementBACnet/SC (beta)NMEA 0183Déclarer une sourceAjouter des variables avec le mode écoute (Listen)Position sur une carteInternal MQTT (Node-RED)Format de publicationModbus RTUContextualisation des donnéesRéglages complémentairesImport / Export CSVExport des données historisées (onglet Data Export)Paramétrage de l’AgentDiagnosticsSauvegarder et redémarrerLogs
 
 * * *
 
@@ -111,9 +109,8 @@ Cochez les variables voulues — seules les Variables dont le type est exploitab
 
 Dès que la politique de sécurité n'est plus None, le bouton **Generate client key pair** crée et télécharge un certificat client auto-signé (validité 10 ans) directement depuis l'interface : inutile de le fabriquer à part. Le champ **Trusted Server Certificate** permet en complément d'épingler le certificat du serveur, pour n'accepter que lui.
 
-Astuce : Trouver facilement vos paramètres OPC-UA avec UaExpert
-
-_💡_
+<details>
+<summary>Astuce : Trouver facilement vos paramètres OPC-UA avec UaExpert</summary>
 
 **Astuce : Trouver facilement vos paramètres OPC-UA avec UaExpert**
 
@@ -132,6 +129,8 @@ A l'aide de cet outil, nous pouvons voir que les champs doivent être écrits de
 ![](./acquisition-4.png)
 
 Vous pourrez également paramétrer pour chaque variable son nom d'affichage, sa catégorie, son unité et sa description.
+
+</details>
 
 #### S7
 
@@ -169,8 +168,6 @@ Cas d'une variable adressée en %M :
 #### BACnet
 
 Le protocole **BACnet/IP** permet de collecter les données de vos équipements de gestion technique du bâtiment (CVC, éclairage, comptage).
-
-_⚠️_
 
 Contrairement aux autres protocoles, BACnet/IP n'est pas géré par Telegraf mais par un collecteur dédié intégré à HAI-OS. Cela ne change rien à votre utilisation, mais explique que ses variables n'apparaissent pas dans le TOML en mode Éditeur.
 
@@ -227,8 +224,6 @@ Un sélecteur **Transport** propose de basculer de **BACnet/IP** vers **BACnet/S
 #### NMEA 0183
 
 Le protocole NMEA 0183 permet de collecter les trames émises par des équipements de navigation et de mesure marine (GPS, sondeur, girouette-anémomètre, centrale de navigation). 
-
-_⚠️_
 
 Comme BACnet, il est traité par un lecteur intégré à HAI-OS et non par Telegraf : ses variables n'apparaissent donc pas dans le TOML en mode Éditeur.
 
@@ -394,8 +389,6 @@ Pour vous faire gagner du temps lors de la configuration de nombreuses variables
 
 ### Export des données historisées (onglet Data Export)
 
-_⚠️_
-
 Ne confondez pas cet export avec l'Import/Export CSV décrit plus haut : celui-ci exporte **vos mesures**, l'autre exporte **votre configuration de variables**.
 
 L'onglet **Data Export** vous permet de télécharger les données enregistrées sur une période de votre choix :
@@ -403,8 +396,6 @@ L'onglet **Data Export** vous permet de télécharger les données enregistrées
 - **From** / **To** : les dates et heures de début et de fin. Par défaut, les 7 derniers jours.
 - **Favorites only** : limite l'export à vos variables favorites (⭐).
 - **Export CSV** : génère et télécharge le fichier.
-
-_💡_
 
 Cet export inclut les données encore en tampon, non encore écrites en base : vous récupérez donc bien les mesures les plus récentes, sans attendre le prochain commit.
 
@@ -434,8 +425,6 @@ En haut de la page Data-Plug, le bandeau **Data-plug Diagnostics** vous donne en
 - 🕗 **Time before next buffer commit** : temps restant avant la prochaine écriture du tampon en base. Cette ligne disparaît lorsque l'historisation est désactivée.
 - 🗃️ **DB Size** : taille du fichier de base de données.
 - 🧹 **Retention** : durée de conservation des données configurée, en jours.
-
-_💡_
 
 Un point important : les données les plus récentes se trouvent d'abord dans le tampon mémoire, et ne sont écrites en base qu'à chaque _commit_. Si vous cherchez une mesure de la dernière minute et qu'elle n'apparaît pas encore, regardez le temps restant avant le prochain commit.
 

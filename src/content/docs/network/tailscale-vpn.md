@@ -23,9 +23,9 @@ Tailscale est une solution de réseau privé virtuel (VPN) moderne et sécurisé
 
 Tailscale crée un réseau maillé (mesh network) entre vos appareils. Chaque appareil se connecte directement aux autres, sans passer par un serveur central, ce qui optimise les performances et la sécurité. L'authentification est gérée via des fournisseurs d'identité existants (comme Google, Microsoft ou GitHub), simplifiant ainsi la gestion des accès.
 
-_💡_
-
+:::tip
 À noter : Tailscale propose une version gratuite pour un usage personnel et des versions payantes pour les entreprises avec des fonctionnalités avancées.
+:::
 
 ## Nécessaire
 

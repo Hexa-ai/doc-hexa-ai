@@ -81,6 +81,10 @@ const CHROME = [
   '.o_knowledge_sidebar_container',
   '.o_menu_systray', '.o_main_navbar', '.breadcrumb', '.o_control_panel',
   '[role="navigation"]', '[role="toolbar"]',
+  // Sommaire interne d'Odoo : Starlight en genere deja un dans la colonne de
+  // droite. Le garder ferait doublon, et la conversion l'aplatit de toute
+  // facon en un pave de titres colles les uns aux autres.
+  '[data-embedded="tableOfContent"]',
 ];
 
 // NE JAMAIS ajouter [contenteditable="false"] a la liste ci-dessus. Odoo rend
@@ -274,6 +278,21 @@ turndown.addRule('bloc-de-code-odoo', {
   },
 });
 
+// Bloc depliant d'Odoo : titre et contenu sont dans deux conteneurs distincts.
+// Il devient un <details>, que Starlight sait presenter.
+turndown.addRule('bloc-depliant-odoo', {
+  filter: (node) =>
+    node.nodeType === 1 && node.getAttribute && node.getAttribute('data-embedded') === 'toggleBlock',
+  replacement: (_content, node) => {
+    const titre = node.querySelector('[data-embedded-editable="title"]');
+    const corps = node.querySelector('[data-embedded-editable="content"]');
+    const t = titre ? titre.textContent.trim().replace(/\s+/g, ' ') : 'Détails';
+    const c = corps ? turndown.turndown(corps.innerHTML).trim() : '';
+    if (!c) return '';
+    return `\n\n<details>\n<summary>${t}</summary>\n\n${c}\n\n</details>\n\n`;
+  },
+});
+
 // Les liens Odoo internes ne veulent plus rien dire une fois sortis d'Odoo.
 turndown.addRule('liens-odoo', {
   filter: (node) =>
@@ -294,12 +313,16 @@ markdown = markdown
 // Le tri se fait ligne par ligne : une expression multiligne sur le document
 // entier se prend les pieds dans le tapis et recolle l'emoji a la ligne
 // precedente — c'est arrive.
+// La conversion enrobe parfois le pictogramme d'italiques ou de gras
+// (« _💡_ ») : on retire ce vernis avant de juger la ligne.
 const EMOJI_SEUL = /^[\s\u{1F000}-\u{1FAFF}\u{2190}-\u{2BFF}\u{FE0F}\u{200D}\u{20E3}]+$/u;
+const denuder = (l) => l.replace(/[*_~`]/g, '').trim();
 let emojisRetires = 0;
 markdown = markdown
   .split('\n')
   .filter((l) => {
-    if (l.trim() !== '' && EMOJI_SEUL.test(l)) {
+    const nu = denuder(l);
+    if (nu !== '' && EMOJI_SEUL.test(nu)) {
       emojisRetires++;
       return false;
     }
