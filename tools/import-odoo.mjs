@@ -78,9 +78,21 @@ const CHROME = [
   'script', 'style', 'noscript', 'nav', 'header', 'footer', 'aside', 'iframe',
   'button', 'form', 'svg',
   '.o_knowledge_header', '.o_knowledge_toolbar', '.o_knowledge_comments_panel',
+  '.o_knowledge_sidebar_container',
   '.o_menu_systray', '.o_main_navbar', '.breadcrumb', '.o_control_panel',
-  '[role="navigation"]', '[role="toolbar"]', '[contenteditable="false"]',
+  '[role="navigation"]', '[role="toolbar"]',
 ];
+
+// NE JAMAIS ajouter [contenteditable="false"] a la liste ci-dessus. Odoo rend
+// un bloc de code sous la forme :
+//
+//   <pre data-language-id="json">
+//     <owl-root contenteditable="false">…le code…</owl-root>
+//   </pre>
+//
+// Le selecteur visait la barre laterale, mais il vidait aussi tous les blocs
+// de code : le <pre> survivait, sans son contenu. La barre laterale est
+// desormais ciblee par son propre nom de classe.
 
 /** Conteneurs probables d'un article Odoo Knowledge, du plus precis au moins. */
 const CANDIDATES = [
@@ -243,6 +255,25 @@ const turndown = new TurndownService({
 });
 turndown.use(gfm);
 
+// Blocs de code. turndown ne sait cloturer qu'un <pre><code>, alors qu'Odoo
+// emet un <pre> dont le contenu est enfoui sous des <span> de coloration
+// syntaxique. On prend donc le texte brut, et le langage depuis l'attribut.
+turndown.addRule('bloc-de-code-odoo', {
+  filter: (node) => node.nodeName === 'PRE',
+  replacement: (_content, node) => {
+    const langue = (node.getAttribute('data-language-id') || '').toLowerCase();
+
+    // Odoo encode les retours a la ligne par des <br>, que textContent ignore :
+    // sans cette conversion, un JSON indente ressort aplati sur une ligne.
+    const tampon = doc.createElement('div');
+    tampon.innerHTML = node.innerHTML.replace(/<br\s*\/?>/gi, '\n');
+
+    const code = tampon.textContent.replace(/^\n+/, '').replace(/\s+$/, '');
+    if (!code.trim()) return '';
+    return `\n\n\`\`\`${langue === 'plaintext' ? '' : langue}\n${code}\n\`\`\`\n\n`;
+  },
+});
+
 // Les liens Odoo internes ne veulent plus rien dire une fois sortis d'Odoo.
 turndown.addRule('liens-odoo', {
   filter: (node) =>
@@ -258,6 +289,24 @@ markdown = markdown
   .replace(/\n{3,}/g, '\n\n')
   .replace(/[ \t]+$/gm, '')
   .trim();
+
+// Odoo parseme ses articles de pictogrammes decoratifs, seuls sur leur ligne.
+// Le tri se fait ligne par ligne : une expression multiligne sur le document
+// entier se prend les pieds dans le tapis et recolle l'emoji a la ligne
+// precedente — c'est arrive.
+const EMOJI_SEUL = /^[\s\u{1F000}-\u{1FAFF}\u{2190}-\u{2BFF}\u{FE0F}\u{200D}\u{20E3}]+$/u;
+let emojisRetires = 0;
+markdown = markdown
+  .split('\n')
+  .filter((l) => {
+    if (l.trim() !== '' && EMOJI_SEUL.test(l)) {
+      emojisRetires++;
+      return false;
+    }
+    return true;
+  })
+  .join('\n')
+  .replace(/\n{3,}/g, '\n\n');
 
 /* ------------------------------------------------------------------ */
 /* Ecriture                                                            */
@@ -293,6 +342,9 @@ console.log(`  Titre  ${title}`);
 console.log(`  Images ${copied.length} copiee(s)${copied.length ? ' : ' + copied.join(', ') : ''}`);
 if (demoted) {
   console.log(`  Titres ${demoted} niveau(x) redescendu(s) d'un cran (l'article decoupait en <h1>)`);
+}
+if (emojisRetires) {
+  console.log(`  Emojis ${emojisRetires} pictogramme(s) decoratif(s) isole(s) retire(s)`);
 }
 
 const todo = [];

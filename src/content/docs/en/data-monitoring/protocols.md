@@ -2,7 +2,7 @@
 title: Overview
 description: Acquisition protocols supported by HAI-OS and their maturity level.
 sidebar:
-  order: 1
+  order: 2
 ---
 
 Six inputs, all configurable from the same web interface, with no intermediate

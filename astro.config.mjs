@@ -73,10 +73,10 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'network' } }],
         },
         {
-          label: 'Protocoles',
-          translations: { en: 'Protocols' },
+          label: 'Données & supervision',
+          translations: { en: 'Data & monitoring' },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'protocols' } }],
+          items: [{ autogenerate: { directory: 'data-monitoring' } }],
         },
         {
           label: 'Matériel',

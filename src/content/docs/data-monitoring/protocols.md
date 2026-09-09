@@ -2,7 +2,7 @@
 title: Vue d'ensemble
 description: Les protocoles d'acquisition supportés par HAI-OS et leur niveau de maturité.
 sidebar:
-  order: 1
+  order: 2
 ---
 
 Six entrées configurables depuis la même interface web, sans passerelle

@@ -4,6 +4,7 @@ description: "Transformer le HAI-P200-4G en point d'accès Wi-Fi : création du 
 sidebar:
   order: 2
 ---
+
 Bienvenue dans ce guide de prise en main du point d'accès Wi-Fi. Cette fonctionnalité transforme votre contrôleur HAI-P200-4G en borne Wi-Fi : vos téléphones, tablettes et PC portables s'y connectent directement, accèdent à l'interface du contrôleur, et peuvent même bénéficier de sa connexion Internet 4G ou Ethernet. C'est l'outil idéal pour intervenir sur une installation sans réseau, ou pour dépanner une machine isolée.
 
 ## Prérequis
@@ -35,8 +36,6 @@ Le basculement est automatique dans les deux sens : activer le point d'accès d�
 Rendez-vous dans le menu **Connection > WiFi**, puis basculez le sélecteur en haut de page de **Client** vers **Hotspot**. La carte **WiFi Access Point (Hotspot)** apparaît.
 
 ![Écran WiFi de HAI-OS basculé en mode Hotspot : nom du réseau, protection WPA2, source Internet et activation du point d'accès](./wifi-hotspot-1.png)
-
-
 
 Renseignez les champs dans l'ordre :
 
@@ -76,8 +75,6 @@ Cliquez sur un QR code pour l'agrandir — pratique pour le faire scanner par un
 Manuellement, connectez-vous au réseau Wi-Fi puis ouvrez http://10.42.0.1 dans un navigateur. Cette adresse est celle du contrôleur sur son propre réseau, et elle ne change jamais.
 
 ![Point d'accès actif : SSID, adresse de passerelle 10.42.0.1, liste des appareils connectés et deux QR codes, pour se connecter et pour ouvrir l'interface](./wifi-hotspot-2.png)
-
-
 
 ## Le portail captif
 
