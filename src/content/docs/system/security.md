@@ -137,34 +137,34 @@ La carte **SSH access monitoring** liste les dernières connexions SSH ouverte
 
 ### Le bouton RESET ALL RULES
 
-En haut de la page, ce bouton applique une politique de sécurité stricte après une simple confirmation :
+En haut de la page, ce bouton rétablit le jeu de règles de base après une simple confirmation.
 
-- **IPv6** bloqué en entrée et en transit ;
-- **IPv4** en politique _DROP_ : tout ce qui n'est pas explicitement autorisé est rejeté ;
-- seuls les **ports 80, 443, 53 et 67** restent ouverts ;
-- le **partage DHCP/DNS** est désactivé.
-
-Ces quatre ports ne sont pas un reliquat : ce sont ceux sans lesquels la remise
-à plat vous couperait du boîtier.
-
-- **443 et 80** — l'interface web d'administration. Les fermer reviendrait à
-  verrouiller la porte de la page depuis laquelle vous venez de cliquer. Le 80
-  sert en outre au [portail captif](/network/wifi-hotspot/) : un appareil qui
-  rejoint un Wi-Fi interroge une adresse en HTTP simple pour savoir s'il doit
-  afficher une page de connexion. En HTTPS seul, il ne verrait rien.
-- **67 et 53** — la distribution d'adresses (DHCP) et la résolution de noms
-  (DNS) du [point d'accès Wi-Fi](/network/wifi-hotspot/). Le premier attribue
-  leurs adresses aux appareils qui se connectent, le second répond à leurs
-  requêtes et permet au portail captif de les rediriger. Fermés, plus aucun
-  téléphone ne pourrait rejoindre le réseau du contrôleur.
-
-Aucun des quatre n'expose vos équipements : ils desservent le boîtier lui-même
-et les appareils qu'il héberge sur son propre réseau. Vos automates restent
-derrière la politique _DROP_ tant que vous n'ouvrez pas explicitement un port
-pour eux.
+- **IPv6** est désactivé au niveau du noyau : plus rien ne passe, ni en entrée ni en transit.
+- **IPv4** repasse en politique _DROP_ : tout ce qui n'est pas explicitement autorisé est rejeté.
+- Les ports **80 et 443** restent joignables depuis vos réseaux locaux et via Tailscale, **jamais depuis le lien 4G**.
+- Les ports **53 et 67** restent ouverts sur les interfaces locales, eth1 et le point d'accès Wi-Fi.
+- Le ping, le trafic arrivant par Tailscale et les réponses aux connexions que le boîtier a lui-même ouvertes continuent de passer.
 
 :::caution
 **Toutes vos règles personnalisées sont supprimées.** Réservez ce bouton au cas où la configuration du pare-feu est devenue incompréhensible et où vous souhaitez repartir d'une base saine.
+:::
+
+Ces ouvertures ne sont pas un reliquat : ce sont celles sans lesquelles la remise
+à plat vous couperait du boîtier.
+
+- **443 et 80** — l'interface web d'administration. Les fermer reviendrait à verrouiller la porte de la page depuis laquelle vous venez de cliquer. Le 80 sert en outre au [portail captif](/network/wifi-hotspot/) : un appareil qui rejoint un Wi-Fi interroge une adresse en HTTP simple pour savoir s'il doit afficher une page de connexion. En HTTPS seul, il ne verrait rien.
+- **67 et 53** — la distribution d'adresses et la résolution de noms pour les appareils que le boîtier héberge sur ses réseaux locaux. Fermés, plus aucun téléphone ne pourrait rejoindre le [point d'accès Wi-Fi](/network/wifi-hotspot/) : ni recevoir d'adresse, ni être redirigé vers le portail.
+
+Ces règles ne dépendent pas de l'état du partage de connexion : elles sont posées à chaque remise à plat, sans condition.
+
+:::note[Le DNS d'eth1 part chez Google]
+Une règle de traduction d'adresses, posée au même moment, redirige vers **8.8.8.8** toute requête DNS venant du port eth1. Le port 53 y est donc bien ouvert au sens du pare-feu, mais c'est Google qui répond, pas le boîtier. À savoir si votre politique interne impose un résolveur maîtrisé.
+:::
+
+Aucune de ces ouvertures n'expose vos équipements : elles desservent le boîtier et les appareils qu'il héberge sur ses propres réseaux. Vos automates restent derrière la politique _DROP_ tant que vous n'ouvrez pas explicitement un port pour eux.
+
+:::caution[La boîte de dialogue annonce une désactivation qui n'a pas lieu]
+Avant de confirmer, l'application affiche « DHCP/DNS Sharing disabled ». C'est inexact : **la remise à plat ne désactive pas le partage de connexion, elle le réapplique** tel qu'il est configuré — immédiatement pour le point d'accès Wi-Fi, une vingtaine de secondes plus tard pour le partage filaire. Cette mention est un reste d'un comportement antérieur.
 :::
 
 ![](./security-7.png)
