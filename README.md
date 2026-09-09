@@ -292,6 +292,30 @@ Le script s'occupe de :
 
 Il termine par une liste de ce qui reste à faire, propre à l'article.
 
+### Vérifier qu'il ne manque rien
+
+Une conversion peut perdre du contenu sans le dire — c'est arrivé pour des
+blocs de code et pour une vidéo. Deux outils comparent la source à la page
+produite :
+
+```bash
+node tools/audit-import.mjs
+```
+
+Il parcourt toutes les paires source / page déclarées en tête du fichier et
+signale les blocs de texte et les images qui n'ont pas suivi. Le tableau des
+paires est à compléter quand vous ajoutez un article.
+
+```bash
+node tools/audit-images.mjs "C:/Users/moi/Downloads/article.html" src/content/docs/section/page.md
+```
+
+Il détaille, image par image, ce que contient l'article et ce qui a été repris —
+utile quand le premier signale un écart.
+
+Deux faux positifs connus : le `<h1>` d'origine, retiré volontairement, et un
+titre que vous auriez renommé.
+
 ### 3. Reprendre à la main
 
 Le script ne devine pas tout :

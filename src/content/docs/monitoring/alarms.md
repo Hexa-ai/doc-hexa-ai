@@ -50,7 +50,9 @@ Pour vous aider à naviguer parmi vos données, surtout lors d'épisodes critiqu
 
 - **Filtres par criticité** : Cochez ou décochez les cases **Error** (Rouge), **Warning** (Orange) et **Info** (Bleu) pour masquer les événements qui ne vous intéressent pas dans l'immédiat.
 
+:::tip
 **Information visuelle** : Dans le tableau, les lignes sont entièrement colorées en fonction de leur niveau de criticité pour attirer votre attention sur les défauts "Error" en priorité.
+:::
 
 ## L'Analyse de Cause Racine (RCA) intégrée
 

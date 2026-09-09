@@ -56,7 +56,9 @@ Par défaut, le Data-Plug enregistre (historise) les données en continu dans sa
 
     - **Action** : Réactive l'enregistrement des données en base de données.
 
+:::caution
 Cet état est persistant : il survit à un redémarrage du contrôleur. Si vous suspendez l'historisation pour une maintenance, n'oubliez pas de la réactiver — un reboot ne la rétablira pas.
+:::
 
 ## 3. Communication SMS (Envoi & Réception)
 
@@ -160,7 +162,9 @@ JSON
 }
 ```
 
+:::tip
 Les tailles used, total et free sont exprimées en octets. La clé "external" renverra null si aucun support de stockage secondaire monté et valide n'est détecté.
+:::
 
 ## 6. Connaître la position du contrôleur
 
@@ -184,6 +188,8 @@ Le contrôleur estime sa position géographique à partir des informations du r�
 - **resolved\_at** : date et heure de la résolution, dans le fuseau local du contrôleur.
 - **provider** : le service de géolocalisation interrogé.
 
+:::caution
 Cette position est déduite du réseau mobile, pas d'un GPS : comptez une précision de l'ordre de la centaine de mètres à plusieurs kilomètres selon la densité du réseau. Elle sert à localiser une installation, pas à suivre un véhicule.
+:::
 
 Si la fonction de géolocalisation est désactivée, le contrôleur efface le message retained et ne publie plus rien.

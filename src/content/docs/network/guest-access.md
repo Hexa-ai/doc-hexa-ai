@@ -37,7 +37,9 @@ Sous le titre **Visible pages**, cochez les pages que vous souhaitez exposer aux
 
 Vous pouvez n'en activer qu'une seule. Par exemple, en ne cochant que **Alarms**, l'invité n'aura accès qu'à la supervision des alarmes.
 
+:::tip
 **Astuce** : chaque case est enregistrée immédiatement, il n'y a pas de bouton de sauvegarde à cliquer pour cette liste.
+:::
 
 ## Ajout de liens personnalisés
 
@@ -61,7 +63,9 @@ Les liens déjà créés apparaissent au-dessus sous forme de volets dépliables
 
 ![](./guest-access-3.png)
 
+:::caution
 **À savoir sur le mode « Inside the app »** : certains sites web refusent techniquement d'être affichés à l'intérieur d'une autre page. Si votre lien intégré reste vide, basculez-le en mode **New tab**.
+:::
 
 ## Se connecter en tant qu'invité
 
@@ -90,4 +94,6 @@ Les pages exposées restent pleinement fonctionnelles en consultation :
 - Sur le **Data-Explorer** : le tracé des courbes, les réglages d'affichage et l'export CSV restent accessibles, mais l'invité **ne peut pas enregistrer de configuration**.
 - Sur **PDF Reports** : la consultation et le téléchargement des rapports sont possibles, mais l'invité **ne peut pas supprimer** de rapport.
 
+:::caution
 **Important** : l'Accès Invité protège la configuration du contrôleur, mais il n'authentifie personne. Toute personne ayant accès au réseau du contrôleur pourra consulter ces pages et exporter ces données. Il n'y a pas d'expiration automatique de session invité. N'activez cette fonction que sur un réseau de confiance.
+:::

@@ -5,6 +5,7 @@ sidebar:
   order: 2
 ---
 
+
 Bienvenue dans ce guide de prise en main du point d'accès Wi-Fi. Cette fonctionnalité transforme votre contrôleur HAI-P200-4G en borne Wi-Fi : vos téléphones, tablettes et PC portables s'y connectent directement, accèdent à l'interface du contrôleur, et peuvent même bénéficier de sa connexion Internet 4G ou Ethernet. C'est l'outil idéal pour intervenir sur une installation sans réseau, ou pour dépanner une machine isolée.
 
 ## Prérequis
@@ -85,11 +86,13 @@ Le comportement dépend de la source Internet choisie :
 - **Avec une source Internet** (Ethernet ou 4G) : l'utilisateur voit une page d'accueil lui indiquant qu'il est connecté, avec l'adresse du contrôleur, un bouton pour ouvrir l'interface dans son vrai navigateur, et un bouton **Continue to the internet** qui débloque son accès Internet. C'est le fonctionnement classique du « clic pour accepter ».
 - **Sans source Internet** (None) : le portail devient un réseau fermé permanent. Toute navigation ramène sur la page du contrôleur, sans possibilité de sortir. Idéal pour une borne de consultation.
 
+:::caution
 Trois points à connaître sur le portail captif :
 
 - La fenêtre qui s'ouvre automatiquement sur les téléphones est un mini-navigateur limité. Il affichera un **avertissement de certificat** en accédant au contrôleur en HTTPS : c'est normal, le contrôleur utilise un certificat auto-signé. Utilisez le bouton **Open in my browser** pour basculer sur le navigateur complet du téléphone.
 - L'autorisation d'accès Internet accordée par le bouton **Continue to the internet** n'est pas permanente : après une réinitialisation interne du pare-feu, l'utilisateur devra cliquer à nouveau. Sans conséquence sur la connexion Wi-Fi elle-même.
 - Certains appareils n'afficheront pas le portail si la source internet sélectionnée est sur None.
+:::
 
 Si vous n'activez pas le portail captif, rien ne s'ouvre automatiquement : les utilisateurs saisissent http://10.42.0.1 ou scannent le QR code.
 

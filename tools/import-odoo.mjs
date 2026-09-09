@@ -282,6 +282,29 @@ turndown.addRule('bloc-de-code-odoo', {
   },
 });
 
+// Encadres d'Odoo (« bannieres »). Ils portent une icone dans un conteneur et
+// leur texte dans un autre. Sans regle dediee, l'icone ressortait en emoji
+// isole et le texte se fondait dans les paragraphes voisins : l'encadre
+// disparaissait en tant que tel, alors que c'est justement sa mise a l'ecart
+// qui porte le sens. Ils deviennent des encadres Starlight.
+turndown.addRule('encadre-odoo', {
+  filter: (node) =>
+    node.nodeType === 1 &&
+    (node.getAttribute('class') || '').includes('o_editor_banner'),
+  replacement: (_content, node) => {
+    const classes = node.getAttribute('class') || '';
+    const type = classes.includes('alert-danger')
+      ? 'danger'
+      : classes.includes('alert-warning')
+        ? 'caution'
+        : 'tip'; // alert-info et alert-success
+    const corps = node.querySelector('.o_editor_banner_content');
+    const texte = corps ? turndown.turndown(corps.innerHTML).trim() : '';
+    if (!texte) return '';
+    return `\n\n:::${type}\n${texte}\n:::\n\n`;
+  },
+});
+
 // Video : l'iframe est retire avec le reste du mobilier, la video disparaissait
 // donc sans laisser de trace. On la remet sous forme de lien — un lien ne
 // depose pas de traceur tiers sur la documentation, contrairement a un embed.

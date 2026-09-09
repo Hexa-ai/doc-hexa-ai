@@ -82,4 +82,6 @@ Une fois votre configuration prête :
 
 3.  Le contrôleur va immédiatement générer un "Status" et un "Daily Report" et tenter de les envoyer en POST. Des notifications visuelles en bas de l'écran vous confirmeront la réussite de l'opération ou vous indiqueront si une erreur est survenue.
 
+:::caution
 Si vous utilisez le mode automatique myHexa, il peut arriver qu'une bannière rouge "Provisioning error" apparaisse. Cela signifie généralement que l'appareil est déjà enregistré côté serveur mais que le jeton local a été perdu. Dans ce cas, contactez le support technique.
+:::

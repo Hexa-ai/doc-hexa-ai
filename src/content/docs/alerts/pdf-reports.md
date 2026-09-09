@@ -30,7 +30,9 @@ En haut de la page, un panneau de configuration vous permet de basculer instanta
 
 - **Batch (Lot)** : Les rapports spécifiques générés à la fin de chaque cycle de production (liés à la page _Batches_).
 
+:::tip
 Si une catégorie n'a encore généré aucun rapport, son bouton n'apparaîtra pas
+:::
 
 ![](./pdf-reports-1.png)
 

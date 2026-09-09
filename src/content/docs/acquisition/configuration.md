@@ -112,11 +112,13 @@ Dès que la politique de sécurité n'est plus None, le bouton **Generate client
 <details>
 <summary>Astuce : Trouver facilement vos paramètres OPC-UA avec UaExpert</summary>
 
+:::tip
 **Astuce : Trouver facilement vos paramètres OPC-UA avec UaExpert**
 
 Si vous ne connaissez pas par cœur l'adressage de vos variables, il est fortement recommandé d'utiliser un client OPC-UA gratuit tel que **UaExpert**. En vous connectant à votre serveur via ce logiciel, naviguez dans l'arborescence (_Address Space_) jusqu'à votre variable. Dans le panneau des propriétés à droite (_Attributes_), dépliez la ligne **NodeId**. Vous y retrouverez très exactement les trois valeurs attendues par le Data-Plug : le NamespaceIndex, l'IdentifierType (et sa valeur associée), ainsi que l'Identifier complet à copier-coller.
 
 [Télécharger UaExpert](https://www.unified-automation.com/downloads/opc-ua-clients.html)
+:::
 
 ![](./configuration-3.png)
 
@@ -169,7 +171,9 @@ Cas d'une variable adressée en %M :
 
 Le protocole **BACnet/IP** permet de collecter les données de vos équipements de gestion technique du bâtiment (CVC, éclairage, comptage).
 
+:::caution
 Contrairement aux autres protocoles, BACnet/IP n'est pas géré par Telegraf mais par un collecteur dédié intégré à HAI-OS. Cela ne change rien à votre utilisation, mais explique que ses variables n'apparaissent pas dans le TOML en mode Éditeur.
+:::
 
 ###### ![](./configuration-8.png)
 
@@ -225,7 +229,9 @@ Un sélecteur **Transport** propose de basculer de **BACnet/IP** vers **BACnet/S
 
 Le protocole NMEA 0183 permet de collecter les trames émises par des équipements de navigation et de mesure marine (GPS, sondeur, girouette-anémomètre, centrale de navigation). 
 
+:::caution
 Comme BACnet, il est traité par un lecteur intégré à HAI-OS et non par Telegraf : ses variables n'apparaissent donc pas dans le TOML en mode Éditeur.
+:::
 
 ##### ![](./configuration-12.png)
 
@@ -389,7 +395,9 @@ Pour vous faire gagner du temps lors de la configuration de nombreuses variables
 
 ### Export des données historisées (onglet Data Export)
 
+:::caution
 Ne confondez pas cet export avec l'Import/Export CSV décrit plus haut : celui-ci exporte **vos mesures**, l'autre exporte **votre configuration de variables**.
+:::
 
 L'onglet **Data Export** vous permet de télécharger les données enregistrées sur une période de votre choix :
 
@@ -397,7 +405,9 @@ L'onglet **Data Export** vous permet de télécharger les données enregistrées
 - **Favorites only** : limite l'export à vos variables favorites (⭐).
 - **Export CSV** : génère et télécharge le fichier.
 
+:::tip
 Cet export inclut les données encore en tampon, non encore écrites en base : vous récupérez donc bien les mesures les plus récentes, sans attendre le prochain commit.
+:::
 
 Si aucune donnée n'existe sur la période demandée, un message vous en informe et aucun fichier n'est téléchargé.
 
@@ -426,7 +436,9 @@ En haut de la page Data-Plug, le bandeau **Data-plug Diagnostics** vous donne en
 - 🗃️ **DB Size** : taille du fichier de base de données.
 - 🧹 **Retention** : durée de conservation des données configurée, en jours.
 
+:::tip
 Un point important : les données les plus récentes se trouvent d'abord dans le tampon mémoire, et ne sont écrites en base qu'à chaque _commit_. Si vous cherchez une mesure de la dernière minute et qu'elle n'apparaît pas encore, regardez le temps restant avant le prochain commit.
+:::
 
 ![](./configuration-24.png)
 

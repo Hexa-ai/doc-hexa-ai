@@ -34,11 +34,15 @@ Pour ajouter ce module à votre environnement Node-RED, c'est très simple :
 
 6.  Cliquez sur le bouton **Install** à côté du résultat.
 
+:::tip
 **Ce que devient le module ensuite.** Il est enregistré dans les données de l'add-on Node-RED : changer la version de Node-RED depuis sa carte le conserve, vos flux et vos modules sont retrouvés au redémarrage. En revanche, désinstaller l'add-on **en cochant la suppression des données** efface le module comme le reste — il faudra le réinstaller.
+:::
 
 ![](./node-red-1.png)
 
+:::tip
 **Astuce :** Une fois installé, vous verrez apparaître un nouveau nœud jaune nommé DataPlug History (avec une petite icône de base de données) dans le panneau de gauche de Node-RED, sous la catégorie _Analysis_.
+:::
 
 ## À quoi sert le nœud DataPlug History ?
 
@@ -77,10 +81,12 @@ Si vous souhaitez que Node-RED décide lui-même de la période à interroger (p
 
 - msg.payload.to : La date de fin (en millisecondes).
 
+:::tip
 **Deux précisions :**
 
 - Envoyer msg.payload.from et msg.payload.to l'emporte sur la période configurée, quelle qu'elle soit — il n'est pas obligatoire de choisir « Use input message ». En revanche, choisir « Use input message » sans fournir les deux dates fait retomber le nœud sur **la dernière heure**, sans avertissement.
 - Le champ _Channels_ et msg.payload.channels s'additionnent : les variables des deux sources sont interrogées. Pour piloter entièrement la liste depuis le flux, laissez le champ _Channels_ vide.
+:::
 
 ### Comment lire min, max et avg
 

@@ -25,7 +25,9 @@ Quatre situations, quatre réponses différentes. Ce tableau vous évitera d'eff
 | Le contrôleur n'est plus raccordé à rien et je dois quand même l'effacer | **Factory reset depuis l'écran** (§4) |
 | Je remplace un contrôleur, ou je veux dupliquer une configuration sur un second site | **Export puis Import** (§5 et §6) |
 
+:::tip
 Avant toute remise à zéro, pensez à faire un **export de configuration** (§5). C'est ce qui vous permettra de remonter vos réglages en quelques minutes plutôt que de tout resaisir.
+:::
 
 ## 2. Réinitialiser les réglages de l'application
 
@@ -53,7 +55,9 @@ Rendez-vous dans le menu **System > Factory Reset**. La première carte, **Res
 2.  Cliquez sur **Reset settings & reboot**.
 3.  Le contrôleur redémarre. L'interface est indisponible quelques minutes.
 
+:::tip
 **Pourquoi un redémarrage ?** L'effacement a lieu très tôt au démarrage, à un moment où plus aucun programme ne tient les bases de données ni la carte de stockage ouvertes. C'est ce qui garantit qu'il est complet.
+:::
 
 ![](./reset-1.png)
 
@@ -72,7 +76,9 @@ La seconde carte, **Factory reset**, efface tout ce que contient le contrôleur
 - Le mot de passe administrateur, qui revient à sa valeur d'usine.
 - Les clés SSH autorisées, afin qu'aucun accès antérieur ne survive à l'effacement.
 
+:::tip
 **La version logicielle n'est pas remise en arrière.** Une remise à zéro efface vos données et vos réglages ; elle ne réinstalle pas une version ancienne, et ne réintroduit donc pas de failles déjà corrigées.
+:::
 
 **La marche à suivre :**
 
@@ -82,13 +88,17 @@ La seconde carte, **Factory reset**, efface tout ce que contient le contrôleur
 4.  Le contrôleur redémarre et s'efface. Comptez quelques minutes.
 5.  Au retour, il vous demande de **choisir un nouveau mot de passe administrateur** avant de donner accès à quoi que ce soit.
 
+:::caution
 **Cette opération est irréversible**, et le contrôleur est injoignable à distance pendant qu'il redémarre. **Ne coupez pas l'alimentation** pendant l'effacement.
+:::
 
 ![](./reset-2.png)
 
 Après le redémarrage, un message vous confirme que l'opération s'est bien déroulée. Si une étape a échoué, le message vous **nomme laquelle** : une remise à zéro annoncée comme un échec global ne vous dirait pas si vos données ont réellement été effacées.
 
+:::tip
 Après une remise à zéro complète, le pare-feu revient à sa configuration de livraison et l'accès SSH est fermé. Vous repartez donc d'une base saine, y compris si des règles avaient été ajoutées entre-temps.
+:::
 
 ## 4. Effacer un contrôleur sans réseau
 
@@ -126,7 +136,9 @@ La touche **F** ouvre l'écran d'effacement. Celui-ci annonce d'abord la march
 2.  Le contrôleur redémarre et s'efface.
 3.  Il vous demande ensuite de choisir un nouveau mot de passe administrateur.
 
+:::caution
 **Aucun mot de passe n'est demandé sur cet écran.** C'est volontaire : un boîtier coupé de tout doit rester effaçable, y compris par quelqu'un qui n'en connaît pas les identifiants. En contrepartie, l'accès physique au contrôleur doit être considéré comme un accès privilégié, et **toute utilisation de cet écran est enregistrée** dans le journal d'audit (voir le guide _🛡️ Sécurité (Mot de passe, Pare-feu et Journaux)_).
+:::
 
 ## 5. Exporter la configuration
 
@@ -162,9 +174,13 @@ Cette séparation est volontaire : ce qui décrit _comment un contrôleur se ra
 2.  Cliquez sur **Export & download**.
 3.  Le fichier .hai est téléchargé sur votre poste, et un message vous indique le nombre de fichiers de configuration exportés.
 
+:::caution
 **Ce mot de passe est la seule chose qui protège ce fichier.** Il n'est stocké nulle part et ne peut pas être récupéré — y compris par nous. Si vous le perdez, l'archive est définitivement inutilisable. Conservez-le dans votre gestionnaire de mots de passe, avec le fichier.
+:::
 
+:::tip
 Le fichier .hai ne s'ouvre pas tout seul. Il se lit uniquement en l'important sur un contrôleur HAI, où le mot de passe est redemandé.
+:::
 
 ![](./reset-3.png)
 
@@ -179,13 +195,19 @@ La carte **Import**, sur la même page, restaure une configuration exportée de
 3.  Une fenêtre confirme l'import et vous indique combien de fichiers ont été restaurés, et depuis quel contrôleur ils proviennent.
 4.  Cliquez sur **Restart now** pour appliquer la configuration, ou sur **Later** si vous préférez choisir le moment.
 
+:::caution
 **La configuration actuelle est écrasée.** Une copie de chaque fichier remplacé est cependant conservée à côté de l'original, avec le suffixe .pre-import.
+:::
 
+:::tip
 **Votre réseau n'est jamais touché.** Le contrôleur qui reçoit l'import conserve ses adresses, son WiFi, son point d'accès, sa liaison mobile, son partage de connexion, ses redirections de ports et son nom — y compris si l'archive a été fabriquée avant cette version.
+:::
 
 ![](./reset-4.png)
 
+:::tip
 **Versions d'add-ons :** si l'archive demande une version d'add-on que ce contrôleur ne propose pas, elle est simplement ignorée. L'import ne se bloque pas pour autant.
+:::
 
 ![](./reset-5.png)
 
@@ -201,7 +223,9 @@ C'est l'usage le plus fréquent des deux pages ensemble.
 6.  Réinstallez les **add-ons** dont vous avez besoin depuis le menu **Add-ons**. Leurs données ne sont pas dans l'archive.
 7.  **Sur l'ancien contrôleur**, avant de vous en séparer : effectuez une **remise à zéro complète** (§3), ou l'effacement depuis l'écran (§4) s'il est déjà débranché.
 
+:::caution
 **Note importante :** les mesures enregistrées ne sont pas transférées par cette procédure. Si l'historique du site doit être conservé, exportez vos données depuis le Data-Explorer, ou récupérez la carte microSD de l'ancien contrôleur avant de l'effacer.
+:::
 
 ## 8. Points d'attention
 

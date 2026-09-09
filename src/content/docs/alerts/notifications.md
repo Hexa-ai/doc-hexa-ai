@@ -30,7 +30,9 @@ Cliquez sur le bouton **SMTP Configuration** pour accéder aux réglages :
 
 ![](./notifications-1.png)
 
+:::tip
 **Astuce** : Utilisez le bouton **Test Connection** pour vérifier la connexion avec le serveur de mails et valider vos paramètres avant de quitter la page.
+:::
 
 ## Gestion des Destinataires
 
@@ -48,7 +50,9 @@ Pour chaque contact, vous pouvez configurer :
 
 ![](./notifications-2.png)
 
+:::tip
 **Gain de temps** : Tout comme pour le Data-Plug, vous pouvez utiliser les boutons **Export CSV** et **Import CSV** pour gérer une longue liste de destinataires directement depuis Excel.
+:::
 
 ## Fonctionnement des Notifications d'Alarmes
 
