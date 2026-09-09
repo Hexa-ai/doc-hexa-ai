@@ -45,74 +45,70 @@ L'historique des données stockées localement par le Data-Plug est exploitable 
 - **Node-RED (traitements)** — disponible depuis le menu Add-ons, Node-RED permet des traitements plus poussés. Le module Hexa-AI @hexa-ai/node-red-contrib-hexa-ai-edge ajoute un nœud _DataPlug History_ qui interroge la base SQLite du Data-Plug et renvoie des statistiques prêtes à l'emploi (moyennes, min, max, différences de compteurs), enrichies des unités et descriptions déclarées dans le Data-Plug.
 - **Grafana** est également proposé dans les Add-ons, mais il est livré tel quel : aucun tableau de bord ni source de données n'est pré-configuré, et il n'a pas accès à la base du Data-Plug. Il s'adresse aux utilisateurs qui alimentent eux-mêmes une base tierce (par exemple l'add-on PostgreSQL, via Node-RED). Ses identifiants — admin et un mot de passe propre à chaque boîtier — se lisent sur la carte de l'add-on.
 
-## 2. Relais vers le Cloud (Forward) : Connecteur MQTT
+## 2. Relais vers le Cloud (Forward) : connecteur de sortie MQTT
 
-Le Data-Plug agit comme une passerelle (Gateway) capable de pousser les données vers un broker MQTT externe.
+Le Data-Plug agit comme une passerelle (Gateway) capable de pousser les données historisées vers un broker MQTT externe. Dans la section **Cloud Gateway Configuration**, vous choisissez d'abord le format de sortie, puis vous renseignez les paramètres de connexion.
 
-Dans la section **Configuration du Cloud Gateway**, vous configurez ce connecteur de sortie :
+**Principe Store & Forward :** chaque valeur historisée est marquée « à transmettre ». Tant que le broker est joignable, les valeurs partent au fil de l'eau, environ une fois par seconde. En cas de coupure réseau, elles restent en attente dans la base locale et sont transmises dans l'ordre chronologique dès que la connexion revient. Aucune valeur n'est perdue, dans la limite de la durée de rétention. Le compteur **Unforwarded**, en haut de la page du Data-Plug, indique le nombre de valeurs en attente d'envoi.
 
-- **Compatibilité** : Les données sont transmises via le protocole standard MQTT.
+### Deux formats de sortie
 
-- **Paramètres de connexion** : Vous pouvez spécifier l'adresse de l'hôte, le port, et les identifiants d'authentification (Client ID, User, Password).
+Le premier champ, **Driver**, détermine le format des messages et les champs affichés en dessous :
 
-- **Identification** : Les champs _Project ID_, _Edge Node ID_ et _Device ID_ permettent de structurer les topics MQTT et d'identifier la source des données.
+- **MQTT (Scorp-IO JSON Format)** : format attendu par la plateforme Scorp-IO. Les valeurs sont regroupées par lots dans un message unique, dont le topic est construit à partir de trois identifiants (voir section 3).
+- **MQTT (Reflex-report JSON Format)** : format attendu par Reflex-report. Chaque variable est publiée sur son propre topic, sous un topic de base que vous choisissez (voir section 4).
+- **None** : aucun relais. Le Data-Plug se contente d'historiser localement.
 
-- **Sécurité** : L'option **TLS** est disponible pour chiffrer les échanges.
+### Paramètres de connexion communs
 
-## 3. Structure des Topics MQTT
+Quel que soit le format choisi :
 
-Les topics de publication sont générés automatiquement en suivant une hiérarchie logique basée sur les identifiants configurés dans le Data-Plug :
+- **Host** et **Port** : adresse du broker MQTT. Le port par défaut est 1883 (généralement 8883 avec TLS).
+- **Client ID** : identifiant présenté au broker. Chaque boîtier doit utiliser un Client ID distinct, sinon le broker déconnecte l'un au profit de l'autre.
+- **Username** et **Password** : identifiants d'authentification. Ils ne sont utilisés que si les deux champs sont renseignés.
+- **Use TLS** : chiffre les échanges avec le broker. Activé par défaut. Le certificat du broker doit être émis par une autorité de certification reconnue ; un certificat auto-signé n'est pas accepté.
 
-mqtts/{PROJECT\_ID}/{TYPE\_MESSAGE}/{EDGE\_NODE\_ID}/{DEVICE\_ID}
+Cliquez sur **Save** pour appliquer : le connecteur se reconnecte immédiatement avec les nouveaux paramètres, sans redémarrage. L'état de la connexion est visible en haut de la page du Data-Plug.
 
-- **PROJECT\_ID** : Identifiant du projet.
+## 3. Format Scorp-IO
 
-- **TYPE\_MESSAGE** : Type de la trame (DBIRTH pour la configuration, DDATA pour les données).
+### Identifiants
 
-- **EDGE\_NODE\_ID** : Identifiant du nœud (passerelle).
+Trois champs identifient la source des données auprès de Scorp-IO :
 
-- **DEVICE\_ID** : Identifiant de l'équipement final.
+- **Project ID** : identifiant du projet Scorp-IO.
+- **Edge Node ID** : identifiant du nœud, c'est-à-dire du boîtier passerelle.
+- **Device ID** : identifiant de l'équipement final dont proviennent les variables.
 
-## 4. Format des Messages (Payload JSON)
+Ces trois valeurs doivent correspondre à ce qui est déclaré côté Scorp-IO : ce sont elles qui composent les topics de publication.
 
-Le Data-Plug utilise deux types de messages principaux formatés en JSON.
+### Topics
 
-### A. Message de Configuration (DBIRTH)
-
-Ce message est envoyé au démarrage ou lors d'une reconnexion. Il déclare la liste et le type des variables disponibles. Il est envoyé avec le flag **Retained: True**.
-
-- **Topic** : mqtts/{PROJECT\_ID}/DBIRTH/{EDGE\_NODE\_ID}/{DEVICE\_ID}
-
-- **Exemple de format JSON** :
+Les topics sont générés automatiquement à partir des identifiants :
 
 ```
+mqtts/{PROJECT_ID}/{TYPE_MESSAGE}/{EDGE_NODE_ID}/{DEVICE_ID}
+```
+
+Le préfixe `mqtts` est fixe. `TYPE_MESSAGE` vaut `DBIRTH` pour le message de connexion et `DDATA` pour les données.
+
+### Message de connexion (DBIRTH)
+
+Publié à chaque connexion ou reconnexion au broker, avec le flag **Retained**, sur le topic `mqtts/{PROJECT_ID}/DBIRTH/{EDGE_NODE_ID}/{DEVICE_ID}`.
+
+Dans la version actuelle, ce message ne déclare pas la liste des variables : le tableau `metrics` est vide. Scorp-IO découvre les variables à réception des trames DDATA, qui portent chacune le nom et le type de chaque valeur.
+
+```json
 {
-  "metrics": [
-    {
-      "name": "pompe-1/etats",
-      "dataType": "Integer"
-    },
-    {
-      "name": "pompe-1/defaut",
-      "dataType": "Boolean"
-    }
-  ]
+  "metrics": []
 }
 ```
 
-- **Champs obligatoires** : name (Nom de la métrique) et dataType (Type de donnée : Integer, Short, Long, Double, Float, Boolean, String).
+### Message de données (DDATA)
 
-### B. Message de Données (DDATA)
+Publié en **QoS 1**, sans flag Retained, sur le topic `mqtts/{PROJECT_ID}/DDATA/{EDGE_NODE_ID}/{DEVICE_ID}`. Un message regroupe jusqu'à 1 000 valeurs. Les messages partent environ toutes les secondes tant qu'il reste des valeurs à transmettre.
 
-Ce message contient les valeurs télémétriques en temps réel ou historisées.
-
-- **Configuration** : QoS 1, Retain: False.
-
-- **Topic** : mqtts/{PROJECT\_ID}/DDATA/{EDGE\_NODE\_ID}/{DEVICE\_ID}
-
-- **Exemple de format JSON** :
-
-```
+```json
 {
   "metrics": [
     {
@@ -131,8 +127,37 @@ Ce message contient les valeurs télémétriques en temps réel ou historisées.
 }
 ```
 
-- **Champs supplémentaires** :
+- `name` : nom de la variable, tel que déclaré dans la configuration du Data-Plug.
+- `timestamp` : horodatage de la mesure, en millisecondes (Epoch).
+- `dataType` : type de la valeur, déduit automatiquement de la donnée reçue. Quatre types sont produits : `Integer`, `Float`, `Boolean` et `String`.
+- `value` : la valeur.
 
-    - timestamp (Long) : Horodatage en millisecondes (Epoch).
+## 4. Format Reflex-report
 
-    - value : La valeur effective de la donnée.
+### Paramètres
+
+- **Base topic** : préfixe commun à tous les topics de publication, choisi librement, par exemple `usine-A/ligne-2`. Un `/` en fin de base topic est toléré.
+- **QoS** : qualité de service MQTT des publications, 0, 1 ou 2. Valeur par défaut : 1.
+
+### Topics
+
+Chaque variable est publiée sur son propre topic, formé du base topic suivi du nom de la variable :
+
+```
+{BASE_TOPIC}/{NOM_VARIABLE}
+```
+
+Avec le base topic `usine-A/ligne-2` et la variable `pompe-1/etats`, le topic est `usine-A/ligne-2/pompe-1/etats`. Si le base topic est vide, le topic est le nom de la variable seul.
+
+### Format des messages
+
+Un message par valeur, sans flag Retained :
+
+```json
+{"ts": 1486144502122, "v": 0}
+```
+
+- `ts` : horodatage de la mesure, en millisecondes (Epoch).
+- `v` : la valeur. Les booléens sont transmis sous forme `0` ou `1`, les entiers et réels sous forme numérique, les chaînes telles quelles.
+
+Il n'y a pas de message de connexion en format Reflex-report.
