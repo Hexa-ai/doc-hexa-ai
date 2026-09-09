@@ -10,7 +10,7 @@ sidebar:
 | | |
 | --- | --- |
 | Module | Raspberry Pi CM4 quad-core, 4 GB RAM |
-| Storage | 32 GB soldered eMMC, optional 128 GB industrial micro-SD (historisation switches over automatically) |
+| Storage | 32 GB soldered eMMC, micro-SD slot for additional storage |
 | System | Debian 12 · HAI-OS, web administration interface |
 
 ## Connectivity
