@@ -167,6 +167,15 @@ const slug = flag('slug') ? slugify(flag('slug')) : slugify(title);
 const targetDir = path.resolve(target);
 fs.mkdirSync(targetDir, { recursive: true });
 
+// Verifie AVANT de copier quoi que ce soit : sinon un import refuse laisserait
+// derriere lui les images d'une page qu'il n'a pas ecrite.
+const outFile = path.join(targetDir, `${slug}.md`);
+if (fs.existsSync(outFile) && !has('force')) {
+  console.error(`\nExiste deja : ${path.relative(process.cwd(), outFile)}`);
+  console.error('Relancez avec --force pour ecraser.');
+  process.exit(1);
+}
+
 const sourceDir = path.dirname(path.resolve(source));
 const copied = [];
 const remote = [];
@@ -267,12 +276,6 @@ const frontmatter = [
   '',
 ].join('\n');
 
-const outFile = path.join(targetDir, `${slug}.md`);
-if (fs.existsSync(outFile) && !has('force')) {
-  console.error(`\nExiste deja : ${path.relative(process.cwd(), outFile)}`);
-  console.error('Relancez avec --force pour ecraser.');
-  process.exit(1);
-}
 fs.writeFileSync(outFile, frontmatter + markdown + '\n', 'utf8');
 
 /* ------------------------------------------------------------------ */

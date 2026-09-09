@@ -25,7 +25,7 @@ By default, the controller's **Ethernet 1 (eth1)** port is preconfigured with th
 
 4.  The gateway opens a configuration screen and asks you to set your administrator password.
 
-![HAI-OS login page, with the Username and Password fields and the Log in button](../../getting-started/quick-start-monitoring-1.png)
+![HAI-OS login page, with the Username and Password fields and the Log in button](../../../../assets/hai-os-login.png)
 
 ## Step 2: Network connectivity
 
@@ -67,7 +67,7 @@ This is the heart of the system. We are going to read a value from a PLC or a se
 
 5.  Click **Save and restart** at the top of the card. The acquisition engine restarts and immediately begins recording the tag.
 
-![Data-Plug screen: a Modbus input named device_1, with the NiveauBassin tag as FLOAT32-IEEE, category measure and unit m³](../../getting-started/quick-start-monitoring-2.png)
+![Data-Plug screen: a Modbus input named device_1, with the NiveauBassin tag as FLOAT32-IEEE, category measure and unit m³](../../getting-started/quick-start-monitoring-1.png)
 
 ## Step 4: Visualisation (Data-Explorer)
 
@@ -81,7 +81,7 @@ Now that the data is being collected, let's watch it live.
 
 4.  The chart updates in real time, every few seconds, tracing your sensor's evolution.
 
-![Data-Explorer in Live mode: the NiveauBassin curve, in m³, over a one-minute window](../../getting-started/quick-start-monitoring-3.png)
+![Data-Explorer in Live mode: the NiveauBassin curve, in m³, over a one-minute window](../../getting-started/quick-start-monitoring-2.png)
 
 ## Congratulations
 

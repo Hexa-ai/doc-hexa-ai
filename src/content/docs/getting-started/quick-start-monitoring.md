@@ -25,7 +25,7 @@ Par défaut, le port **Ethernet 1 (eth1)** du contrôleur est préconfiguré ave
 
 4.  Le boîtier ouvre un écran de configuration et vous demande de définir votre mot de passe administrateur.
 
-![Page de connexion de HAI-OS, avec les champs Username et Password et le bouton Log in](./quick-start-monitoring-1.png)
+![Page de connexion de HAI-OS, avec les champs Username et Password et le bouton Log in](../../../assets/hai-os-login.png)
 
 ## Étape 2 : Connectivité réseau
 
@@ -67,7 +67,7 @@ C'est le cœur du système. Nous allons lire une donnée depuis un automate ou u
 
 5.  Cliquez sur le bouton **Save and restart** en haut de la carte. Le moteur d'acquisition redémarre et commence immédiatement à enregistrer la donnée.
 
-![Écran Data-Plug : configuration d'une entrée Modbus device_1, avec la variable NiveauBassin en FLOAT32-IEEE, catégorie measure et unité m³](./quick-start-monitoring-2.png)
+![Écran Data-Plug : configuration d'une entrée Modbus device_1, avec la variable NiveauBassin en FLOAT32-IEEE, catégorie measure et unité m³](./quick-start-monitoring-1.png)
 
 ## Étape 4 : Visualisation (Data-Explorer)
 
@@ -81,7 +81,7 @@ Maintenant que la donnée est collectée, allons la regarder vivre.
 
 4.  Le graphique se met à jour en temps réel, au rythme de quelques secondes, et trace l'évolution de votre capteur.
 
-![Data-Explorer en mode Live : la courbe de NiveauBassin, en m³, sur une fenêtre d'une minute](./quick-start-monitoring-3.png)
+![Data-Explorer en mode Live : la courbe de NiveauBassin, en m³, sur une fenêtre d'une minute](./quick-start-monitoring-2.png)
 
 ## Félicitations
 
