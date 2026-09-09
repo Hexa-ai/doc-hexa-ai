@@ -1,0 +1,16 @@
+# Documentation HAI-OS — docs.hexa-ai.fr
+#
+# Le crawl est autorise volontairement : c'est ce qui permet aux moteurs de
+# LIRE la balise <meta name="robots"> de chaque page. Tant que le drapeau
+# NOINDEX d'astro.config.mjs vaut true, cette balise dit « noindex » et le
+# site n'est pas reference.
+#
+# Bloquer le crawl ici serait contre-productif : un moteur qui ne peut pas
+# lire la page ne voit pas non plus son « noindex », et peut referencer
+# l'URL seule. Ce fichier est donc deja dans son etat definitif — pour
+# ouvrir l'indexation, il suffit de passer NOINDEX a false.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.hexa-ai.fr/sitemap-index.xml

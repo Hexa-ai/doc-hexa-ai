@@ -179,6 +179,17 @@ Côté GitHub, une fois le dépôt créé :
 Le domaine est aussi déclaré dans `astro.config.mjs` (`SITE`) — il sert à
 générer le `sitemap.xml` et les URL canoniques. À modifier en même temps.
 
+### Le jour de la mise en ligne publique
+
+Tant que la documentation est en cours de rédaction, chaque page émet
+`<meta name="robots" content="noindex, nofollow">` : les moteurs la lisent
+mais ne la référencent pas. C'est ce qui évite que les pages « Page
+d'exemple », au contenu fictif, atterrissent dans les résultats de recherche.
+
+Pour ouvrir l'indexation, **un seul geste** : passer `NOINDEX` à `false` en
+tête d'`astro.config.mjs`, puis pousser. Le `robots.txt` est déjà dans son
+état définitif et n'a pas à être touché.
+
 Dernière étape, après la première mise en ligne : remplacer les liens
 `hexa-ai.odoo.com/knowledge/article/65` du dépôt `site-hexa-ai-edge` (header,
 CTA de la section contact et pied de page, en FR comme en EN) par la nouvelle

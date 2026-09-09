@@ -7,6 +7,17 @@ import starlightImageZoom from 'starlight-image-zoom';
 // (voir README, section « Publication »).
 const SITE = 'https://docs.hexa-ai.fr';
 
+// Garde-fou anti-indexation, le temps de la redaction.
+//
+// Tant que ce drapeau est a true, chaque page emet <meta name="robots"
+// content="noindex, nofollow"> : les moteurs peuvent lire le site mais ne
+// le referencent pas. On evite ainsi que les pages « Page d'exemple »,
+// au contenu fictif, se retrouvent dans les resultats de recherche.
+//
+// LE JOUR DE LA MISE EN LIGNE PUBLIQUE : passer a false, et rien d'autre.
+// Le robots.txt de public/ est deja dans son etat definitif.
+const NOINDEX = true;
+
 export default defineConfig({
   site: SITE,
   integrations: [
@@ -18,6 +29,10 @@ export default defineConfig({
 
       favicon: '/favicon.ico',
       description: 'Documentation de la passerelle industrielle HAI-P200-4G et du système HAI-OS.',
+
+      head: NOINDEX
+        ? [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } }]
+        : [],
 
       // FR a la racine (docs.hexa-ai.fr/), EN sous /en/ : meme convention
       // que le site vitrine edge.hexa-ai.fr.
