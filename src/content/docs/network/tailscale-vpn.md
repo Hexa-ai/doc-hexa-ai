@@ -1,14 +1,11 @@
 ---
 title: "VPN Tailscale"
-description: TODO — une phrase, reprise par la recherche et les moteurs.
+description: "Relier le HAI-P200-4G à votre réseau Tailscale : installation du client, clé d'authentification, exposition d'un sous-réseau et redirection de port."
 sidebar:
-  order: 2
+  order: 1
 ---
 
-![](./vpn-1.webp)
-
-🔐
-
+![Un opérateur devant son ordinateur portable, relié par le nuage Tailscale à une passerelle HAI-P200-4G installée près d'une ligne de production](./tailscale-vpn-1.webp)
 ## Qu'est-ce que Tailscale ?
 
 Tailscale est une solution de réseau privé virtuel (VPN) moderne et sécurisée qui permet de connecter facilement des appareils entre eux, où qu'ils se trouvent dans le monde. Contrairement aux VPN traditionnels, Tailscale utilise le protocole WireGuard et une approche « zero-config » qui simplifie considérablement la mise en place et la gestion du réseau.
@@ -20,7 +17,7 @@ Tailscale est une solution de réseau privé virtuel (VPN) moderne et sécurisé
 - Fonctionne à travers les pare-feu et NAT sans configuration particulière
 - Parfait pour les équipes en télétravail et les infrastructures distribuées
 
-![](./vpn-2.png)
+![Le PC en IP Tailscale 100.1.1.1 rejoint la passerelle en 100.2.2.2 par un tunnel chiffré à travers Internet, puis atteint l'automate en 192.168.1.50 sur le réseau local](./tailscale-vpn-2.png)
 
 ## Comment ça marche ?
 
@@ -46,9 +43,9 @@ _💡_
 
 Une fois installé, connectez votre ordinateur en cliquant sur la flèche à droite de votre barre Windows. Cliquez sur l’**icône de Tailscale** (un carré rempli de points).
 
-![](./vpn-3.png)
+![L'icône Tailscale dans la zone de notification de Windows](./tailscale-vpn-3.png)
 
-![](./vpn-4.png)
+![Le menu Tailscale ouvert depuis la barre des tâches](./tailscale-vpn-4.png)
 
 Cela aura pour effet d’ouvrir un onglet de votre navigateur internet. Cliquez alors sur le bouton **Connect**.
 
@@ -58,7 +55,7 @@ Ne rajoutez pas directement un second appareil.
 
 Cliquez sur **Skip this introduction** en bas de l’écran.
 
-![](./vpn-5.png)
+![Écran d'introduction de la console Tailscale, avec le lien Skip this introduction en bas](./tailscale-vpn-5.png)
 
 Vous retrouverez alors une interface d’administration qui liste les appareils connectés (et donc votre ordinateur).
 
@@ -66,15 +63,15 @@ Dans les onglets, ouvrez **Settings** et cliquez sur **Keys** dans le menu verti
 
 Créez alors une clé avec les paramètres que vous souhaitez lui appliquer (durée de validité, etc.).
 
-![](./vpn-6.png)
+![Création d'une clé d'authentification dans la console Tailscale](./tailscale-vpn-6.png)
 
 Cette clé peut être copiée. Vous pouvez alors vous rendre sur l’interface web de votre passerelle HAI-P200-4G. Cliquez sur **VPN Tailscale** et renseignez votre clé dans la zone de texte. Cochez **Activate Tailscale VPN** et cliquez sur **Apply**.
 
-![](./vpn-7.png)
+![Écran VPN Tailscale de HAI-OS : saisie de la clé, case Activate Tailscale VPN et bouton Apply](./tailscale-vpn-7.png)
 
 En retournant sur votre interface d’administrateur sur Tailscale, vous pouvez bien voir votre appareil connecté.
 
-![](./vpn-8.png)
+![Console d'administration Tailscale : la passerelle apparaît parmi les appareils connectés](./tailscale-vpn-8.png)
 
 ## Me connecter à la passerelle
 
@@ -94,7 +91,7 @@ Pour ce faire, connectez-vous à votre passerelle et allez dans **VPN Tailscale*
 
 Entrez l’adresse du sous-réseau dans la zone de texte Subnet, au format **192.168.1.0/24** (notation CDIR), et cliquez sur **Apply**.
 
-![](./vpn-9.png)
+![Saisie du sous-réseau 192.168.1.0/24 dans le champ Subnet, puis Apply](./tailscale-vpn-9.png)
 
 Une fois validé, vous pouvez vous rendre sur l’interface d’administration de Tailscale, sur leur site, et cliquer sur le nom de votre passerelle.
 
@@ -102,11 +99,11 @@ Dans **Subnets**, vous devriez voir la liste des sous-réseaux validés et de ce
 
 Cherchez l’adresse du réseau que vous avez tapée et cliquez sur **Edit.**
 
-![](./vpn-10.png)
+![Console Tailscale : le bouton Edit en regard du réseau annoncé](./tailscale-vpn-10.png)
 
 Dans la pop-up qui s’ouvre, cochez l’adresse du sous-réseau et sauvegardez.
 
-![](./vpn-11.png)
+![Fenêtre d'approbation : cocher le sous-réseau puis enregistrer](./tailscale-vpn-11.png)
 
 Vous pouvez à présent utiliser les appareils connectés au sous-réseau !
 

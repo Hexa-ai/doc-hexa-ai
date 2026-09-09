@@ -269,7 +269,11 @@ const ordre = flag('ordre');
 const frontmatter = [
   '---',
   `title: ${yaml(title)}`,
-  'description: TODO — une phrase, reprise par la recherche et les moteurs.',
+  // Description entre guillemets des le depart : une description contenant
+  // « : » suivi d'une espace casse le parseur YAML si elle est nue, et le
+  // message d'erreur (« bad indentation of a mapping entry ») ne designe pas
+  // le coupable. En laissant les guillemets, la rediger reste sans danger.
+  `description: ${yaml('TODO — une phrase, reprise par la recherche et les moteurs.')}`,
   ...(ordre ? ['sidebar:', `  order: ${ordre}`] : []),
   '---',
   '',

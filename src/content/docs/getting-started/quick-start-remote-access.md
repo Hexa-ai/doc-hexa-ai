@@ -53,7 +53,7 @@ Maintenant que le boîtier a accès à Internet, nous allons le relier à votre 
 
 3.  **Key** : renseignez la clé d'authentification générée depuis votre console d'administration Tailscale — elle commence généralement par `tskey-auth-` — puis cliquez sur **Apply**. Le statut passe à **Connected** et le champ _Key_ disparaît : le boîtier est enrôlé.
 
-4.  Le sélecteur **Mode** apparaît alors, positionné sur **Subnet Route**. C'est le mode à conserver pour la télémaintenance. _(L'autre mode, Port Forwarding, n'expose qu'un équipement sur un port précis ; voir l'article VPN Tailscale.)_
+4.  Le sélecteur **Mode** apparaît alors, positionné sur **Subnet Route**. C'est le mode à conserver pour la télémaintenance. _(L'autre mode, Port Forwarding, n'expose qu'un équipement sur un port précis ; voir [l'article VPN Tailscale](/network/tailscale-vpn/).)_
 
 5.  **Subnet Route Configuration** : saisissez le réseau de vos machines, celui du port **eth1**, que vous souhaitez rendre accessible à distance. Indiquez **l'adresse du réseau**, pas celle d'un équipement : si votre automate est en 192.168.1.50, saisissez `192.168.1.0/24`.
 

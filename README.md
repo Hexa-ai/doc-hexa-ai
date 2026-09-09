@@ -30,6 +30,9 @@ sidebar:
 ## Une section
 ```
 
+- **Gardez les guillemets autour de `title` et `description`.** Une valeur nue
+  contenant « : » suivi d'une espace casse le parseur YAML, et le message
+  d'erreur — *bad indentation of a mapping entry* — ne désigne pas le coupable.
 - `sidebar.order` fixe la position dans le menu (sinon : ordre alphabétique).
 - Le menu est **déplié par défaut**. Pour replier un groupe, passer
   `collapsed: true` sur ce groupe dans `astro.config.mjs`.

@@ -53,7 +53,7 @@ Now that the gateway has Internet access, let's attach it to your private networ
 
 3.  **Key**: enter the authentication key generated from your Tailscale admin console — it usually starts with `tskey-auth-` — then click **Apply**. The status turns to **Connected** and the _Key_ field disappears: the gateway is enrolled.
 
-4.  The **Mode** selector then appears, set to **Subnet Route**. Keep that mode for remote maintenance. _(The other mode, Port Forwarding, exposes a single device on a specific port; see the Tailscale VPN article.)_
+4.  The **Mode** selector then appears, set to **Subnet Route**. Keep that mode for remote maintenance. _(The other mode, Port Forwarding, exposes a single device on a specific port; see [the Tailscale VPN article](/en/network/tailscale-vpn/).)_
 
 5.  **Subnet Route Configuration**: enter the machine network — the one on the **eth1** port — that you want to make reachable remotely. Give **the network address**, not a device address: if your PLC is at 192.168.1.50, enter `192.168.1.0/24`.
 

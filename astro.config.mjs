@@ -67,6 +67,12 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'getting-started' } }],
         },
         {
+          label: 'Réseau',
+          translations: { en: 'Network' },
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'network' } }],
+        },
+        {
           label: 'Protocoles',
           translations: { en: 'Protocols' },
           collapsed: false,
