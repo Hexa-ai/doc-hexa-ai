@@ -22,7 +22,7 @@ Bienvenue dans ce guide de prise en main du **DataPlug**, la nouvelle fonctionna
 
 #### Modbus TCP
 
-![](./acquisition-1.png)
+![](./configuration-1.png)
 
 Pour Modbus, il est possible de nommer votre appareil utilisant ce protocole (Input Name), de saisir son URL composée de son port (Controller URL), de sélectionner l’identifiant de l’esclave (Slave ID), son timeout et l’intervalle de collecte des données (Interval).
 
@@ -57,7 +57,7 @@ Vous pourrez également nommer ces champs, et choisir leurs paramètres de conte
 
 #### OPC-UA
 
-![](./acquisition-2.png)
+![](./configuration-2.png)
 
 Pour l’OPC-UA, il est possible de choisir le nom de l’entrée (Input Name) ainsi que son URL avec son port (Endpoint URL) au format opc.tcp://ADRESSE\_IP:NUMERO\_DE\_PORT.
 
@@ -118,7 +118,7 @@ Si vous ne connaissez pas par cœur l'adressage de vos variables, il est forteme
 
 [Télécharger UaExpert](https://www.unified-automation.com/downloads/opc-ua-clients.html)
 
-![](./acquisition-3.png)
+![](./configuration-3.png)
 
 A l'aide de cet outil, nous pouvons voir que les champs doivent être écrits de cette façon sur le Data-Plug :
 
@@ -126,7 +126,7 @@ A l'aide de cet outil, nous pouvons voir que les champs doivent être écrits de
 - Identifier Type : s (String)
 - Identifier : |var|CODESYS Control for Raspberry Pi 64 SL.Application.Sensors.rPvNiveauCuve
 
-![](./acquisition-4.png)
+![](./configuration-4.png)
 
 Vous pourrez également paramétrer pour chaque variable son nom d'affichage, sa catégorie, son unité et sa description.
 
@@ -134,7 +134,7 @@ Vous pourrez également paramétrer pour chaque variable son nom d'affichage, sa
 
 #### S7
 
-![](./acquisition-5.png)
+![](./configuration-5.png)
 
 Pour le protocole S7, il est possible d’entrer l’adresse IP du serveur ainsi que son port (Server Address), avec son rack et son slot. Vous pouvez également saisir le type de communication (Connection Type) à établir avec l'automate. Les options sont :
 
@@ -161,9 +161,9 @@ Lorsque vous ajoutez une variable, vous pouvez paramétrer son nom (Field Name),
 
 Cas d'une variable adressée en %M :
 
-![](./acquisition-6.png)
+![](./configuration-6.png)
 
-![](./acquisition-7.png)
+![](./configuration-7.png)
 
 #### BACnet
 
@@ -171,7 +171,7 @@ Le protocole **BACnet/IP** permet de collecter les données de vos équipements 
 
 Contrairement aux autres protocoles, BACnet/IP n'est pas géré par Telegraf mais par un collecteur dédié intégré à HAI-OS. Cela ne change rien à votre utilisation, mais explique que ses variables n'apparaissent pas dans le TOML en mode Éditeur.
 
-###### ![](./acquisition-8.png)
+###### ![](./configuration-8.png)
 
 ###### Déclarer un équipement
 
@@ -194,7 +194,7 @@ Plutôt que de saisir l'adresse et l'identifiant à la main, cliquez sur **Disco
 
 Cliquez sur **Search** : les équipements trouvés s'affichent en liste. Cliquez sur l'un d'eux et son adresse, son identifiant et son nom sont recopiés dans la carte.
 
-![](./acquisition-9.png)
+![](./configuration-9.png)
 
 ###### Ajouter des variables (Browse objects)
 
@@ -209,13 +209,13 @@ Vous pouvez aussi cliquer sur **Add Variable** pour saisir une variable manuelle
 
 Le type de valeur est déduit automatiquement du type d'objet : les objets _analog_ donnent un nombre décimal, les _binary_ un booléen, les _multiState_ un entier.
 
-![](./acquisition-10.png)
+![](./configuration-10.png)
 
 ###### Diagnostics par équipement
 
 L'icône de graphique en haut de la carte ouvre la fenêtre **BACnet/IP Diagnostics**, mise à jour toutes les 2 secondes : état de connexion, état du collecteur, date et durée de la dernière interrogation, nombre d'erreurs, intervalle d'interrogation, et un tableau ligne par ligne indiquant pour chaque variable sa dernière valeur, son ancienneté et sa dernière erreur. Les journaux détaillés se trouvent dans /var/log/hai-os/hai\_bacnet\_service.log.
 
-![](./acquisition-11.png)
+![](./configuration-11.png)
 
 ###### BACnet/SC (beta)
 
@@ -227,7 +227,7 @@ Le protocole NMEA 0183 permet de collecter les trames émises par des équipemen
 
 Comme BACnet, il est traité par un lecteur intégré à HAI-OS et non par Telegraf : ses variables n'apparaissent donc pas dans le TOML en mode Éditeur.
 
-##### ![](./acquisition-12.png)
+##### ![](./configuration-12.png)
 
 ##### Déclarer une source
 
@@ -248,7 +248,7 @@ Un badge d'état en haut de la carte affiche en continu la situation : Stopped, 
 
 Le bouton **Listen** écoute la source pendant quelques secondes et affiche les trames reçues, décodées champ par champ. Chaque champ reconnu s'ajoute en variable d'un clic, avec son unité quand la trame la porte. Les champs que le décodeur ne sait pas nommer restent accessibles sous « Raw positional fields », lus par leur position dans la trame — attention, cette position peut varier d'un constructeur à l'autre.
 
-![](./acquisition-13.png)
+![](./configuration-13.png)
 
 Vous pouvez aussi cliquer sur **Add Variable** et saisir :
 
@@ -295,7 +295,7 @@ Tout topic correspondant à data/all/# est accepté. Telegraf n'intervient pas d
 
 Pour paramétrer une connexion utilisant le protocole Modbus RTU, vous devez dans un premier temps vous rendre sur la page de configuration dédiée à ce protocole dans l'interface de votre contrôleur. Cette page vous permet de définir les paramètres de communication série de votre équipement (port série, vitesse de transmission ou _baud rate_, parité, bits de données, etc.).
 
-![](./acquisition-14.png)
+![](./configuration-14.png)
 
 Une fois la liaison série établie sur cette page dédiée, l'ajout de votre appareil et la collecte de ses données s'effectuent de façon identique au **Modbus TCP**. Il vous suffit de l'ajouter dans le configurateur graphique comme une entrée Modbus classique.
 
@@ -337,11 +337,11 @@ Lors de la création d'une variable (qu'elle soit en Modbus, OPC-UA, S7, BACnet
 
 Pour mettre une variable en favoris, cliquez sur l’étoile se situant sur la gauche. Les variables en favoris seront à la fois transmises sur le topic data/all et sur le topic data/favorites. Les variables en favoris peuvent également être retrouvées dans la table hai\_vars de votre base SQLite.
 
-- - ![](./acquisition-15.png)
+- - ![](./configuration-15.png)
 
 Lorsque vous déclarez une variable en tant qu’alarme, un champ supplémentaire va se créer afin de vous permettre de choisir le type d’alarme. Par défaut, il s’agit d’une info, mais vous pouvez aussi la passer en warning ou error. De plus, vous pouvez créer vos propres catégories en tapant leur nom puis en cliquant sur la touche Entrée.
 
-- - ![](./acquisition-16.png)
+- - ![](./configuration-16.png)
 
 #### Réglages complémentaires
 
@@ -349,7 +349,7 @@ Selon la catégorie choisie, trois réglages supplémentaires peuvent apparaîtr
 
 **Compute RCA** _(variables de catégorie Alarm)_
 
-![](./acquisition-17.png)
+![](./configuration-17.png)
 
 Cet interrupteur, activé par défaut, détermine si l'analyse de cause racine (RCA) est calculée pour cette alarme. Lorsqu'il est désactivé :
 
@@ -360,7 +360,7 @@ L'alarme continue bien sûr d'être détectée, historisée et notifiée : seule
 
 **Batch** _(identifiant de lot)_
 
-![](./acquisition-18.png)
+![](./configuration-18.png)
 
 Cette case désigne la variable qui porte l'identifiant de lot (numéro de fabrication, numéro d'OF, ou simplement un booléen « production en cours »). C'est à partir de ses changements de valeur que la page Batches reconstruit vos lots :
 
@@ -371,7 +371,7 @@ La case n'est proposée que sur les variables de type booléen, entier ou texte 
 
 **Map in reports** _(variables de catégorie Position mises en favori)_
 
-![](./acquisition-19.png)
+![](./configuration-19.png)
 
 Ajoute la trace GPS de la variable aux rapports PDF et e-mail. L'interrupteur n'apparaît que si la variable est à la fois de catégorie Position et marquée en favori (⭐), les rapports ne reprenant que les favoris. Le fond de carte est téléchargé au moment de la génération du rapport : sans accès internet, le tracé reste dessiné, sur fond neutre.
 
@@ -381,11 +381,11 @@ Pour vous faire gagner du temps lors de la configuration de nombreuses variables
 
 1.  Configurez une ou deux variables pour l'exemple via l'interface.
 2.  Cliquez sur le bouton **Export CSV** (situé en haut de l'onglet _Config_).
-3.  ![](./acquisition-20.png)
+3.  ![](./configuration-20.png)
 4.  Ouvrez le fichier téléchargé dans Excel ou un tableur, copiez-collez vos lignes et modifiez vos variables rapidement.
-5.  ![](./acquisition-21.png)
+5.  ![](./configuration-21.png)
 6.  Cliquez sur **Import CSV** pour charger toute votre configuration en un clin d'œil.
-7.  ![](./acquisition-22.png)
+7.  ![](./configuration-22.png)
 
 ### Export des données historisées (onglet Data Export)
 
@@ -405,7 +405,7 @@ Si aucune donnée n'existe sur la période demandée, un message vous en informe
 
 Ouvrez la page Data-Plug. La page de paramétrage de l’agent s’affichera directement :
 
-![](./acquisition-23.png)
+![](./configuration-23.png)
 
 Voici les 5 paramètres clés pour piloter le comportement de l'agent :
 
@@ -428,13 +428,13 @@ En haut de la page Data-Plug, le bandeau **Data-plug Diagnostics** vous donne en
 
 Un point important : les données les plus récentes se trouvent d'abord dans le tampon mémoire, et ne sont écrites en base qu'à chaque _commit_. Si vous cherchez une mesure de la dernière minute et qu'elle n'apparaît pas encore, regardez le temps restant avant le prochain commit.
 
-![](./acquisition-24.png)
+![](./configuration-24.png)
 
 * * *
 
 ## Sauvegarder et redémarrer
 
-![](./acquisition-25.png)
+![](./configuration-25.png)
 
 Pour sauvegarder, cliquez sur Save And Restart. Cela va automatiquement redémarrer le Data-Plug. Vous pouvez également l’allumer et l’éteindre en cliquant sur Data-Plug Service (On/Off) ou allumer et éteindre l'historisation en cliquant sur Historization (On/Off) (Plus de détails sont disponibles dans 🔝 Configuration Store & Forward).
 
@@ -444,6 +444,6 @@ N’oubliez pas de sauvegarder quand vous changez de page ou de vue (par exemple
 
 ## Logs
 
-![](./acquisition-26.png)
+![](./configuration-26.png)
 
 Un onglet est disponible sur la page de Data-Plug pour vous permettre de visualiser les logs de Telegraf. Il vous est possible de choisir le nombre de lignes à afficher et de rafraîchir la page facilement.

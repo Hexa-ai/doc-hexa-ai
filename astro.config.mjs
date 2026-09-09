@@ -72,11 +72,26 @@ export default defineConfig({
           collapsed: false,
           items: [{ autogenerate: { directory: 'network' } }],
         },
+        // Les trois sections suivent le cycle de la donnee : on l'acquiert,
+        // on la supervise, on alerte. Dix articles dans une seule section
+        // devenaient illisibles.
         {
-          label: 'Données & supervision',
-          translations: { en: 'Data & monitoring' },
+          label: 'Acquisition',
+          translations: { en: 'Acquisition' },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'data-monitoring' } }],
+          items: [{ autogenerate: { directory: 'acquisition' } }],
+        },
+        {
+          label: 'Supervision',
+          translations: { en: 'Monitoring' },
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'monitoring' } }],
+        },
+        {
+          label: 'Alertes & rapports',
+          translations: { en: 'Alerts & reports' },
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'alerts' } }],
         },
         {
           label: 'Matériel',
