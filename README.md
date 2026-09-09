@@ -207,15 +207,61 @@ adresse.
 
 ## Reprise du contenu Odoo
 
-Odoo Knowledge n'exporte pas de Markdown. Le chemin praticable est de copier le
-HTML d'un article puis :
+Odoo Knowledge n'exporte pas de Markdown. Le script `tools/import-odoo.mjs`
+fait la conversion, images comprises. Rien à installer : il s'appuie sur les
+dépendances du projet.
+
+### 1. Enregistrer l'article depuis le navigateur
+
+Ouvrez l'article dans Odoo, **en étant connecté**, puis `Ctrl+S` et choisissez
+**« Page web, complète »** (et non « HTML seul »).
+
+C'est l'étape qui compte. En « page complète », le navigateur télécharge aussi
+toutes les images dans un dossier `<nom>_files` à côté du `.html` — il utilise
+votre session, donc il passe l'authentification. Un script, lui, ne le pourrait
+pas : les images d'Odoo sont derrière un login.
+
+### 2. Convertir
 
 ```bash
-pandoc -f html -t gfm article.html -o src/content/docs/ma-page.md
+npm run import -- "C:/Users/moi/Downloads/OPC-UA.html" src/content/docs/protocols --slug opc-ua --ordre 3
 ```
 
-Restent à reprendre à la main : les images (à redéposer à côté de la page) et
-les tableaux complexes.
+| Option | Effet |
+| --- | --- |
+| `--slug` | nom du `.md` produit (défaut : déduit du titre) |
+| `--titre` | force le titre (défaut : premier `<h1>`) |
+| `--ordre` | valeur de `sidebar.order` |
+| `--selecteur` | conteneur de l'article, si l'auto-détection se trompe |
+| `--force` | écrase une page existante |
+
+Le script s'occupe de :
+
+- retirer l'interface d'Odoo (barre de navigation, fil d'Ariane, boutons) ;
+- convertir titres, listes, **tableaux** et blocs de code ;
+- retirer le `<h1>`, que Starlight affiche déjà depuis le frontmatter ;
+- **copier les images** à côté de la page et les renommer `<slug>-1.png`,
+  `<slug>-2.png`… en réécrivant les chemins en `./` ;
+- reconstituer en fichiers les images embarquées en base64 ;
+- écrire le frontmatter.
+
+Il termine par une liste de ce qui reste à faire, propre à l'article.
+
+### 3. Reprendre à la main
+
+Le script ne devine pas tout :
+
+- **la `description`**, laissée en `TODO` — elle sert à la recherche et aux
+  moteurs ;
+- **les tableaux complexes** (cellules fusionnées), que le format Markdown ne
+  sait pas représenter ;
+- **les textes alternatifs** des images, souvent vides côté Odoo ;
+- **les images restées sur une URL distante**, signalées en fin d'exécution :
+  à télécharger depuis Odoo et à déposer à côté de la page ;
+- **la version anglaise**, à créer au même chemin sous
+  `src/content/docs/en/`.
+
+Enfin, relisez : une doc reprise mécaniquement se voit.
 
 ## Pages d'exemple
 
