@@ -154,21 +154,29 @@
 }
 
 /* Le texte est bride a une mesure lisible, alors que la colonne, elle,
-   reste large. Les figures ci-dessous ne sont pas dans cette liste : elles
-   recuperent donc toute la largeur disponible. */
-.sl-markdown-content > :is(p, ul, ol, dl, blockquote, details, hr, table,
-pre, h1, h2, h3, h4, h5, h6, .starlight-aside, .expressive-code) {
+   reste large.
+   Les <figure> sont dans la liste au meme titre que les paragraphes : sans
+   cela, une image dans un <figure> se centrerait sur la colonne (869 px) et
+   une image dans un paragraphe sur le texte (800 px) — deux alignements
+   differents sur la meme page, visibles a l'oeil. */
+.sl-markdown-content > :is(p, ul, ol, dl, blockquote, details, hr,
+figure, pre, h1, h2, h3, h4, h5, h6, .starlight-aside, .expressive-code) {
   max-width: var(--hai-text-width);
 }
 
-/* Figure large : prend la colonne entiere, dans la limite du plafond. */
+/* Figure large : echappe a la mesure du texte et prend la colonne entiere. */
 .sl-markdown-content .wide {
+  max-width: none;
   width: min(var(--hai-img-max-wide), 100%);
 }
 
-/* Legende */
+/* Legende.
+   margin-inline: 0 et non auto : une figure doit se caler sur le bloc de
+   texte, comme un paragraphe. Avec des marges automatiques elle se centrait
+   sur la colonne entiere, et ses images tombaient 35 px a droite de toutes
+   les autres — un decalage discret mais visible en parcourant la page. */
 .sl-markdown-content figure {
-  margin: 1.75rem auto;
+  margin: 1.75rem 0;
 }
 
 .sl-markdown-content figcaption {
@@ -280,13 +288,40 @@ starlight-theme-select > label {
   letter-spacing: -0.015em;
 }
 
-/* Tableaux : lisibles meme longs. */
-.sl-markdown-content table {
-  display: block;
-  overflow-x: auto;
+/* Tableaux.
+   Ils occupent toute la colonne, et non la seule mesure du texte : une
+   grille de correspondances se lit mieux etalee que tassee.
+   Surtout, pas de display:block ici — il transforme le tableau en simple
+   bloc, le contenu se retracte alors sur sa largeur naturelle et se colle a
+   gauche. La mise en page tabulaire doit rester une mise en page tabulaire. */
+.sl-markdown-content > table {
+  display: table;
+  max-width: none;
+  width: 100%;
   border-collapse: collapse;
 }
 
 .sl-markdown-content :is(th, td) {
   border-color: var(--sl-color-hairline-light);
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+/* Premiere colonne : c'est l'entree de la grille, elle ne doit pas se casser
+   au milieu d'une reference. */
+.sl-markdown-content :is(th, td):first-child {
+  white-space: nowrap;
+}
+
+/* Sous le point de rupture, un tableau large defile horizontalement plutot
+   que de deborder la page. Le display:block n'a lieu d'etre qu'ici. */
+@media (max-width: 50rem) {
+  .sl-markdown-content > table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .sl-markdown-content :is(th, td):first-child {
+    white-space: normal;
+  }
 }
