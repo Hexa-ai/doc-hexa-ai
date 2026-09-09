@@ -144,6 +144,25 @@ En haut de la page, ce bouton applique une politique de sécurité stricte aprè
 - seuls les **ports 80, 443, 53 et 67** restent ouverts ;
 - le **partage DHCP/DNS** est désactivé.
 
+Ces quatre ports ne sont pas un reliquat : ce sont ceux sans lesquels la remise
+à plat vous couperait du boîtier.
+
+- **443 et 80** — l'interface web d'administration. Les fermer reviendrait à
+  verrouiller la porte de la page depuis laquelle vous venez de cliquer. Le 80
+  sert en outre au [portail captif](/network/wifi-hotspot/) : un appareil qui
+  rejoint un Wi-Fi interroge une adresse en HTTP simple pour savoir s'il doit
+  afficher une page de connexion. En HTTPS seul, il ne verrait rien.
+- **67 et 53** — la distribution d'adresses (DHCP) et la résolution de noms
+  (DNS) du [point d'accès Wi-Fi](/network/wifi-hotspot/). Le premier attribue
+  leurs adresses aux appareils qui se connectent, le second répond à leurs
+  requêtes et permet au portail captif de les rediriger. Fermés, plus aucun
+  téléphone ne pourrait rejoindre le réseau du contrôleur.
+
+Aucun des quatre n'expose vos équipements : ils desservent le boîtier lui-même
+et les appareils qu'il héberge sur son propre réseau. Vos automates restent
+derrière la politique _DROP_ tant que vous n'ouvrez pas explicitement un port
+pour eux.
+
 :::caution
 **Toutes vos règles personnalisées sont supprimées.** Réservez ce bouton au cas où la configuration du pare-feu est devenue incompréhensible et où vous souhaitez repartir d'une base saine.
 :::
