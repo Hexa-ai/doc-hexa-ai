@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-
 Bienvenue dans ce guide de prise en main de la page **Alarmes**. Ce module centralise la surveillance de votre installation en affichant l'état de vos alertes, leur historique de déclenchement, et intègre un outil puissant d'Analyse de Cause Racine (RCA) pour vous aider à comprendre rapidement l'origine d'un défaut.
 
 ## Prérequis

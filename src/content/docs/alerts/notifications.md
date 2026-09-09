@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-
 Le système de **Notifications et Rapports** transforme les données brutes collectées par le Data-Plug en informations exploitables. Il permet d'alerter les opérateurs en temps réel en cas d'anomalie et de générer des rapports périodiques automatiques (par e-mail) sur vos installations.
 
 ## Prérequis
@@ -85,7 +84,7 @@ Activez l'interrupteur **Enable escalation** pour faire apparaître la configura
 
 **Point important** : l'escalade _remplace_ la notification immédiate, elle ne s'y ajoute pas. Une alarme prise en charge par la chaîne ne part que par la chaîne — un destinataire qui ne figure sur aucun palier n'est pas contacté du tout. Les niveaux d'alarme que vous laissez décochés dans **Apply to** continuent, eux, d'être envoyés immédiatement à tout le monde.
 
-#### Portée et options de la chaîne
+### Portée et options de la chaîne
 
 - **Apply to** : les niveaux d'alarme confiés à la chaîne (Error, Warning, Info). Par défaut, seul Error.
 - **Keep previous levels engaged** : une fois le palier 2 atteint, le palier 1 continue de recevoir les messages de relance.

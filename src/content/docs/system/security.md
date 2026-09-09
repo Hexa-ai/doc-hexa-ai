@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-
 Bienvenue dans ce guide de prise en main du menu **Security**. Ce module regroupe tout ce qui protège votre contrôleur : le mot de passe qui en garde l'accès, le pare-feu qui filtre ce qui peut l'atteindre, et le journal d'audit qui conserve la trace de ce qui s'y passe. La version 1.3.8 y apporte des nouveautés importantes, présentées ici une par une.
 
 ## Prérequis
@@ -63,7 +62,7 @@ Certains add-ons possèdent leur propre compte, indépendant de celui du contrô
 
 Jusqu'à la version précédente, ces mots de passe étaient identiques sur tous les contrôleurs et imprimés dans nos manuels. Ils sont désormais **générés au premier démarrage de votre appareil** et propres à lui seul. Comme ils ne peuvent plus figurer dans une documentation, le contrôleur vous les montre directement.
 
-#### Où les retrouver ?
+### Où les retrouver ?
 
 1.  Rendez-vous dans le menu **Add-ons**.
 2.  Sur la carte de l'add-on concerné, ouvrez le menu **⋮** (les trois points).

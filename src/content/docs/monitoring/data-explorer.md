@@ -5,7 +5,6 @@ sidebar:
   order: 1
 ---
 
-
 Bienvenue dans ce guide de prise en main du **Data-Explorer**, l'outil de visualisation de données natif de votre contrôleur HAI-P200-4G. Ce tutoriel vous montrera comment explorer, analyser et comparer les données collectées par votre Data-Plug au travers de graphiques interactifs et personnalisables.
 
 ## Prérequis
@@ -54,7 +53,7 @@ Pour commencer à visualiser vos données, vous devez définir quelles variables
 
 Le Data-Explorer propose deux modes de fonctionnement, accessibles via le sélecteur principal en haut de la page : **Historical** et **Live**.
 
-##### 1\. Le mode Historical (Historique)
+### 1. Le mode Historical (Historique)
 
 Ce mode interroge la base de données du Data-Plug pour afficher les données passées.
 
@@ -66,7 +65,7 @@ Ce mode interroge la base de données du Data-Plug pour afficher les données pa
 
 - **Compare (Comparaison)** : Activez ce switch pour superposer la période actuelle avec la période précédente équivalente (tracée en pointillés). _Exemple : Si vous regardez les 24 dernières heures, le mode Compare affichera en surimpression les 24 heures d'avant._ Vous pouvez aussi définir une date de comparaison manuelle.
 
-##### 2\. Le mode Live (Temps Réel)
+#### 2. Le mode Live (Temps Réel)
 
 Ce mode se connecte directement au broker MQTT pour vous offrir un rafraîchissement ultra-rapide et continu des valeurs de vos capteurs.
 

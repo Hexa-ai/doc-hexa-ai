@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-
 Le courtier (broker) MQTT interne de votre contrôleur HAI-P200-4G ne sert pas uniquement à faire transiter les données de vos équipements. Il agit également comme une véritable **API locale** vous permettant de piloter les fonctions systèmes du boîtier directement depuis vos applications (comme Node-RED, le runtime CODESYS, ou tout autre client MQTT local).
 
 Ce guide recense l'ensemble des "Topics Commande" (sujets) auxquels le système HAI-OS est abonné, ainsi que les formats de messages (Payloads) attendus.

@@ -5,7 +5,6 @@ sidebar:
   order: 4
 ---
 
-
 Si vous utilisez **Node-RED** (l'outil de programmation visuelle intégré à votre contrôleur) pour créer des automatismes, vous pourriez avoir besoin de consulter des données enregistrées dans le passé.
 
 Par défaut, Node-RED ne voit que les données "en temps réel". Ce module officiel Hexa-AI rajoute un nouveau composant (un _nœud_) dans Node-RED, appelé **DataPlug History**, qui permet d'aller interroger directement la base de données historique du contrôleur et d'en extraire des statistiques toutes prêtes (moyennes, minimum, maximum, etc.).

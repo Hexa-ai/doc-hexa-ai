@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-
 Le module **Webhooks** permet d'interfacer votre contrôleur HAI-P200-4G avec vos propres serveurs informatiques ou plateformes Cloud. Au lieu d'attendre que vous vous connectiez au boîtier pour lire les données, le contrôleur se charge de **pousser (Push) activement et de manière sécurisée** son état de santé et ses rapports périodiques vers l'API de votre choix.
 
 ## Prérequis

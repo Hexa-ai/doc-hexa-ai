@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-
 Bienvenue dans ce guide de prise en main des pages **Factory Reset** et **Configuration**. Elles répondent à trois besoins : repartir d'une configuration propre, effacer un contrôleur avant de s'en séparer, et déplacer une configuration d'un boîtier vers un autre.
 
 ## Prérequis

@@ -5,8 +5,6 @@ sidebar:
   order: 3
 ---
 
-
-
 Bienvenue dans ce guide de prise en main du **DataPlug**, la nouvelle fonctionnalité de votre contrôleur HAI-P200-4G. Ce tutoriel vous montrera comment utiliser notre configurateur graphique pour collecter, structurer et publier en quelques clics des données issues de vos équipements industriels en **OPC-UA, Modbus TCP, Modbus RTU, S7-Com, BACnet/IP, NMEA 0183, ou publiées par vos propres flux Node-RED.** À la fin de ce guide, vos données seront disponibles sur le broker MQTT interne, prêtes à être utilisées par le Data-Explorer, Node-RED ou vos propres applications.
 
 ## Prérequis
@@ -175,9 +173,9 @@ Le protocole **BACnet/IP** permet de collecter les données de vos équipements 
 Contrairement aux autres protocoles, BACnet/IP n'est pas géré par Telegraf mais par un collecteur dédié intégré à HAI-OS. Cela ne change rien à votre utilisation, mais explique que ses variables n'apparaissent pas dans le TOML en mode Éditeur.
 :::
 
-###### ![](./configuration-8.png)
+![](./configuration-8.png)
 
-###### Déclarer un équipement
+##### Déclarer un équipement
 
 Chaque carte BACnet correspond à un équipement :
 
@@ -233,7 +231,7 @@ Le protocole NMEA 0183 permet de collecter les trames émises par des équipemen
 Comme BACnet, il est traité par un lecteur intégré à HAI-OS et non par Telegraf : ses variables n'apparaissent donc pas dans le TOML en mode Éditeur.
 :::
 
-##### ![](./configuration-12.png)
+![](./configuration-12.png)
 
 ##### Déclarer une source
 
@@ -277,7 +275,7 @@ C'est la solution à privilégier pour tout équipement dont le protocole n'est 
 
 Un seul input de ce type peut exister sur le contrôleur. Déclarez-y autant de variables que nécessaire, en renseignant pour chacune son **Channel name**, son type de valeur, sa catégorie, son unité et sa description.
 
-###### Format de publication
+##### Format de publication
 
 Un bouton d'aide dans la carte rappelle le format attendu. Publiez sur le broker local **localhost:1883** (sans authentification), sur un topic commençant par **data/all/** :
 

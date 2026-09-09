@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-
 L'Accès Invité permet d'ouvrir une partie de l'interface du contrôleur à des utilisateurs non authentifiés. Vos opérateurs, techniciens de maintenance ou visiteurs peuvent ainsi consulter les données, les alarmes et les rapports sans mot de passe, et sans aucun risque de modifier la configuration du contrôleur.
 
 ## Prérequis

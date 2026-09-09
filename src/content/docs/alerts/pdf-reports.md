@@ -5,7 +5,6 @@ sidebar:
   order: 3
 ---
 
-
 Bienvenue dans ce guide de prise en main de la page **PDF Reports**. Ce module centralise l'ensemble des rapports générés automatiquement par votre système (quotidiens, hebdomadaires ou de fins de lots). Il vous permet de les visualiser directement depuis l'interface, de les télécharger ou de les gérer facilement.
 
 ## Prérequis

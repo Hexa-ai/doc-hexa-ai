@@ -106,15 +106,15 @@ L’appareil **HAI-P200-4G** inclut :
 - Un **slot de carte SD** (Micro SD) pour le stockage de données.
 - Un **slot de carte Nano SIM** pour la connexion 4G.
 
-#### **1.6.1.1 Slot de Carte SD**
+#### 1.6.1.1 Slot de Carte SD
 
 Le slot Micro SD, permet d’installer une carte SD pour stocker les données utilisateur.
 
-#### **1.6.1.2 Slot de Carte SIM**
+#### 1.6.1.2 Slot de Carte SIM
 
 Le slot Nano SIM, permet d’installer une carte SIM pour recevoir le signal 4G.
 
-### **1.6.2 Interface d’Alimentation**
+### 1.6.2 Interface d’Alimentation
 
 L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant continu (9–36 V) via des borniers Phoenix 2 broches (espacement 3,5 mm). Les broches sont définies comme suit :
 
@@ -129,7 +129,7 @@ L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant cont
 | 1 | GND |
 | 2 | 9 V à 36 V |
 
-### **1.6.4 Interface RS485/RS232**
+### 1.6.4 Interface RS485/RS232
 
 L’appareil inclut 2 ports RS485 et 2 ports RS232 (borniers 6 broches). Configuration par modèle : 2x RS485 + 2x RS232
 
@@ -166,7 +166,7 @@ Le schéma de câblage du RS232 est le suivant :
 
 ![Schéma de câblage RS232](./product-guide-8.png)
 
-### **1.6.5 Port Ethernet 1000M**
+### 1.6.5 Port Ethernet 1000M
 
 L’appareil **HAI-P200-4G** inclut un port Ethernet 10/100/1000M adaptatif. Le connecteur est de type **RJ45** et prend en charge le **PoE** avec module d’extension. Utilisez un câble réseau **Cat6** ou supérieur.
 
@@ -187,7 +187,7 @@ L’appareil **HAI-P200-4G** inclut un port Ethernet 10/100/1000M adaptatif. Le 
 | 7 | TX4+ |
 | 8 | TX4- |
 
-#### **1.6.6 Port Ethernet 100M**
+#### 1.6.6 Port Ethernet 100M
 
 Port Ethernet 10/100M adaptatif (connecteur **RJ45**). Utilisez un câble réseau **Cat6** ou supérieur.
 
@@ -208,26 +208,26 @@ Port Ethernet 10/100M adaptatif (connecteur **RJ45**). Utilisez un câble rése
 | 7 | – |
 | 8 | – |
 
-### **1.6.7 Port HDMI**
+### 1.6.7 Port HDMI
 
 Port HDMI de type **A**, marquage **HDMI**, supportant une résolution jusqu’à **4Kp60**.
 
-### **1.6.8 Ports USB 2.0**
+### 1.6.8 Ports USB 2.0
 
 2 ports USB 2.0 de type **A**, débit maximal de **480 Mbps**.
 
-### **1.6.9 Port Micro USB**
+### 1.6.9 Port Micro USB
 
 Port Micro USB marqué pour connecter l’appareil à un PC et flasher le système sur l’eMMC.
 
-### **1.6.10 Ports Antenne**
+### 1.6.10 Ports Antenne
 
 2 ports antenne **SMA** :
 
 - Marquage **4G** : pour antenne 4G.
 - Marquage **Wi-Fi/BT** : pour antenne Wi-Fi/Bluetooth.
 
-### **1.6.11 Support de Pile RTC**
+### 1.6.11 Support de Pile RTC
 
 La carte mère intègre une **RTC** (horloge temps réel).
 

@@ -364,6 +364,42 @@ markdown = markdown
 // precedente — c'est arrive.
 // La conversion enrobe parfois le pictogramme d'italiques ou de gras
 // (« _💡_ ») : on retire ce vernis avant de juger la ligne.
+// Structure des titres. Odoo laisse passer des sauts de niveau — un h2 suivi
+// d'un h4 — qui cassent le sommaire, ainsi que des images enfermees dans un
+// titre et une numerotation echappee par la conversion. On remet tout d'aplomb
+// en une passe, ligne a ligne, en ignorant l'interieur des blocs de code.
+{
+  const lignes = markdown.split('\n');
+  const sortie = [];
+  let precedent = 1; // le titre de la page tient lieu de h1
+  let dansCode = false;
+
+  for (const l of lignes) {
+    if (/^```/.test(l)) dansCode = !dansCode;
+    const m = dansCode ? null : l.match(/^(#{2,6}) (.+)$/);
+    if (!m) {
+      sortie.push(l);
+      continue;
+    }
+
+    let niveau = m[1].length;
+    let texte = m[2];
+
+    if (/^!\[[^\]]*\]\([^)]*\)$/.test(texte)) {
+      sortie.push(texte); // une image seule n'est pas un titre
+      continue;
+    }
+
+    texte = texte.replace(/^(\d+)\\\./, '$1.').replace(/^\*\*(.+?)\*\*$/, '$1');
+
+    if (niveau > precedent + 1) niveau = precedent + 1;
+    precedent = niveau;
+    sortie.push('#'.repeat(niveau) + ' ' + texte);
+  }
+
+  markdown = sortie.join('\n');
+}
+
 const EMOJI_SEUL = /^[\s\u{1F000}-\u{1FAFF}\u{2190}-\u{2BFF}\u{FE0F}\u{200D}\u{20E3}]+$/u;
 const denuder = (l) => l.replace(/[*_~`]/g, '').trim();
 let emojisRetires = 0;

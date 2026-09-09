@@ -9,7 +9,7 @@ Au-delà de la simple collecte de données, le **DataPlug** a une vocation plus 
 
 Comme pour les données de vos équipements, ces échanges se font très simplement en utilisant notre **broker MQTT interne**.
 
-### Comment envoyer un SMS
+## Comment envoyer un SMS
 Pour envoyer un SMS, le principe est simple : il suffit de publier un message au format JSON sur un _topic_ MQTT dédié.
 
 - **Topic MQTT à utiliser :** service/sms/send

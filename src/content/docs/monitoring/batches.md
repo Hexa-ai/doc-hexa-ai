@@ -5,7 +5,6 @@ sidebar:
   order: 2
 ---
 
-
 Bienvenue dans ce guide de prise en main de la page **Batches**. Ce module permet d'isoler, de suivre et de documenter vos cycles de production (lots). Il centralise l'historique de vos lots, permet de les analyser individuellement dans le Data-Explorer, et gère la génération de rapports de fin de lot (PDF).
 
 ## Prérequis
