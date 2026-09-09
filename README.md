@@ -80,6 +80,22 @@ Elles s'empilent automatiquement sous 260 px de large.
 Les plafonds se règlent en un seul endroit, dans `src/styles/hexa.css`
 (`--hai-img-max`, `--hai-img-max-wide`, `--hai-img-max-narrow`).
 
+### Pourquoi vos images ne sont jamais agrandies
+
+Deux garde-fous, en plus du plafond de largeur :
+
+- **`width: auto`** — une image n'est jamais affichée plus grande que sa taille
+  réelle. Une capture native de 279 px reste à 279 px : l'étirer à 720 la
+  rendrait floue, sans rien apporter.
+- **`--hai-img-max-height`** (416 px) — une image carrée ou verticale est
+  ramenée à cette hauteur. Un détail de connecteur n'a pas besoin de 630 px de
+  haut. La valeur est calée pour qu'une capture 16/9 affichée sur 720 px de
+  large (soit 405 px de haut) passe juste en dessous, sans être touchée.
+
+Dans les deux cas, le zoom au clic reste disponible pour inspecter le détail.
+Une image vraiment trop petite pour être lisible est à refaire à la source :
+aucun réglage d'affichage ne recréera des pixels absents.
+
 ### Où ranger les fichiers
 
 Deux emplacements possibles, jamais `public/` (les images qui y sont déposées
@@ -130,6 +146,17 @@ La publication se déclenche de la même façon.
 > accents**. Si vous générez ou collez du contenu par script, vérifiez que
 > l'encodage suit — un « é » transformé en « Ã© » se voit immédiatement en
 > ligne.
+
+### Si toutes les pages tombent en 404 en local
+
+C'est le serveur, pas votre contenu. Astro garde l'index de ses collections
+dans `.astro/` ; si ce dossier disparaît ou est réécrit pendant que
+`npm run dev` tourne, le serveur se retrouve avec zéro page et répond 404
+partout, `/` comprise. Arrêtez-le et relancez-le.
+
+Le signe distinctif : *toutes* les pages tombent d'un coup. Un vrai problème de
+contenu ne casserait qu'une page, ou ferait échouer `npm run build` avec un
+message d'erreur explicite.
 
 ## Traductions
 

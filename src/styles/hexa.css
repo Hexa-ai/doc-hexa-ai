@@ -18,9 +18,13 @@
   --hai-img-max-wide: 1100px;
   --hai-img-max-narrow: 380px;
 
-  /* Hauteur maximale d'une image, quelle que soit sa classe. Une capture tres
-     verticale est reduite pour tenir dans l'ecran plutot que de le remplir. */
-  --hai-img-max-height: 70vh;
+  /* Hauteur maximale d'une image, quelle que soit sa classe.
+     416 px est choisi pour qu'une capture 16/9 affichee sur 720 px de large
+     (donc 405 px de haut) passe juste en dessous, sans etre touchee. Ce sont
+     les images carrees ou verticales qui sont ramenees a cette hauteur : un
+     detail de connecteur n'a pas besoin de 630 px de haut. Le zoom au clic
+     reste la pour les inspecter. */
+  --hai-img-max-height: 26rem;
 
   /* Largeur du sommaire de droite. */
   --hai-toc-width: 13rem;
