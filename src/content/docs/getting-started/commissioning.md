@@ -20,7 +20,7 @@ Il doit être remplacé par la procédure réelle lors de la reprise depuis Odoo
 
 Le raccordement se fait sur le bornier industriel, en respectant la polarité
 sérigraphiée. La plage d'alimentation admise est indiquée dans les
-[spécifications matérielles](/materiel/specifications/).
+[spécifications matérielles](/hardware/specifications/).
 
 Après mise sous tension, le démarrage complet de HAI-OS prend environ une
 minute. La LED de statut passe au vert fixe quand les services sont
@@ -41,7 +41,7 @@ automatiquement plafonnée à 720 px de large : plein écran sur mobile, sans
 
 Rendez-vous dans **Acquisition → Sources**, puis choisissez le protocole de
 votre automate. La configuration d'une source Modbus TCP est détaillée dans
-[la page Modbus](/protocoles/modbus-tcp/).
+[la page Modbus](/protocols/modbus-tcp/).
 
 <figure class="wide">
 

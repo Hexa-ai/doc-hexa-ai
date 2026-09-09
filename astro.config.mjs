@@ -49,19 +49,19 @@ export default defineConfig({
           label: 'Démarrage',
           translations: { en: 'Getting started' },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'demarrage' } }],
+          items: [{ autogenerate: { directory: 'getting-started' } }],
         },
         {
           label: 'Protocoles',
           translations: { en: 'Protocols' },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'protocoles' } }],
+          items: [{ autogenerate: { directory: 'protocols' } }],
         },
         {
           label: 'Matériel',
           translations: { en: 'Hardware' },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'materiel' } }],
+          items: [{ autogenerate: { directory: 'hardware' } }],
         },
       ],
 

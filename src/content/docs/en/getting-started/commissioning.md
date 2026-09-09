@@ -20,7 +20,7 @@ procedure when migrating from Odoo.
 
 Wiring goes to the industrial terminal block, respecting the silkscreened
 polarity. The accepted supply range is listed in the
-[hardware specifications](/en/materiel/specifications/).
+[hardware specifications](/en/hardware/specifications/).
 
 Once powered, a full HAI-OS boot takes about a minute. The status LED turns
 solid green when services are up.
@@ -39,7 +39,7 @@ a 27-inch display.
 ## 3. Declare your first device
 
 Go to **Acquisition → Sources**, then pick your PLC's protocol. Configuring a
-Modbus TCP source is covered in [the Modbus page](/en/protocoles/modbus-tcp/).
+Modbus TCP source is covered in [the Modbus page](/en/protocols/modbus-tcp/).
 
 <figure class="wide">
 

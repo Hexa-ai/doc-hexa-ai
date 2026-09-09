@@ -89,8 +89,8 @@ ne sont pas optimisées).
 dossier que le `.md` et appelez-le avec `./` :
 
 ```
-src/content/docs/demarrage/
-├── mise-en-service.md
+src/content/docs/getting-started/
+├── commissioning.md
 └── ecran-accueil.png       <- ![...](./ecran-accueil.png)
 ```
 
@@ -138,16 +138,27 @@ chemin de fichier**. C'est ce qui permet au sélecteur de langue de basculer
 d'une page à l'autre.
 
 ```
-src/content/docs/protocoles/modbus-tcp.md        -> /protocoles/modbus-tcp/
-src/content/docs/en/protocoles/modbus-tcp.md     -> /en/protocoles/modbus-tcp/
+src/content/docs/protocols/modbus-tcp.md        -> /protocols/modbus-tcp/
+src/content/docs/en/protocols/modbus-tcp.md     -> /en/protocols/modbus-tcp/
 ```
 
-> **Compromis assumé :** les URL anglaises reprennent les segments français
-> (`/en/protocoles/`, pas `/en/protocols/`). C'est la contrainte du menu
-> autogénéré, qui apparie les dossiers par leur nom. Pour des URL anglaises
-> natives, il faudrait remplacer `autogenerate` par une liste explicite de
-> liens dans `astro.config.mjs`. À trancher avant la mise en ligne : changer
-> ces URL après coup casserait les liens entrants.
+> **Pourquoi les dossiers portent des noms anglais**, y compris côté français.
+> Deux mécanismes de Starlight l'imposent, et ils ne sont pas contournables
+> sans réécrire des composants :
+>
+> - le sélecteur de langue construit l'URL de l'autre langue en **remplaçant
+>   le seul segment de langue** (`localizedUrl.js`) — il ne cherche pas la
+>   page équivalente par son fichier ;
+> - le menu autogénéré cherche le dossier `<langue>/<dossier>`, donc sous le
+>   **même nom** dans les deux langues.
+>
+> Autrement dit, le chemin après `/en/` doit être identique au chemin
+> français. Des segments français d'un côté et anglais de l'autre casseraient
+> le bouton de langue (404) et le menu anglais. Les noms anglais donnent donc
+> des URL correctes en anglais sans rien sacrifier.
+>
+> **Ne renommez pas ces dossiers après la mise en ligne** : cela casserait les
+> liens entrants et le référencement.
 
 Les libellés des groupes de menu se traduisent dans `astro.config.mjs`
 (`translations: { en: '...' }`). Les libellés d'interface de Starlight se

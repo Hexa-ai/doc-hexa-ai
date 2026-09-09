@@ -10,7 +10,7 @@ gateway — and always **read-only**.
 
 | Protocol | Status | Scope |
 | --- | --- | --- |
-| [Modbus TCP](/en/protocoles/modbus-tcp/) | Production | Holding & input registers, coils, discrete inputs |
+| [Modbus TCP](/en/protocols/modbus-tcp/) | Production | Holding & input registers, coils, discrete inputs |
 | Modbus RTU | Production | RS232 / RS485 on the 4 terminal-block ports |
 | S7 · ISO-on-TCP | Production | Data blocks on S7-300/400/1200/1500 |
 | OPC-UA | Production | Node browser, anonymous / password / certificate |
