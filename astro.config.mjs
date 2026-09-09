@@ -100,6 +100,12 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'integration' } }],
         },
         {
+          label: 'Système & sécurité',
+          translations: { en: 'System & security' },
+          collapsed: false,
+          items: [{ autogenerate: { directory: 'system' } }],
+        },
+        {
           label: 'Matériel',
           translations: { en: 'Hardware' },
           collapsed: false,
