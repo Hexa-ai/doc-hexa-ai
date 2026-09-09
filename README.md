@@ -169,15 +169,25 @@ surchargent dans `src/content/i18n/`.
 Le workflow `.github/workflows/deploy.yml` construit et publie sur GitHub Pages
 à chaque push sur `main`.
 
-Côté GitHub, une fois le dépôt créé :
+Le dépôt appartient à l'organisation **Hexa-ai**. Ces étapes demandent le rôle
+**Admin** sur le dépôt : un simple accès en écriture ne fait pas apparaître la
+section Pages.
 
-1. **Settings → Pages → Source** : choisir **GitHub Actions**.
-2. **Settings → Pages → Custom domain** : `docs.hexa-ai.fr`.
-3. Chez le registrar, un `CNAME` `docs` vers `<compte>.github.io`.
+1. **Settings → Pages → Source** : **GitHub Actions**.
+2. Chez le registrar de `hexa-ai.fr`, un `CNAME` `docs` vers
+   **`hexa-ai.github.io`** — la cible est le domaine Pages de
+   l'organisation, pas celui du dépôt.
+3. **Settings → Pages → Custom domain** : `docs.hexa-ai.fr`.
 4. Cocher **Enforce HTTPS** une fois le certificat émis.
 
 Le domaine est aussi déclaré dans `astro.config.mjs` (`SITE`) — il sert à
 générer le `sitemap.xml` et les URL canoniques. À modifier en même temps.
+
+> Tant que le domaine personnalisé n'est pas en place, le site est servi sous
+> un sous-chemin (`hexa-ai.github.io/doc-hexa-ai/`) et s'affiche **sans style**
+> : les feuilles CSS et les images sont référencées depuis la racine du
+> domaine. Ce n'est pas une panne, et il n'y a rien à corriger — tout rentre
+> dans l'ordre une fois le site servi à la racine de `docs.hexa-ai.fr`.
 
 ### Le jour de la mise en ligne publique
 
