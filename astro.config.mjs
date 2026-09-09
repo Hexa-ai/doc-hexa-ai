@@ -82,8 +82,8 @@ export default defineConfig({
           items: [{ autogenerate: { directory: 'acquisition' } }],
         },
         {
-          label: 'Supervision',
-          translations: { en: 'Monitoring' },
+          label: 'Visualisation',
+          translations: { en: 'Visualisation' },
           collapsed: false,
           items: [{ autogenerate: { directory: 'monitoring' } }],
         },

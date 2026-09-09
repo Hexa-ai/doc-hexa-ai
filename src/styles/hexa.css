@@ -325,6 +325,13 @@ starlight-theme-select > label {
   margin-block-start: 0.4rem;
 }
 
+/* Titre de la page d'accueil. Starlight le compose en tres grand, ce qui
+   convient a un nom d'une syllabe et ecrase le reste des qu'il s'allonge. */
+.hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  line-height: 1.1;
+}
+
 /* Titres un peu resserres, dans l'esprit du site. */
 .sl-markdown-content :is(h1, h2, h3) {
   letter-spacing: -0.015em;

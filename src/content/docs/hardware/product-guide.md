@@ -9,7 +9,7 @@ sidebar:
 
 Ce chapitre présente un aperçu du produit, la liste d’emballage, l’apparence, les boutons, les indicateurs et les interfaces.
 
-## 1.1 Aperçu
+### 1.1 Aperçu
 
 La référence **HAI-P200-4G** est un PC industriel basé sur le **Raspberry Pi CM4**., il dispose de 4 Go de RAM et 32 Go de stockage eMMC.
 
@@ -17,7 +17,7 @@ L’**HAI-P200-4G** intègre des interfaces courantes (**HDMI**, **USB**, **Et
 
 ![Plans cotés du HAI-P200-4G : vues de dessus, de face, de côté et de dessous, dimensions en millimètres](./product-guide-1.png)
 
-## 1.2 Liste d'emballage
+### 1.2 Liste d'emballage
 
 - 1x Unité **HAI-P200-4G**
 - 1x Antenne 4G
@@ -25,11 +25,11 @@ L’**HAI-P200-4G** intègre des interfaces courantes (**HDMI**, **USB**, **Et
 - 1x Bornier d’alimentation débrochable à 2 contacts (borne à vis)
 - 2x Borniers RS232/RS485 débrochables à 6 contacts (bornes à ressort)
 
-## 1.3 Apparence
+### 1.3 Apparence
 
 Description des fonctions et définitions des interfaces sur chaque face.
 
-### 1.3.1 Face Avant
+#### 1.3.1 Face Avant
 
 | **N°** | **Fonction** |
 | --- | --- |
@@ -44,7 +44,7 @@ Description des fonctions et définitions des interfaces sur chaque face.
 | **9** | 1 port Ethernet 10/100/1000 M (RJ45) avec indicateur LED |
 | **10** | 1 port Ethernet 10/100 M (RJ45) avec indicateur LED |
 
-### 1.3.2 Face arrière
+#### 1.3.2 Face arrière
 
 ![Face arrière du HAI-P200-4G](./product-guide-2.png)
 
@@ -55,7 +55,7 @@ Description des fonctions et définitions des interfaces sur chaque face.
 | **3** | 1 slot Nano SIM pour installer une carte SIM (réception du signal 4G). |
 | **4** | 1 port Micro USB pour flasher le système sur l’eMMC. |
 
-### 1.3.3 Face latérale
+#### 1.3.3 Face latérale
 
 ![Face latérale du HAI-P200-4G](./product-guide-3.png)
 
@@ -67,11 +67,11 @@ Description des fonctions et définitions des interfaces sur chaque face.
 | **4** | 1 port antenne 4G (connecteur SMA). |
 | **5** | 1 port antenne Wi-Fi/BT (connecteur SMA). |
 
-## 1.4 Bouton
+### 1.4 Bouton
 
 Le dispositif **HAI-P200-4G** inclut un bouton **RESET**, marqué "RESET" sous le boîtier. Appuyer sur ce bouton réalise un redémarrage électrique.
 
-## 1.5 Indicateurs
+### 1.5 Indicateurs
 
 Présentation des différents états et significations des indicateurs de l’appareil **HAI-P200-4G**.
 
@@ -95,26 +95,26 @@ Présentation des différents états et significations des indicateurs de l’ap
 | **COM1~COM4** | Allumé/Clignote | Données en transmission. |
 | | Éteint | Aucune transmission ou appareil éteint. |
 
-## 1.6 Interfaces
+### 1.6 Interfaces
 
 Présentation de la définition et de la fonction de chaque interface du produit.
 
-### 1.6.1 Emplacements de Cartes
+#### 1.6.1 Emplacements de Cartes
 
 L’appareil **HAI-P200-4G** inclut :
 
 - Un **slot de carte SD** (Micro SD) pour le stockage de données.
 - Un **slot de carte Nano SIM** pour la connexion 4G.
 
-#### 1.6.1.1 Slot de Carte SD
+##### 1.6.1.1 Slot de Carte SD
 
 Le slot Micro SD, permet d’installer une carte SD pour stocker les données utilisateur.
 
-#### 1.6.1.2 Slot de Carte SIM
+##### 1.6.1.2 Slot de Carte SIM
 
 Le slot Nano SIM, permet d’installer une carte SIM pour recevoir le signal 4G.
 
-### 1.6.2 Interface d’Alimentation
+#### 1.6.2 Interface d’Alimentation
 
 L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant continu (9–36 V) via des borniers Phoenix 2 broches (espacement 3,5 mm). Les broches sont définies comme suit :
 
@@ -129,7 +129,7 @@ L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant cont
 | 1 | GND |
 | 2 | 9 V à 36 V |
 
-### 1.6.4 Interface RS485/RS232
+#### 1.6.4 Interface RS485/RS232
 
 L’appareil inclut 2 ports RS485 et 2 ports RS232 (borniers 6 broches). Configuration par modèle : 2x RS485 + 2x RS232
 
@@ -166,7 +166,7 @@ Le schéma de câblage du RS232 est le suivant :
 
 ![Schéma de câblage RS232](./product-guide-8.png)
 
-### 1.6.5 Port Ethernet 1000M
+#### 1.6.5 Port Ethernet 1000M
 
 L’appareil **HAI-P200-4G** inclut un port Ethernet 10/100/1000M adaptatif. Le connecteur est de type **RJ45** et prend en charge le **PoE** avec module d’extension. Utilisez un câble réseau **Cat6** ou supérieur.
 
@@ -208,26 +208,26 @@ Port Ethernet 10/100M adaptatif (connecteur **RJ45**). Utilisez un câble rése
 | 7 | – |
 | 8 | – |
 
-### 1.6.7 Port HDMI
+#### 1.6.7 Port HDMI
 
 Port HDMI de type **A**, marquage **HDMI**, supportant une résolution jusqu’à **4Kp60**.
 
-### 1.6.8 Ports USB 2.0
+#### 1.6.8 Ports USB 2.0
 
 2 ports USB 2.0 de type **A**, débit maximal de **480 Mbps**.
 
-### 1.6.9 Port Micro USB
+#### 1.6.9 Port Micro USB
 
 Port Micro USB marqué pour connecter l’appareil à un PC et flasher le système sur l’eMMC.
 
-### 1.6.10 Ports Antenne
+#### 1.6.10 Ports Antenne
 
 2 ports antenne **SMA** :
 
 - Marquage **4G** : pour antenne 4G.
 - Marquage **Wi-Fi/BT** : pour antenne Wi-Fi/Bluetooth.
 
-### 1.6.11 Support de Pile RTC
+#### 1.6.11 Support de Pile RTC
 
 La carte mère intègre une **RTC** (horloge temps réel).
 
@@ -239,7 +239,7 @@ La **RTC** garantit une horloge fiable et ininterrompue, même en cas de coupu
 
 Ce chapitre explique comment installer l’appareil.
 
-## 2.1 Installation sur Rail DIN
+### 2.1 Installation sur Rail DIN
 
 L’appareil **HAI-P200-4G** est livré avec un **support Rail-DIN** préinstallé par défaut.
 
@@ -259,7 +259,7 @@ L’appareil **HAI-P200-4G** est livré avec un **support Rail-DIN** préinsta
 
 ## 4 Démarrage de l’Appareil
 
-## 4.1 Premier Démarrage du Système
+### 4.1 Premier Démarrage du Système
 
 L’**HAI-P200-4G** **n’a pas d’interrupteur d’alimentation**. Le système démarre automatiquement après la mise sous tension.
 

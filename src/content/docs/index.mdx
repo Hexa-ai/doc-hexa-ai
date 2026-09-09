@@ -1,47 +1,74 @@
 ---
 title: Accueil
-description: Passerelle industrielle HAI-P200-4G — acquisition, monitoring, télémaintenance et astreinte.
+description: Documentation du HAI-P200-4G et de HAI-OS — mise en route, réseau, acquisition, visualisation, alertes et intégration.
 template: splash
 hero:
-  title: Documentation HAI-OS
-  tagline: Raccorder vos automates, historiser vos variables et intervenir à distance — sans VPN à monter.
+  title: HAI Doc
+  tagline: Le HAI-P200-4G et HAI-OS, de la première mise sous tension à l'intégration dans vos systèmes.
   image:
     file: ../../assets/hai-p200-4g.webp
   actions:
-    - text: Démarrage rapide
-      link: /getting-started/quick-start-monitoring/
+    - text: Première connexion
+      link: /getting-started/first-connection/
       icon: right-arrow
       variant: primary
-    - text: Protocoles supportés
-      link: /acquisition/protocols/
-      icon: external
+    - text: Démarrage rapide
+      link: /getting-started/quick-start-monitoring/
+      icon: rocket
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<CardGrid stagger>
+<CardGrid>
   <Card title="Démarrage" icon="rocket">
-    Raccordement électrique, premier accès à l'interface web et déclaration
-    du premier équipement.
+    Raccorder le boîtier, ouvrir son interface, collecter une première
+    donnée et l'atteindre à distance.
 
-    [Démarrage rapide →](/getting-started/quick-start-monitoring/)
+    [Première connexion →](/getting-started/first-connection/)
   </Card>
-  <Card title="Protocoles" icon="setting">
-    Modbus TCP et RTU, S7, OPC-UA, BACnet/IP, NMEA 0183 et MQTT via Node-RED.
+  <Card title="Réseau & accès" icon="puzzle">
+    Tunnel VPN Tailscale, point d'accès Wi-Fi et accès invité en lecture.
 
-    [Vue d'ensemble →](/acquisition/protocols/)
+    [VPN Tailscale →](/network/tailscale-vpn/)
+  </Card>
+  <Card title="Acquisition" icon="setting">
+    Le Data-Plug, les protocoles supportés — Modbus, OPC-UA, S7, BACnet/IP,
+    NMEA 0183 — et le paramétrage des entrées.
+
+    [Data-Plug →](/acquisition/data-plug/)
+  </Card>
+  <Card title="Visualisation" icon="bars">
+    Explorer les variables historisées, découper la production en lots et
+    suivre les alarmes.
+
+    [Data-Explorer →](/monitoring/data-explorer/)
+  </Card>
+  <Card title="Alertes & rapports" icon="email">
+    Notifications par e-mail et SMS, escalade par paliers et rapports PDF
+    périodiques.
+
+    [Notifications →](/alerts/notifications/)
+  </Card>
+  <Card title="Intégration" icon="seti:json">
+    Store & Forward, webhooks, API MQTT et flux Node-RED pour relier le
+    boîtier à vos systèmes.
+
+    [Store & Forward →](/integration/store-and-forward/)
+  </Card>
+  <Card title="Système & sécurité" icon="approve-check">
+    Mot de passe, pare-feu, journaux d'audit, remise à zéro et transfert de
+    configuration.
+
+    [Sécurité →](/system/security/)
   </Card>
   <Card title="Matériel" icon="laptop">
     Caractéristiques du HAI-P200-4G : cœur, connectivité, robustesse,
-    alimentation et montage.
+    interfaces et montage sur rail DIN.
 
     [Spécifications →](/hardware/specifications/)
   </Card>
-  <Card title="Besoin d'aide ?" icon="email">
-    Pas de commercial : vous parlez directement à l'ingénieur qui suit votre
-    projet.
-
-    [contact@hexa-ai.fr](mailto:contact@hexa-ai.fr)
-  </Card>
 </CardGrid>
+
+Une question sur votre installation ? Pas de commercial : vous parlez
+directement à l'ingénieur qui suit votre projet — [contact@hexa-ai.fr](mailto:contact@hexa-ai.fr).
