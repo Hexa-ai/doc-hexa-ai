@@ -6,7 +6,7 @@
 // ou il devrait deviner ce qui est du contenu et ce qui est du gabarit.
 
 import { getCollection } from 'astro:content';
-import { SECTIONS, NOTES_DE_VERSION } from './sections.mjs';
+import { SECTIONS, NOTES_DE_VERSION, TITRE } from './sections.mjs';
 
 const SITE = 'https://docs.hexa-ai.fr';
 
@@ -80,8 +80,8 @@ export async function construireLlmsFull(langue) {
   // decales d'un cran par descendreTitres().
   if (langue === 'en') {
     morceaux.push(
-      '> HAI Docs — every page of the HAI-P200-4G / HAI-OS documentation, in one ' +
-        'file, in the order of the site navigation. Published by Hexa-AI.'
+      `> ${TITRE.en} — every page of the HAI-P200-4G / HAI-OS documentation, in ` +
+        'one file, in the order of the site navigation. Published by Hexa-AI.'
     );
     morceaux.push('');
     morceaux.push(`Source: ${SITE}/en/ — index: ${SITE}/llms.txt`);
@@ -92,8 +92,8 @@ export async function construireLlmsFull(langue) {
     );
   } else {
     morceaux.push(
-      '> HAI Doc — toutes les pages de la documentation du HAI-P200-4G et de ' +
-        "HAI-OS, en un seul fichier, dans l'ordre du menu. Editee par Hexa-AI."
+      `> ${TITRE.fr} — toutes les pages de la documentation du HAI-P200-4G et ` +
+        "de HAI-OS, en un seul fichier, dans l'ordre du menu. Editee par Hexa-AI."
     );
     morceaux.push('');
     morceaux.push(`Source : ${SITE}/ — sommaire : ${SITE}/llms.txt`);

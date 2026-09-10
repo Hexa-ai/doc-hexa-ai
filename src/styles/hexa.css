@@ -364,6 +364,26 @@ starlight-theme-select > label {
   }
 }
 
+/* Barre de recherche centree.
+   Starlight distribue l'en-tete en trois colonnes « nom du site | recherche |
+   selecteurs », la colonne du milieu prenant toute la place restante. La
+   recherche s'y cale a gauche : elle se retrouve donc a un tiers de l'ecran,
+   ni alignee sur le nom, ni au centre.
+   En donnant aux deux colonnes laterales la meme part, la colonne du milieu
+   tombe exactement au milieu de la fenetre. Sous 50rem, l'en-tete n'a plus
+   que deux colonnes et la regle n'a pas lieu d'etre. */
+@media (min-width: 50rem) {
+  div.header {
+    grid-template-columns: 1fr min(22rem, 40%) 1fr;
+  }
+
+  /* La colonne de droite n'etant plus taillee sur son contenu, il faut lui
+     dire de rester collee au bord. */
+  div.header > :last-child {
+    justify-content: flex-end;
+  }
+}
+
 /* Listes.
    Odoo separe ses puces par une ligne vide. En Markdown cela produit une
    liste « lache » : chaque item est enveloppe dans un <p>, dont la marge

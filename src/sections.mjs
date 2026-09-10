@@ -1,3 +1,8 @@
+// Nom du site. Il apparait dans l'en-tete, dans le titre des onglets et en
+// tete des fichiers destines aux modeles de langage : une seule definition
+// evite qu'il change a un endroit et pas aux autres.
+export const TITRE = { fr: 'HAI-Doc', en: 'HAI-Docs' };
+
 // Sections de la documentation — source unique.
 //
 // Le menu lateral (astro.config.mjs) et les index destines aux modeles de

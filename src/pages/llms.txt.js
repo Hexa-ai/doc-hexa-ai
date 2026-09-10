@@ -8,7 +8,7 @@
 // Genere au build a partir du contenu reel : aucune liste a tenir a jour.
 
 import { getCollection } from 'astro:content';
-import { SECTIONS, NOTES_DE_VERSION } from '../sections.mjs';
+import { SECTIONS, NOTES_DE_VERSION, TITRE } from '../sections.mjs';
 
 const SITE = 'https://docs.hexa-ai.fr';
 
@@ -47,7 +47,7 @@ export async function GET() {
 
   const lignes = [];
 
-  lignes.push('# HAI Doc');
+  lignes.push(`# ${TITRE.fr}`);
   lignes.push('');
   lignes.push(
     '> Documentation de la passerelle industrielle HAI-P200-4G et du systeme HAI-OS : ' +

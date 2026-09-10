@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
-import { SECTIONS, NOTES_DE_VERSION } from './src/sections.mjs';
+import { SECTIONS, NOTES_DE_VERSION, TITRE } from './src/sections.mjs';
 
 // Domaine de publication. A changer si la doc part sur un sous-chemin
 // (voir README, section « Publication »).
@@ -27,10 +27,7 @@ export default defineConfig({
       // avec le logo, la recherche et le bouton de menu. « Documentation
       // HAI-OS » reclamait 221 px pour 143 px disponibles sur un telephone,
       // et se retrouvait tranche en plein milieu d'un mot.
-      title: {
-        fr: 'HAI Doc',
-        en: 'HAI Docs',
-      },
+      title: TITRE,
 
       favicon: '/favicon.ico',
       description: 'Documentation de la passerelle industrielle HAI-P200-4G et du système HAI-OS.',

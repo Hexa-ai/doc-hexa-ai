@@ -3,7 +3,7 @@ title: Accueil
 description: Documentation du HAI-P200-4G et de HAI-OS — mise en route, réseau, acquisition, visualisation, alertes et intégration.
 template: splash
 hero:
-  title: HAI Doc
+  title: HAI-Doc
   tagline: Le HAI-P200-4G et HAI-OS, de la première mise sous tension à l'intégration dans vos systèmes.
   image:
     file: ../../assets/hai-p200-4g.webp
@@ -20,7 +20,9 @@ hero:
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-<CardGrid>
+{/* stagger : la colonne de droite descend d'une demi-carte. Huit cartes
+    alignees au cordeau font un damier ; decalees, l'oeil suit. */}
+<CardGrid stagger>
   <Card title="Démarrage" icon="rocket">
     Raccorder le boîtier, ouvrir son interface, collecter une première
     donnée et l'atteindre à distance.
