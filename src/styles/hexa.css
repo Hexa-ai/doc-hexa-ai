@@ -160,9 +160,18 @@
    cela, une image dans un <figure> se centrerait sur la colonne (869 px) et
    une image dans un paragraphe sur le texte (800 px) — deux alignements
    differents sur la meme page, visibles a l'oeil. */
+/* .sl-heading-wrapper doit figurer dans la liste : Starlight y enveloppe les
+   titres porteurs d'une ancre, qui ne sont donc pas enfants directs. Sans lui,
+   les titres se calent sur le bord de la colonne quand le texte, lui, se
+   centre — deux axes differents sur la meme page. */
 .sl-markdown-content > :is(p, ul, ol, dl, blockquote, details, hr,
-figure, pre, h1, h2, h3, h4, h5, h6, .starlight-aside, .expressive-code) {
+figure, pre, h1, h2, h3, h4, h5, h6, .sl-heading-wrapper,
+.starlight-aside, .expressive-code) {
   max-width: var(--hai-text-width);
+  /* Centre dans la colonne, et non cale a gauche : sans cela le reliquat de
+     largeur — celui qui sert aux figures — s'accumule entierement a droite,
+     et la page parait decentree sur les articles sans grande image. */
+  margin-inline: auto;
 }
 
 /* Figure large : echappe a la mesure du texte et prend la colonne entiere. */
@@ -282,6 +291,16 @@ header.header {
 
   /* Le centrage assure jusqu'ici par la marge du sommaire. */
   .content-panel > .sl-container {
+    margin-inline: auto;
+  }
+
+  /* Le titre de la page, le pied et la pagination vivent hors de la colonne
+     Markdown, dans un conteneur qui occupe toute la largeur. Sans cette regle
+     ils se calent sur le bord de la colonne tandis que le corps du texte se
+     centre : le titre se retrouve decale d'une centaine de pixels a gauche de
+     son propre paragraphe. */
+  .content-panel > .sl-container > :not(.sl-markdown-content) {
+    max-width: var(--hai-text-width);
     margin-inline: auto;
   }
 }
