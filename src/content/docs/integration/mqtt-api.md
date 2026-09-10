@@ -74,7 +74,7 @@ Pour expédier un message texte vers un téléphone portable :
     JSON
 
     ```
-    {  "number": "+33612345678",  "message": "Alerte : Niveau cuve bas !"
+    { "number": "+33612345678", "message": "Alerte : Niveau cuve bas !" }
     ```
 
     _(Remarque : Assurez-vous d'utiliser le format international pour le numéro de téléphone, par exemple +33 pour la France)_.
@@ -90,7 +90,7 @@ Pour expédier un message texte vers un téléphone portable :
     JSON
 
     ```
-    {  "number": "+33612345678",  "message": "Texte du SMS reçu"
+    { "number": "+33612345678", "message": "Texte du SMS reçu" }
     ```
 
     _(Dans Node-RED, vous pouvez utiliser un nœud mqtt in abonné à ce topic pour déclencher des actions, comme par exemple : si le message contient le mot "STATUS", répondre par un SMS donnant l'état de la machine)_.

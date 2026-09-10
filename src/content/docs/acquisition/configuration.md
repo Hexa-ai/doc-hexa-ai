@@ -303,7 +303,7 @@ Pour paramétrer une connexion utilisant le protocole Modbus RTU, vous devez dan
 
 Une fois la liaison série établie sur cette page dédiée, l'ajout de votre appareil et la collecte de ses données s'effectuent de façon identique au **Modbus TCP**. Il vous suffit de l'ajouter dans le configurateur graphique comme une entrée Modbus classique.
 
-Pour configurer vos différentes variables, il faudra donc revenir à l'explication détaillée de la section [**Modbus TCP**](https://hexa-ai.odoo.com/odoo/knowledge/159#227545997557). Vous y appliquerez exactement la même méthode pour :
+Pour configurer vos différentes variables, il faudra donc revenir à l'explication détaillée de la section [**Modbus TCP**](#modbus-tcp). Vous y appliquerez exactement la même méthode pour :
 
 - **Sélectionner le type de champ :** Holding Registers, Input Registers, Coils ou Discrete Inputs.
 
