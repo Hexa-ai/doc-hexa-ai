@@ -4,6 +4,20 @@
    fond #0a0f14, accent #00d4aa, texte #e6edf3, bordures #2a3a47.
    ========================================================================== */
 
+/* Deplacement vers une ancre : on glisse au lieu de sauter.
+   Choisir un chapitre dans le sommaire tombait sans transition sur le titre,
+   sans montrer d'ou l'on venait ni de combien on s'etait deplace.
+   La regle est enfermee dans prefers-reduction-motion : un lecteur qui a
+   demande moins d'animations dans son systeme retrouve le saut immediat, qui
+   reste le comportement le plus sur pour les vertiges et les migraines.
+   Le decalage sous l'en-tete colle est deja gere par Starlight
+   (scroll-padding-top, barre de sommaire mobile comprise). */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 :root {
   --sl-font: 'Inter Variable', Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
 
