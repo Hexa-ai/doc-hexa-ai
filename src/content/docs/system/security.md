@@ -16,7 +16,9 @@ Bienvenue dans ce guide de prise en main du menu **Security**. Ce module regrou
 
 ### À la première mise en service
 
-Un contrôleur neuf ne vous présente pas de page de connexion. Il ouvre directement un **écran de configuration** qui vous demande de choisir votre mot de passe administrateur. Tant que ce n'est pas fait, aucune page et aucun réglage ne sont accessibles.
+Le contrôleur vous présente d'abord sa page de connexion et attend les identifiants d'usine : utilisateur `admin`, mot de passe `hai1@`. Une fois ceux-ci saisis, il ouvre un **écran de configuration** qui vous demande de choisir votre propre mot de passe administrateur. Tant que ce n'est pas fait, aucune autre page et aucun réglage ne sont accessibles.
+
+Le mot de passe d'usine ne sert donc qu'à franchir cette étape : il ne sera jamais celui avec lequel vous administrerez le contrôleur. C'est le même parcours après une [remise à zéro complète](/system/reset/), qui rétablit ces identifiants d'usine.
 
 Le mot de passe demandé doit respecter deux règles :
 

@@ -85,7 +85,7 @@ La seconde carte, **Factory reset**, efface tout ce que contient le contrôleur
 2.  Saisissez ERASE dans le champ de confirmation.
 3.  Cliquez sur **Erase everything & reboot**.
 4.  Le contrôleur redémarre et s'efface. Comptez quelques minutes.
-5.  Au retour, il vous demande de **choisir un nouveau mot de passe administrateur** avant de donner accès à quoi que ce soit.
+5.  Au retour, le mot de passe administrateur est revenu à sa valeur d'usine : connectez-vous avec `admin` / `hai1@`. Le contrôleur vous demande alors de **choisir un nouveau mot de passe administrateur** avant de donner accès à quoi que ce soit.
 
 :::caution
 **Cette opération est irréversible**, et le contrôleur est injoignable à distance pendant qu'il redémarre. **Ne coupez pas l'alimentation** pendant l'effacement.
@@ -133,7 +133,7 @@ La touche **F** ouvre l'écran d'effacement. Celui-ci annonce d'abord la march
 
 1.  Vous saisissez ERASE et appuyez sur Entrée.
 2.  Le contrôleur redémarre et s'efface.
-3.  Il vous demande ensuite de choisir un nouveau mot de passe administrateur.
+3.  Il redemande ensuite les identifiants d'usine (`admin` / `hai1@`), puis vous fait choisir un nouveau mot de passe administrateur.
 
 :::caution
 **Aucun mot de passe n'est demandé sur cet écran.** C'est volontaire : un boîtier coupé de tout doit rester effaçable, y compris par quelqu'un qui n'en connaît pas les identifiants. En contrepartie, l'accès physique au contrôleur doit être considéré comme un accès privilégié, et **toute utilisation de cet écran est enregistrée** dans le journal d'audit (voir le guide _🛡️ Sécurité (Mot de passe, Pare-feu et Journaux)_).

@@ -85,7 +85,7 @@ The second card, **Factory reset**, erases everything the controller holds and r
 2.  Type ERASE in the confirmation field.
 3.  Click **Erase everything & reboot**.
 4.  The controller restarts and erases itself. Allow a few minutes.
-5.  When it comes back, it asks you to **choose a new administrator password** before giving access to anything.
+5.  When it comes back, the administrator password has returned to its factory value: log in with `admin` / `hai1@`. The controller then asks you to **choose a new administrator password** before giving access to anything.
 
 :::caution
 **This operation is irreversible**, and the controller is unreachable remotely while it restarts. **Do not cut the power** during the erasure.
@@ -133,7 +133,7 @@ The **F** key opens the erasure screen. It first states how to proceed, then lis
 
 1.  You type ERASE and press Enter.
 2.  The controller restarts and erases itself.
-3.  It then asks you to choose a new administrator password.
+3.  It then asks for the factory credentials again (`admin` / `hai1@`), and has you choose a new administrator password.
 
 :::caution
 **No password is asked for on that screen.** That is deliberate: a box cut off from everything must remain erasable, including by someone who does not know its credentials. In exchange, physical access to the controller must be treated as privileged access, and **every use of that screen is recorded** in the audit log (see the _🛡️ Security (password, firewall and logs)_ guide).

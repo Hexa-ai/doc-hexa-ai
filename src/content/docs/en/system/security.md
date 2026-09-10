@@ -16,7 +16,9 @@ Welcome to this guide to the **Security** menu. This module gathers everything t
 
 ### At first setup
 
-A new controller does not show you a login page. It opens a **configuration screen** straight away, asking you to choose your administrator password. Until that is done, no page and no setting is reachable.
+The controller first shows you its login page and expects the factory credentials: user `admin`, password `hai1@`. Once those are entered, it opens a **configuration screen** asking you to choose your own administrator password. Until that is done, no other page and no setting is reachable.
+
+The factory password therefore only serves to get through that step: it will never be the one you administer the controller with. The same applies after a [full reset](/en/system/reset/), which restores those factory credentials.
 
 The password requested has to obey two rules:
 
