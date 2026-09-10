@@ -2,6 +2,7 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
+import { SECTIONS, NOTES_DE_VERSION } from './src/sections.mjs';
 
 // Domaine de publication. A changer si la doc part sur un sous-chemin
 // (voir README, section « Publication »).
@@ -61,66 +62,22 @@ export default defineConfig({
       // sans qu'on ait besoin de les sur-dimensionner dans la page.
       plugins: [starlightImageZoom()],
 
-      // Depuis Starlight 0.39, un groupe autogenere s'ecrit
-      // { label, items: [{ autogenerate }] }. collapsed: false => deplie.
+      // Les sections viennent de src/sections.mjs, que partagent le menu et
+      // les index pour modeles de langage. Depuis Starlight 0.39, un groupe
+      // autogenere s'ecrit { label, items: [{ autogenerate }] }.
+      // collapsed: false => deplie.
       sidebar: [
-        {
-          label: 'Démarrage',
-          translations: { en: 'Getting started' },
+        ...SECTIONS.map(({ dossier, fr, en }) => ({
+          label: fr,
+          translations: { en },
           collapsed: false,
-          items: [{ autogenerate: { directory: 'getting-started' } }],
-        },
+          items: [{ autogenerate: { directory: dossier } }],
+        })),
+        // Page seule, hors groupe. Le lien est localise automatiquement en /en/.
         {
-          label: 'Réseau & accès',
-          translations: { en: 'Network & access' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'network' } }],
-        },
-        // Les trois sections suivent le cycle de la donnee : on l'acquiert,
-        // on la supervise, on alerte. Dix articles dans une seule section
-        // devenaient illisibles.
-        {
-          label: 'Acquisition',
-          translations: { en: 'Acquisition' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'acquisition' } }],
-        },
-        {
-          label: 'Visualisation',
-          translations: { en: 'Visualisation' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'monitoring' } }],
-        },
-        {
-          label: 'Alertes & rapports',
-          translations: { en: 'Alerts & reports' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'alerts' } }],
-        },
-        {
-          label: 'Intégration',
-          translations: { en: 'Integration' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'integration' } }],
-        },
-        {
-          label: 'Système & sécurité',
-          translations: { en: 'System & security' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'system' } }],
-        },
-        {
-          label: 'Matériel',
-          translations: { en: 'Hardware' },
-          collapsed: false,
-          items: [{ autogenerate: { directory: 'hardware' } }],
-        },
-        // Page seule, hors groupe : les notes de version ne relevent d'aucune
-        // des trois sections. Le lien est localise automatiquement en /en/.
-        {
-          label: 'Notes de version',
-          translations: { en: 'Release notes' },
-          link: '/release-notes/',
+          label: NOTES_DE_VERSION.fr,
+          translations: { en: NOTES_DE_VERSION.en },
+          link: `/${NOTES_DE_VERSION.fichier}/`,
         },
       ],
 

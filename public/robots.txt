@@ -7,8 +7,21 @@
 # NOINDEX d'astro.config.mjs mettait « noindex » sur chaque page. Bloquer le
 # crawl ici aurait ete contre-productif : un moteur qui ne peut pas lire la
 # page ne voit pas non plus son « noindex », et peut referencer l'URL seule.
+#
+# Les robots des assistants sont accueillis de la meme facon, et c'est
+# deliberé : quand un client demande a un assistant comment configurer son
+# Data-Plug, mieux vaut qu'il reponde a partir de notre documentation que
+# d'une supposition. Les fichiers /llms.txt et /llms-full.txt leur donnent le
+# contenu en Markdown, sans gabarit ni navigation autour.
 
 User-agent: *
 Allow: /
 
 Sitemap: https://docs.hexa-ai.fr/sitemap-index.xml
+
+# Sommaire et contenu integral au format Markdown, convention llmstxt.org.
+# Ces deux lignes ne sont pas une directive du protocole : les robots les
+# ignorent, elles servent aux personnes qui ouvrent ce fichier.
+# Sommaire      : https://docs.hexa-ai.fr/llms.txt
+# Integral (fr) : https://docs.hexa-ai.fr/llms-full.txt
+# Integral (en) : https://docs.hexa-ai.fr/en/llms-full.txt
