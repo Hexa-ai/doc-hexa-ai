@@ -2,7 +2,7 @@
 title: "VPN Tailscale"
 description: "Relier le HAI-P200-4G à votre réseau Tailscale : installation du client, clé d'authentification, exposition d'un sous-réseau et redirection de port."
 sidebar:
-  order: 1
+  order: 2
 ---
 
 ![Un opérateur devant son ordinateur portable, relié par le nuage Tailscale à une passerelle HAI-P200-4G installée près d'une ligne de production](./tailscale-vpn-1.webp)

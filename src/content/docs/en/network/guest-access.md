@@ -2,7 +2,7 @@
 title: "Guest access"
 description: "Open read-only access to the interface: enabling it, choosing the visible pages, custom links and logging in."
 sidebar:
-  order: 3
+  order: 4
 ---
 
 Guest Access opens part of the controller's interface to unauthenticated users. Your operators, maintenance technicians or visitors can consult the data, the alarms and the reports without a password, and with no risk of altering the controller's configuration.

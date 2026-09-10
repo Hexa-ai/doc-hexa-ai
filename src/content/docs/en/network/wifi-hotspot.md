@@ -2,7 +2,7 @@
 title: "WiFi access point (hotspot)"
 description: "Turn the HAI-P200-4G into a WiFi access point: creating the network, captive portal, tracking connected devices and sharing the connection."
 sidebar:
-  order: 2
+  order: 3
 ---
 
 Welcome to this guide to the WiFi access point. This feature turns your HAI-P200-4G controller into a WiFi hotspot: your phones, tablets and laptops connect to it directly, reach the controller's interface, and can even use its 4G or Ethernet Internet connection. It is the ideal tool for working on an installation with no network, or for troubleshooting an isolated machine.

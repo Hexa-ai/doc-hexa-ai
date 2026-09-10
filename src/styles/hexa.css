@@ -357,15 +357,18 @@ starlight-theme-select > label {
 }
 
 /* Tableaux.
-   Ils occupent toute la colonne, et non la seule mesure du texte : une
-   grille de correspondances se lit mieux etalee que tassee.
-   Surtout, pas de display:block ici — il transforme le tableau en simple
-   bloc, le contenu se retracte alors sur sa largeur naturelle et se colle a
-   gauche. La mise en page tabulaire doit rester une mise en page tabulaire. */
+   Ils suivent la mesure du texte, comme les paragraphes et les titres. Ils
+   prenaient auparavant la colonne entiere (68rem contre 50rem) : le tableau
+   depassait alors d'une centaine de pixels de chaque cote du texte, et la
+   page semblait avoir deux marges gauches.
+   Pas de display:block ici — il transforme le tableau en simple bloc, le
+   contenu se retracte alors sur sa largeur naturelle et se colle a gauche.
+   La mise en page tabulaire doit rester une mise en page tabulaire. */
 .sl-markdown-content > table {
   display: table;
-  max-width: none;
+  max-width: var(--hai-text-width);
   width: 100%;
+  margin-inline: auto;
   border-collapse: collapse;
 }
 
@@ -375,10 +378,17 @@ starlight-theme-select > label {
   vertical-align: top;
 }
 
-/* Premiere colonne : c'est l'entree de la grille, elle ne doit pas se casser
-   au milieu d'une reference. */
+/* Premiere colonne : c'est l'entree de la grille. Elle etait en nowrap pour
+   qu'une reference ne se casse pas en deux, mais le nowrap ne fait pas la
+   difference entre « RS485-B2 » et une phrase entiere. Sur les tableaux de
+   messages d'erreur, la colonne reclamait mille pixels sur une seule ligne,
+   debordait la colonne et ne laissait a la seconde qu'un boyau de texte
+   empile sur cinq lignes.
+   Le plafond ci-dessous joue le meme role sans cet effet de bord : une
+   entree courte tient toujours sur sa ligne, faute d'avoir de quoi se
+   casser, et une phrase s'enveloppe au lieu de tout prendre. */
 .sl-markdown-content :is(th, td):first-child {
-  white-space: nowrap;
+  max-width: 20rem;
 }
 
 /* Sous le point de rupture, un tableau large defile horizontalement plutot
@@ -390,6 +400,6 @@ starlight-theme-select > label {
   }
 
   .sl-markdown-content :is(th, td):first-child {
-    white-space: normal;
+    max-width: none;
   }
 }

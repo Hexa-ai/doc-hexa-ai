@@ -2,7 +2,7 @@
 title: "Tailscale VPN"
 description: "Connect the HAI-P200-4G to your Tailscale network: installing the client, authentication key, exposing a subnet and port forwarding."
 sidebar:
-  order: 1
+  order: 2
 ---
 
 ![An operator at their laptop, linked through the Tailscale cloud to a HAI-P200-4G gateway installed next to a production line](../../network/tailscale-vpn-1.webp)

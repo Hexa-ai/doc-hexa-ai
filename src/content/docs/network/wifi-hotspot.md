@@ -2,7 +2,7 @@
 title: "Point d'accès Wi-Fi (hotspot)"
 description: "Transformer le HAI-P200-4G en point d'accès Wi-Fi : création du réseau, portail captif, suivi des appareils connectés et partage de connexion."
 sidebar:
-  order: 2
+  order: 3
 ---
 
 Bienvenue dans ce guide de prise en main du point d'accès Wi-Fi. Cette fonctionnalité transforme votre contrôleur HAI-P200-4G en borne Wi-Fi : vos téléphones, tablettes et PC portables s'y connectent directement, accèdent à l'interface du contrôleur, et peuvent même bénéficier de sa connexion Internet 4G ou Ethernet. C'est l'outil idéal pour intervenir sur une installation sans réseau, ou pour dépanner une machine isolée.
