@@ -340,6 +340,30 @@ starlight-theme-select > label {
   --sl-select-width: 8em !important;
 }
 
+/* Nom du site.
+   Il partage la barre du haut avec le logo, la recherche et le bouton de
+   menu, et c'est lui qui cede quand la place manque. Starlight le tronque
+   alors sans rien afficher (text-overflow: clip), donc en plein milieu d'un
+   mot. Les points de suspension disent au moins que le nom continue. */
+.site-title > span {
+  text-overflow: ellipsis;
+}
+
+/* Sur les tres petits ecrans — 320 px, un iPhone SE — « HAI Docs » demandait
+   encore 89 px pour 80 px disponibles. On resserre l'ecart logo/nom et on
+   descend le logo de 32 a 28 px de haut : le nom recupere 20 px, de quoi
+   tenir en entier dans les deux langues. */
+@media (max-width: 30rem) {
+  .site-title {
+    gap: 0.5rem;
+  }
+
+  .site-title img {
+    height: 28px;
+    width: auto;
+  }
+}
+
 /* Listes.
    Odoo separe ses puces par une ligne vide. En Markdown cela produit une
    liste « lache » : chaque item est enveloppe dans un <p>, dont la marge

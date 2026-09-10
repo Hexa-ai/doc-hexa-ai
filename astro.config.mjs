@@ -22,9 +22,13 @@ export default defineConfig({
   site: SITE,
   integrations: [
     starlight({
+      // Titre court, et court volontairement : il partage la barre du haut
+      // avec le logo, la recherche et le bouton de menu. « Documentation
+      // HAI-OS » reclamait 221 px pour 143 px disponibles sur un telephone,
+      // et se retrouvait tranche en plein milieu d'un mot.
       title: {
-        fr: 'Documentation HAI-OS',
-        en: 'HAI-OS Documentation',
+        fr: 'HAI Doc',
+        en: 'HAI Docs',
       },
 
       favicon: '/favicon.ico',
