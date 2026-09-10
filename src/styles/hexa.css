@@ -349,15 +349,17 @@ starlight-theme-select > label {
   text-overflow: ellipsis;
 }
 
-/* Sur les tres petits ecrans — 320 px, un iPhone SE — « HAI Docs » demandait
-   encore 89 px pour 80 px disponibles. On resserre l'ecart logo/nom et on
-   descend le logo de 32 a 28 px de haut : le nom recupere 20 px, de quoi
-   tenir en entier dans les deux langues. */
-@media (max-width: 30rem) {
-  .site-title {
-    gap: 0.5rem;
-  }
+/* Le nom se colle au logo. Starlight les separe de 24 px, ce qui les fait
+   lire comme deux elements poses cote a cote plutot que comme une seule
+   signature. A 8 px, le mot appartient au logo. */
+.site-title {
+  gap: 0.5rem;
+}
 
+/* Sur les tres petits ecrans — 320 px, un iPhone SE — « HAI-Docs » demandait
+   encore 89 px pour 80 px disponibles. Le logo descend de 32 a 28 px de haut,
+   ce qui rend au nom de quoi tenir en entier dans les deux langues. */
+@media (max-width: 30rem) {
   .site-title img {
     height: 28px;
     width: auto;
