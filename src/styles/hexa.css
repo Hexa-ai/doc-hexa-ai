@@ -378,18 +378,18 @@ starlight-theme-select > label {
   vertical-align: top;
 }
 
-/* Premiere colonne : c'est l'entree de la grille. Elle etait en nowrap pour
-   qu'une reference ne se casse pas en deux, mais le nowrap ne fait pas la
-   difference entre « RS485-B2 » et une phrase entiere. Sur les tableaux de
-   messages d'erreur, la colonne reclamait mille pixels sur une seule ligne,
-   debordait la colonne et ne laissait a la seconde qu'un boyau de texte
-   empile sur cinq lignes.
-   Le plafond ci-dessous joue le meme role sans cet effet de bord : une
-   entree courte tient toujours sur sa ligne, faute d'avoir de quoi se
-   casser, et une phrase s'enveloppe au lieu de tout prendre. */
-.sl-markdown-content :is(th, td):first-child {
-  max-width: 20rem;
-}
+/* Rien n'est impose a la premiere colonne, et c'est deliberé.
+   Elle a d'abord ete mise en white-space: nowrap, pour qu'une reference du
+   genre « RS485-B2 » ne se casse pas en deux. Mais le nowrap ne distingue
+   pas une reference d'une phrase : sur le tableau des messages d'erreur du
+   modem, la colonne reclamait 1003 px sur une seule ligne, debordait la
+   page et ne laissait a la seconde que 138 px.
+   Le plafond fixe qui l'a remplace a produit le defaut inverse — colonne
+   bridee a 251 px et empilee, seconde colonne a 549 px avec du vide.
+   Sans contrainte, l'algorithme de tableau repartit la largeur au prorata
+   du contenu, ce qui est precisement ce qu'on veut : le meme tableau tient
+   en 438 / 362 px et 483 px de haut, contre 623 px avec le plafond. Une
+   entree courte reste sur sa ligne, faute d'avoir de quoi se casser. */
 
 /* Sous le point de rupture, un tableau large defile horizontalement plutot
    que de deborder la page. Le display:block n'a lieu d'etre qu'ici. */
@@ -397,9 +397,5 @@ starlight-theme-select > label {
   .sl-markdown-content > table {
     display: block;
     overflow-x: auto;
-  }
-
-  .sl-markdown-content :is(th, td):first-child {
-    max-width: none;
   }
 }
