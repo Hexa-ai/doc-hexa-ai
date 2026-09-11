@@ -13,7 +13,7 @@ Par défaut, Node-RED ne voit que les données "en temps réel". Ce module offic
 
 - Le contrôleur **HAI-P200-4G** avec HAI-OS.
 
-- L'application **Node-RED** activée (depuis la page _Add-ons_ du contrôleur).
+- L'application **Node-RED** activée, depuis la page [Add-ons](/system/add-ons/) du contrôleur.
 
 - L'enregistrement des données activé dans le Data-Plug (Historization ON).
 

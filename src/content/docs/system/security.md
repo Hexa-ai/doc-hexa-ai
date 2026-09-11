@@ -60,7 +60,7 @@ Le compte n'est **jamais bloqué définitivement**. Personne ne peut vous enfer
 
 ## 2. Les mots de passe des add-ons
 
-Certains add-ons possèdent leur propre compte, indépendant de celui du contrôleur : **Grafana**, **Ignition**, **PostgreSQL** et **pgAdmin**. Node-RED, lui, n'en a pas.
+Certains add-ons possèdent leur propre compte, indépendant de celui du contrôleur : **Grafana**, **Ignition**, **PostgreSQL** et **pgAdmin**. Node-RED, lui, n'en a pas. L'installation et la gestion de ces applications font l'objet d'une page à part, [Add-ons](/system/add-ons/).
 
 Jusqu'à la version précédente, ces mots de passe étaient identiques sur tous les contrôleurs et imprimés dans nos manuels. Ils sont désormais **générés au premier démarrage de votre appareil** et propres à lui seul. Comme ils ne peuvent plus figurer dans une documentation, le contrôleur vous les montre directement.
 

@@ -13,7 +13,7 @@ By default, Node-RED only sees "real-time" data. This official Hexa-AI module ad
 
 - The **HAI-P200-4G** controller running HAI-OS.
 
-- The **Node-RED** application enabled (from the controller's _Add-ons_ page).
+- The **Node-RED** application enabled, from the controller's [Add-ons](/en/system/add-ons/) page.
 
 - Data recording enabled in the Data-Plug (Historization ON).
 

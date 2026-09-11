@@ -60,7 +60,7 @@ The account is **never permanently locked**. Nobody can shut you out of your own
 
 ## 2. Add-on passwords
 
-Some add-ons have their own account, independent of the controller's: **Grafana**, **Ignition**, **PostgreSQL** and **pgAdmin**. Node-RED does not.
+Some add-ons have their own account, independent of the controller's: **Grafana**, **Ignition**, **PostgreSQL** and **pgAdmin**. Node-RED does not. Installing and managing those applications has a page of its own, [Add-ons](/en/system/add-ons/).
 
 Up to the previous version, those passwords were identical on every controller and printed in our manuals. They are now **generated when your device first boots**, and belong to it alone. Since they can no longer appear in documentation, the controller shows them to you directly.
 
