@@ -5,6 +5,14 @@ sidebar:
   order: 3
 ---
 
+<!-- VIDEO A VENIR — mise en route en telemaintenance.
+     Quand le lien YouTube sera connu, remplacer ce commentaire par la
+     ligne ci-dessous, ID et titre renseignes. Le style vient de la
+     classe hai-video, dans src/styles/hexa.css.
+
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Mise en route du HAI-P200-4G : telemaintenance" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
 Bienvenue sur votre contrôleur **HAI-P200-4G** propulsé par **HAI-OS**. Ce guide a pour but de vous accompagner pas à pas pour transformer votre boîtier en une passerelle d'accès distant sécurisée (VPN). En quelques minutes, vous pourrez vous connecter à distance à vos équipements industriels (automates, IHM) comme si vous étiez sur place avec un câble.
 
 ## Étape 1 : Première connexion

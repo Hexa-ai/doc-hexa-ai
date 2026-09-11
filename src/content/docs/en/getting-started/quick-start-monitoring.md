@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/tltGissKEcY" title="From PLC to dashboard in 5 minutes" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Welcome to your **HAI-P200-4G** controller, powered by **HAI-OS**. This guide walks you through configuring the gateway, collecting your first industrial data point and visualising it — in a matter of minutes.
 
 ## Step 1: First connection

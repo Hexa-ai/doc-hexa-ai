@@ -5,6 +5,8 @@ sidebar:
   order: 2
 ---
 
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/tltGissKEcY" title="De l'automate au dashboard en 5 minutes" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Bienvenue sur votre contrôleur **HAI-P200-4G** propulsé par **HAI-OS**. Ce guide a pour but de vous accompagner pas à pas pour configurer votre boîtier, collecter votre première donnée industrielle et la visualiser en quelques minutes seulement.
 
 ## Étape 1 : Première connexion

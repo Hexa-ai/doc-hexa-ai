@@ -140,6 +140,37 @@ normal. Pour une figure qui a vraiment besoin de toute la page, ajouter
 `tableOfContents: false` dans l'en-tête : le sommaire de droite disparaît et
 libère sa colonne.
 
+## Vidéos
+
+Une vidéo YouTube s'intègre avec une seule ligne de HTML, posée sur une ligne
+seule et entourée de lignes vides :
+
+```html
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Titre de la vidéo" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+L'identifiant est ce qui suit `youtu.be/` ou `watch?v=` dans l'adresse — pour
+`https://youtu.be/tltGissKEcY?si=…`, c'est `tltGissKEcY`. Ce qui suit le `?`
+est du suivi de partage, à ne pas recopier.
+
+Trois détails qui comptent :
+
+- **`youtube-nocookie.com`** et non `youtube.com` : aucun cookie n'est déposé
+  tant que le lecteur n'a pas été lancé.
+- **`loading="lazy"`** : la vidéo ne coûte rien tant qu'on n'a pas défilé
+  jusqu'à elle.
+- **`title`** : c'est ce qu'annonce un lecteur d'écran. Reprendre le titre réel
+  de la vidéo, traduit dans la page anglaise.
+
+Le cadre suit la mesure du texte et garde le rapport 16/9 à toutes les largeurs
+— la classe `hai-video` s'en charge, il n'y a aucune hauteur à régler.
+
+Deux emplacements attendent leur vidéo, marqués par un commentaire
+`VIDEO A VENIR` dans `getting-started/quick-start-remote-access.md` et
+`alerts/notifications.md`, en français comme en anglais. Le commentaire
+contient la ligne toute prête : il suffit de la sortir du commentaire et d'y
+mettre l'identifiant.
+
 ## Au quotidien
 
 1. `npm run dev` une fois pour toutes ; la page se recharge à chaque

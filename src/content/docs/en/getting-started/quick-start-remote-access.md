@@ -5,6 +5,14 @@ sidebar:
   order: 3
 ---
 
+<!-- VIDEO A VENIR — remote maintenance quick start.
+     Quand le lien YouTube sera connu, remplacer ce commentaire par la
+     ligne ci-dessous, ID et titre renseignes. Le style vient de la
+     classe hai-video, dans src/styles/hexa.css.
+
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Getting started with the HAI-P200-4G: remote maintenance" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
 Welcome to your **HAI-P200-4G** controller, powered by **HAI-OS**. This guide walks you through turning the gateway into a secure remote-access bridge (VPN). Within minutes you will be able to reach your industrial equipment — PLCs, HMIs — from anywhere, as if you were on site with a cable.
 
 ## Step 1: First connection

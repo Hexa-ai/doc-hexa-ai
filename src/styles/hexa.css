@@ -194,6 +194,28 @@ figure, pre, h1, h2, h3, h4, h5, h6, .sl-heading-wrapper,
   width: min(var(--hai-img-max-wide), 100%);
 }
 
+/* Video integree.
+   Le cadre suit la mesure du texte et garde le rapport 16/9 quelle que soit
+   la largeur : rien a calculer a la main, aucune hauteur figee qui laisserait
+   des bandes noires sur un telephone.
+   Le plafond de hauteur des images ne s'applique pas ici — une video ramenee
+   a 416 px de haut deviendrait illisible.
+   Usage, dans un .md, sur une ligne seule entouree de lignes vides :
+   <iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/ID"
+     title="…" loading="lazy" allowfullscreen></iframe> */
+.sl-markdown-content .hai-video {
+  display: block;
+  width: 100%;
+  max-width: var(--hai-text-width);
+  aspect-ratio: 16 / 9;
+  height: auto;
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 10px;
+  background: var(--sl-color-gray-7);
+}
+
 /* Legende.
    margin-inline: 0 et non auto : une figure doit se caler sur le bloc de
    texte, comme un paragraphe. Avec des marges automatiques elle se centrait

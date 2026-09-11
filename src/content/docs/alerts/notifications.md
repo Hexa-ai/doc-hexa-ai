@@ -5,6 +5,14 @@ sidebar:
   order: 1
 ---
 
+<!-- VIDEO A VENIR — notifications et alertes.
+     Quand le lien YouTube sera connu, remplacer ce commentaire par la
+     ligne ci-dessous, ID et titre renseignes. Le style vient de la
+     classe hai-video, dans src/styles/hexa.css.
+
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/IDENTIFIANT" title="Notifications et alertes du HAI-P200-4G" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
 Le système de **Notifications et Rapports** transforme les données brutes collectées par le Data-Plug en informations exploitables. Il permet d'alerter les opérateurs en temps réel en cas d'anomalie et de générer des rapports périodiques automatiques (par e-mail) sur vos installations.
 
 ## Prérequis
