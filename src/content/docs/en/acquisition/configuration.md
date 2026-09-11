@@ -103,6 +103,8 @@ Rather than typing the Namespace / Identifier Type / Identifier triplet in by ha
 
 Tick the variables you want — only Variables with a usable type (BOOL, INT, FLOAT, STRING) can be ticked — then confirm. Each imported variable arrives with its full BrowseName path as its name (Plant/Line1/Temperature, for example), along with its description and its type as read from the server.
 
+![The Browse OPC-UA Server window: the tree of server opc.tcp://192.168.1.15:4840, a checkbox in front of each node, variables with an unsupported type greyed out, Cancel and Add selection buttons](../../acquisition/browse-opcua.png)
+
 ##### Certificates
 
 As soon as the security policy is no longer None, the **Generate client key pair** button creates and downloads a self-signed client certificate (10-year validity) straight from the interface: there is no need to build one separately. The **Trusted Server Certificate** field additionally lets you pin the server's certificate, so that only that one is accepted.

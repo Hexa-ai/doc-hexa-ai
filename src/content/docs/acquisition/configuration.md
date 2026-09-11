@@ -103,6 +103,8 @@ Plutôt que de saisir le triplet Namespace / Identifier Type / Identifier à la 
 
 Cochez les variables voulues — seules les Variables dont le type est exploitable (BOOL, INT, FLOAT, STRING) sont cochables — puis validez. Chaque variable importée arrive avec son chemin BrowseName complet comme nom (ex. Plant/Line1/Temperature), ainsi que sa description et son type lus sur le serveur.
 
+![Fenêtre Browse OPC-UA Server : arborescence du serveur opc.tcp://192.168.1.15:4840, cases à cocher devant chaque nœud, variables de type non supporté grisées, boutons Cancel et Add selection](./browse-opcua.png)
+
 ##### Certificats
 
 Dès que la politique de sécurité n'est plus None, le bouton **Generate client key pair** crée et télécharge un certificat client auto-signé (validité 10 ans) directement depuis l'interface : inutile de le fabriquer à part. Le champ **Trusted Server Certificate** permet en complément d'épingler le certificat du serveur, pour n'accepter que lui.

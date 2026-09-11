@@ -289,6 +289,13 @@ header.header {
     font-size: var(--sl-text-sm);
     line-height: 1.45;
     padding-block: 0.3rem;
+
+    /* Retrait constant, quel que soit le rang. Starlight le calcule a partir
+       de la profondeur (8, 24, 40 px), ce qui melange deux mecanismes : le
+       decalage viendrait a la fois de l'entree et de la liste, et le filet
+       d'un niveau ne pourrait plus tomber au pied du texte du niveau au-dessus.
+       C'est desormais la liste seule qui creuse le retrait. */
+    padding-inline-start: 0.5rem;
   }
 
   /* Filets d'imbrication, a la maniere des guides d'un editeur de code.
@@ -296,11 +303,11 @@ header.header {
      toute la hauteur du groupe, enfants imbriques compris. Un sous-sous-titre
      a ainsi deux traits a sa gauche — le sien, et celui de son parent qui se
      poursuit derriere lui.
-     Pose sur les entrees, comme auparavant, le trait s'arretait a chaque ligne
-     et le niveau parent disparaissait des qu'un enfant s'ouvrait. */
+     La marge vaut exactement le retrait des entrees : chaque filet tombe donc
+     au pied du texte du rang superieur, et non quelques pixels avant. */
   .right-sidebar-panel ul ul {
-    margin-inline-start: 0.1rem;
-    padding-inline-start: 0.7rem;
+    margin-inline-start: 0.5rem;
+    padding-inline-start: 0.5rem;
     border-inline-start: 1px solid var(--sl-color-hairline);
   }
 

@@ -103,6 +103,8 @@ Les paliers se configurent sur un tableau en colonnes, à faire glisser :
 
 Une frise **Chain timeline** sous le tableau récapitule le déroulé dans le temps (T+0, T+5 min, …), pour vérifier d'un coup d'œil qu'un incident non traité finit bien par remonter, et en combien de temps.
 
+![Carte Escalade de HAI-OS : interrupteur Enable escalation, portée Apply to, les trois options, les colonnes Outside the chain, Level 1 et Level 2 avec leurs destinataires et canaux, et la frise Chain timeline](./escalation.png)
+
 #### Acquitter
 
 Un destinataire acquitte de trois façons :

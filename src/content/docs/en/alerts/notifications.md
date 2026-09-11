@@ -103,6 +103,8 @@ Tiers are configured on a table of columns, using drag and drop:
 
 A **Chain timeline** strip below the table sums up how things unfold over time (T+0, T+5 min, …), so you can check at a glance that an unhandled incident does eventually escalate, and how long that takes.
 
+![The HAI-OS escalation card: the Enable escalation switch, the Apply to scope, the three options, the Outside the chain, Level 1 and Level 2 columns with their recipients and channels, and the Chain timeline strip](../../alerts/escalation.png)
+
 #### Acknowledging
 
 A recipient acknowledges in one of three ways:
