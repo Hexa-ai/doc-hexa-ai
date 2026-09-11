@@ -14,13 +14,7 @@ n'est nécessaire.
 Aucun add-on n'est démarré par défaut : vous n'installez que ce dont vous avez
 besoin, ce qui laisse les ressources du boîtier aux autres.
 
-<!-- CAPTURE A VENIR — la page Add-ons complete, avec les cartes des cinq
-     applications et au moins une carte en Online. C'est la seule vue
-     d'ensemble de la page. Deposer le fichier add-ons-1.png a cote de cette
-     page, puis remplacer ce commentaire par la ligne ci-dessous.
-
-![Page Add-ons de HAI-OS : les cartes Node-RED, Grafana, Ignition, PostgreSQL et pgAdmin, avec leur statut](./add-ons-1.png)
--->
+![Page Add-ons de HAI-OS : le chemin de stockage Podman, puis les cartes Node-RED, Grafana, Ignition Edge et PostgreSQL, chacune avec sa version, son statut et ses boutons Start, Stop, Logs et Open. La carte Node-RED porte en plus son interrupteur Safe Mode](./add-ons.png)
 
 ## 1. Le catalogue
 
@@ -62,10 +56,10 @@ et fonctionne hors ligne.
 
 <!-- CAPTURE A VENIR — une carte d'add-on avec le menu a trois points deroule
      (Node-RED ou Grafana), pour montrer les entrees Credentials, Backup,
-     Restore, Version et Uninstall. Deposer le fichier add-ons-2.png a cote de
+     Restore, Version et Uninstall. Deposer le fichier add-ons-menu.png a cote de
      cette page, puis remplacer ce commentaire par la ligne ci-dessous.
 
-![Carte d'un add-on avec son menu à trois points déroulé : Credentials, Backup, Restore, Version et Uninstall](./add-ons-2.png)
+![Carte d'un add-on avec son menu à trois points déroulé : Credentials, Backup, Restore, Version et Uninstall](./add-ons-menu.png)
 -->
 
 ### Credentials

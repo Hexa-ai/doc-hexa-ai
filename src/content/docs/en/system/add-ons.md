@@ -13,13 +13,7 @@ from the interface's **Add-ons** page — no command line needed.
 No add-on is started by default: you only install what you need, which leaves
 the box's resources to the others.
 
-<!-- CAPTURE A VENIR — the whole Add-ons page, with the cards of the five
-     applications and at least one card Online. It is the page's only overview.
-     Drop the file add-ons-1.png next to the French page, then replace this
-     comment with the line below.
-
-![The HAI-OS Add-ons page: the Node-RED, Grafana, Ignition, PostgreSQL and pgAdmin cards, with their status](../../system/add-ons-1.png)
--->
+![The HAI-OS Add-ons page: the Podman storage path, then the Node-RED, Grafana, Ignition Edge and PostgreSQL cards, each with its version, its status and its Start, Stop, Logs and Open buttons. The Node-RED card also carries its Safe Mode switch](../../system/add-ons.png)
 
 ## 1. The catalogue
 
@@ -60,10 +54,10 @@ offline.
 
 <!-- CAPTURE A VENIR — an add-on card with its three-dot menu open (Node-RED or
      Grafana), to show the Credentials, Backup, Restore, Version and Uninstall
-     entries. Drop the file add-ons-2.png next to the French page, then replace
+     entries. Drop the file add-ons-menu.png next to the French page, then replace
      this comment with the line below.
 
-![An add-on card with its three-dot menu open: Credentials, Backup, Restore, Version and Uninstall](../../system/add-ons-2.png)
+![An add-on card with its three-dot menu open: Credentials, Backup, Restore, Version and Uninstall](../../system/add-ons-menu.png)
 -->
 
 ### Credentials
