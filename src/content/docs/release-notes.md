@@ -9,6 +9,15 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.9] - 2026-09-10
+
+### Fixed
+
+- **Remote access after a reboot**: When the 4G modem (or a DHCP cable) took longer than the gateway's start-up delay to come up, the connection sharing fell back to "local only" and stayed there. In that state the automates had no internet and, worse, could no longer answer anyone reaching them through the VPN — neither through the subnet route nor through the port forwards — until someone reset the firewall. The share now re-arms itself as soon as the link gets its gateway, and a "local only" network refuses only the connections it opens itself, never the replies to connections opened from the other side.
+- **Subnet route after a firewall reset**: Resetting the firewall silently removed the address translation Tailscale relies on for the subnet route, so a device reached that way answered into the void. The gateway now keeps its own copy of that rule and puts Tailscale's back after every reset.
+- **Firewall page**: Deleting a rule worked but ended with an error in the log instead of the confirmation message.
+- **Recovering an interrupted update**: If a gateway lost power or rebooted in the middle of a package installation, every later update was refused ("dpkg was interrupted") and, with no terminal on the gateway, could only be unblocked by a technician on site. The gateway now finishes the interrupted step by itself at the start of the next install.
+
 ## [1.3.8] - 2026-09-08
 
 ### Added
