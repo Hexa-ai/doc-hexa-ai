@@ -21,4 +21,4 @@ Right after that login, the box opens a configuration screen and **asks you to s
 The factory password therefore only serves for that first access: it will never be the one you administer the controller with. Have one ready before you start, and keep it — see [Security](/en/system/security/) for the rules it has to obey.
 :::
 
-[Watch the getting-started video](https://www.youtube.com/watch?v=arMbBaHQpJU)
+<iframe class="hai-video" src="https://www.youtube-nocookie.com/embed/arMbBaHQpJU" title="P200 4G Première connexion" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
