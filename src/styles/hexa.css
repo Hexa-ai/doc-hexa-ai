@@ -291,21 +291,17 @@ header.header {
     padding-block: 0.3rem;
   }
 
-  /* Sous-entrees : un filet leur donne un rang, au lieu de les noyer dans la
-     liste principale. */
-  .right-sidebar-panel ul ul a {
-    padding-inline-start: 0.7rem;
+  /* Filets d'imbrication, a la maniere des guides d'un editeur de code.
+     Le trait est porte par la LISTE, pas par chaque entree : il court donc sur
+     toute la hauteur du groupe, enfants imbriques compris. Un sous-sous-titre
+     a ainsi deux traits a sa gauche — le sien, et celui de son parent qui se
+     poursuit derriere lui.
+     Pose sur les entrees, comme auparavant, le trait s'arretait a chaque ligne
+     et le niveau parent disparaissait des qu'un enfant s'ouvrait. */
+  .right-sidebar-panel ul ul {
     margin-inline-start: 0.1rem;
+    padding-inline-start: 0.7rem;
     border-inline-start: 1px solid var(--sl-color-hairline);
-  }
-
-  /* Troisieme rang : son propre filet, decale du premier.
-     La regle ci-dessus s'appliquant aussi a lui, il heritait bien d'un filet,
-     mais trace au meme endroit que celui du deuxieme rang — les deux se
-     superposaient, et seul le texte se decalait. On pousse la boite entiere,
-     bordure comprise : deux traits paralleles, un par niveau d'imbrication. */
-  .right-sidebar-panel ul ul ul a {
-    margin-inline-start: 0.8rem;
   }
 
   .right-sidebar-panel h2 {
