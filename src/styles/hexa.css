@@ -299,6 +299,13 @@ header.header {
     border-inline-start: 1px solid var(--sl-color-hairline);
   }
 
+  /* Troisieme rang. Sans ce decrochage supplementaire, un sous-sous-titre
+     s'alignait exactement sur le sous-titre au-dessus de lui : le sommaire
+     annoncait une hierarchie a trois etages et n'en montrait que deux. */
+  .right-sidebar-panel ul ul ul a {
+    padding-inline-start: 1.4rem;
+  }
+
   .right-sidebar-panel h2 {
     margin-bottom: 0.75rem;
   }

@@ -81,6 +81,15 @@ export default defineConfig({
       lastUpdated: true,
       pagination: true,
 
+      // Sommaire de droite. Starlight s'arrete au niveau 3 par defaut ; on
+      // descend au 4 pour que les sous-sous-titres y figurent aussi. Ils
+      // portent du contenu qu'on cherche directement — « Trouver vos
+      // equipements automatiquement », « Ajouter des variables » — et sans eux
+      // la page d'acquisition n'exposait que quatre entrees pour trente ecrans.
+      // Les notes de version gardent leur propre reglage a 2 : leurs dizaines
+      // de « Added / Changed / Fixed » n'ont rien a faire dans un sommaire.
+      tableOfContents: { minHeadingLevel: 2, maxHeadingLevel: 4 },
+
       social: [
         { icon: 'external', label: 'Site produit', href: 'https://edge.hexa-ai.fr' },
         { icon: 'email', label: 'Contact', href: 'mailto:contact@hexa-ai.fr' },
