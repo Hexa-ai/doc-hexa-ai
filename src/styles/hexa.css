@@ -299,11 +299,13 @@ header.header {
     border-inline-start: 1px solid var(--sl-color-hairline);
   }
 
-  /* Troisieme rang. Sans ce decrochage supplementaire, un sous-sous-titre
-     s'alignait exactement sur le sous-titre au-dessus de lui : le sommaire
-     annoncait une hierarchie a trois etages et n'en montrait que deux. */
+  /* Troisieme rang : son propre filet, decale du premier.
+     La regle ci-dessus s'appliquant aussi a lui, il heritait bien d'un filet,
+     mais trace au meme endroit que celui du deuxieme rang — les deux se
+     superposaient, et seul le texte se decalait. On pousse la boite entiere,
+     bordure comprise : deux traits paralleles, un par niveau d'imbrication. */
   .right-sidebar-panel ul ul ul a {
-    padding-inline-start: 1.4rem;
+    margin-inline-start: 0.8rem;
   }
 
   .right-sidebar-panel h2 {
