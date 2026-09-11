@@ -21,4 +21,4 @@ Juste après cette connexion, le boîtier ouvre un écran de configuration et **
 Le mot de passe d'usine ne sert donc qu'à ce premier accès : il ne sera jamais celui avec lequel vous administrerez le contrôleur. Prévoyez-en un avant de commencer, et conservez-le — voir [Sécurité](/system/security/) pour les règles qu'il doit respecter.
 :::
 
-[Voir la vidéo de mise en route](https://www.youtube.com/watch?v=arMbBaHQpJU)
+<iframe class="hai-video" src="https://www.youtube.com/watch?v=arMbBaHQpJU" title="P200 4G Première connexion" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
