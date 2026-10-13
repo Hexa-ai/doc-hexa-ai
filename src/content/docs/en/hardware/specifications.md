@@ -26,8 +26,10 @@ sidebar:
 | | |
 | --- | --- |
 | Form factor | Aluminium enclosure, DIN rail mounting |
-| Power | Industrial terminal block, wide DC range |
+| Power | Industrial terminal block, wide input range: 9–36 V DC on a 2-pin pluggable terminal block |
 | Reliability | Real-time clock, service monitoring and automatic restart |
+| Temperature | Operating: –25 °C to +60 °C · Storage: –25 °C to +60 °C |
+| Certifications | CE, FCC |
 
 ## Footprint
 
