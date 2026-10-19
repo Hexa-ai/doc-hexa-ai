@@ -19,6 +19,17 @@ const SITE = 'https://docs.hexa-ai.fr';
 // publique, elle doit etre trouvable.
 const NOINDEX = false;
 
+// Visuel d'apercu quand un lien est partage (LinkedIn, Teams, mail...) :
+// public/og-doc.jpg, 1200 x 627, en JPG (LinkedIn affiche mal le WebP).
+/** @type {NonNullable<import('@astrojs/starlight/types').StarlightUserConfig['head']>} */
+const HEAD = [
+  ...(NOINDEX ? [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } }] : []),
+  { tag: 'meta', attrs: { property: 'og:image', content: `${SITE}/og-doc.jpg` } },
+  { tag: 'meta', attrs: { property: 'og:image:width', content: '1200' } },
+  { tag: 'meta', attrs: { property: 'og:image:height', content: '627' } },
+  { tag: 'meta', attrs: { name: 'twitter:image', content: `${SITE}/og-doc.jpg` } },
+];
+
 export default defineConfig({
   site: SITE,
   integrations: [
@@ -32,9 +43,7 @@ export default defineConfig({
       favicon: '/favicon.ico',
       description: 'Documentation de la passerelle industrielle HAI-P200-4G et du système HAI-OS.',
 
-      head: NOINDEX
-        ? [{ tag: 'meta', attrs: { name: 'robots', content: 'noindex, nofollow' } }]
-        : [],
+      head: HEAD,
 
       // FR a la racine (docs.hexa-ai.fr/), EN sous /en/ : meme convention
       // que le site vitrine edge.hexa-ai.fr.
