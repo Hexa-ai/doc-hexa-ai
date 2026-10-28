@@ -2,7 +2,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightImageZoom from 'starlight-image-zoom';
-import { SECTIONS, NOTES_DE_VERSION, TITRE } from './src/sections.mjs';
+import starlightSidebarTopics from 'starlight-sidebar-topics';
+import { SECTIONS, NOTES_DE_VERSION, TITRE, PORTAIL } from './src/sections.mjs';
 
 // Domaine de publication. A changer si la doc part sur un sous-chemin
 // (voir README, section « Publication »).
@@ -64,27 +65,52 @@ export default defineConfig({
         './src/styles/hexa.css',
       ],
 
-      // Zoom au clic sur les images : les schemas denses restent lisibles
-      // sans qu'on ait besoin de les sur-dimensionner dans la page.
-      plugins: [starlightImageZoom()],
-
-      // Les sections viennent de src/sections.mjs, que partagent le menu et
-      // les index pour modeles de langage. Depuis Starlight 0.39, un groupe
-      // autogenere s'ecrit { label, items: [{ autogenerate }] }.
-      // collapsed: false => deplie.
-      sidebar: [
-        ...SECTIONS.map(({ dossier, fr, en }) => ({
-          label: fr,
-          translations: { en },
-          collapsed: false,
-          items: [{ autogenerate: { directory: dossier } }],
-        })),
-        // Page seule, hors groupe. Le lien est localise automatiquement en /en/.
-        {
-          label: NOTES_DE_VERSION.fr,
-          translations: { en: NOTES_DE_VERSION.en },
-          link: `/${NOTES_DE_VERSION.fichier}/`,
-        },
+      // Zoom au clic sur les images : les schemas denses restent lisibles.
+      //
+      // Deux documentations dans le meme site, chacune avec son menu : le
+      // controleur HAI-P200 (SECTIONS) et le portail myHexa (PORTAIL), voir
+      // src/sections.mjs. Un selecteur en haut du menu lateral passe de l'une
+      // a l'autre (plugin starlight-sidebar-topics). Depuis Starlight 0.39, un
+      // groupe autogenere s'ecrit { label, items: [{ autogenerate }] }.
+      plugins: [
+        starlightImageZoom(),
+        starlightSidebarTopics(
+          [
+            {
+              label: { fr: 'Contrôleur HAI-P200', en: 'HAI-P200 controller' },
+              link: '/',
+              icon: 'laptop',
+              items: [
+                ...SECTIONS.map(({ dossier, fr, en }) => ({
+                label: fr,
+                translations: { en },
+                collapsed: false,
+                items: [{ autogenerate: { directory: dossier } }],
+              })),
+                {
+                  label: NOTES_DE_VERSION.fr,
+                  translations: { en: NOTES_DE_VERSION.en },
+                  link: `/${NOTES_DE_VERSION.fichier}/`,
+                },
+              ],
+            },
+            {
+              label: { fr: PORTAIL.fr, en: PORTAIL.en },
+              link: `/${PORTAIL.dossier}/`,
+              icon: 'external',
+              items: [
+                { label: 'Présentation', translations: { en: 'Overview' }, link: `/${PORTAIL.dossier}/` },
+                ...PORTAIL.sections.map(({ dossier, fr, en }) => ({
+                label: fr,
+                translations: { en },
+                collapsed: false,
+                items: [{ autogenerate: { directory: dossier } }],
+              })),
+              ],
+            },
+          ],
+          { exclude: ['/404', '/en/404'] },
+        ),
       ],
 
       lastUpdated: true,

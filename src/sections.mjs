@@ -30,3 +30,19 @@ export const NOTES_DE_VERSION = {
   fr: 'Notes de version',
   en: 'Release notes',
 };
+
+// Portail myHexa (my.hexa-ai.fr) : documentation distincte de celle du contrôleur.
+// Elle a son propre menu (sujet « Portail myHexa » du sélecteur en haut du menu
+// latéral), pour ne pas mêler les écrans du portail aux réglages de la box.
+export const PORTAIL = {
+  dossier: 'portal',
+  fr: 'Portail myHexa',
+  en: 'myHexa portal',
+  sections: [
+    { dossier: 'portal/getting-started', fr: 'Prise en main', en: 'Getting started' },
+    { dossier: 'portal/fleet', fr: 'Parc de box', en: 'Fleet' },
+    { dossier: 'portal/dashboards', fr: 'Tableaux de bord', en: 'Dashboards' },
+    { dossier: 'portal/alarms', fr: 'Alarmes & terrain', en: 'Alarms & field' },
+    { dossier: 'portal/administration', fr: 'Administration', en: 'Administration' },
+  ],
+};

@@ -6,7 +6,7 @@
 // ou il devrait deviner ce qui est du contenu et ce qui est du gabarit.
 
 import { getCollection } from 'astro:content';
-import { SECTIONS, NOTES_DE_VERSION, TITRE } from './sections.mjs';
+import { SECTIONS, NOTES_DE_VERSION, TITRE, PORTAIL } from './sections.mjs';
 
 const SITE = 'https://docs.hexa-ai.fr';
 
@@ -132,6 +132,20 @@ export async function construireLlmsFull(langue) {
     morceaux.push(`# ${langue === 'en' ? section.en : section.fr}`);
     morceaux.push('');
     for (const e of entrees) ajouterPage(e);
+  }
+
+  // Portail myHexa (francais seulement pour l'instant)
+  if (!prefixe) {
+    const accueil = pages.find((e) => e.id === PORTAIL.dossier);
+    for (const section of PORTAIL.sections) {
+      const entrees = pages.filter((e) => e.id.startsWith(`${section.dossier}/`)).sort(parOrdre);
+      if (entrees.length === 0) continue;
+      morceaux.push('');
+      morceaux.push(`# ${PORTAIL.fr} : ${section.fr}`);
+      morceaux.push('');
+      if (accueil && section === PORTAIL.sections[0]) ajouterPage(accueil);
+      for (const e of entrees) ajouterPage(e);
+    }
   }
 
   const notes = pages.find((e) => e.id === `${prefixe}${NOTES_DE_VERSION.fichier}`);

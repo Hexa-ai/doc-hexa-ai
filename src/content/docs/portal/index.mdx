@@ -1,0 +1,34 @@
+---
+title: Portail myHexa
+description: "Le portail myHexa centralise vos box HAI-P200 : état du parc, historique, tableaux de bord, rapports, alarmes et interventions, depuis un navigateur ou un téléphone."
+sidebar:
+  order: 0
+  label: Présentation
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+**myHexa** est le portail en ligne qui rassemble toutes vos box HAI-P200, à l'adresse [my.hexa-ai.fr](https://my.hexa-ai.fr). Chaque box y remonte ses mesures et ses alarmes : vous suivez tout le parc au même endroit, sans vous connecter aux box une par une.
+
+Cette partie de la documentation décrit le portail. Pour l'installation et la configuration d'une box (réseau, acquisition, Data-Explorer embarqué), voir la documentation du [contrôleur HAI-P200](/).
+
+<CardGrid>
+  <Card title="Suivre le parc" icon="laptop">
+    La liste de vos box et leur état en direct, la carte, la fiche de chaque box et l'historique de ses variables.
+  </Card>
+  <Card title="Tableaux de bord" icon="seti:pipeline">
+    Des tableaux par box ou par projet, à composer vous-même, avec des rapports PDF envoyés automatiquement.
+  </Card>
+  <Card title="Alarmes" icon="warning">
+    Les alarmes en cours et leur historique, des notifications sur téléphone, et les destinataires que préviennent les box.
+  </Card>
+  <Card title="Terrain" icon="setting">
+    Les techniciens déclarent leurs interventions en scannant le QR code de la box, photos à l'appui.
+  </Card>
+</CardGrid>
+
+## Par où commencer
+
+<LinkCard title="Fonctionnement du portail" description="Ce que fait la box, ce que fait le portail, où sont vos données." href="/portal/getting-started/architecture/" />
+<LinkCard title="Se connecter et inviter vos équipes" description="Premier accès, mot de passe, invitations." href="/portal/getting-started/login/" />
+<LinkCard title="Installer myHexa sur votre téléphone" description="Application et notifications d'alarme." href="/portal/getting-started/mobile/" />

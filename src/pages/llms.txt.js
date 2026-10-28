@@ -8,7 +8,7 @@
 // Genere au build a partir du contenu reel : aucune liste a tenir a jour.
 
 import { getCollection } from 'astro:content';
-import { SECTIONS, NOTES_DE_VERSION, TITRE } from '../sections.mjs';
+import { SECTIONS, NOTES_DE_VERSION, TITRE, PORTAIL } from '../sections.mjs';
 
 const SITE = 'https://docs.hexa-ai.fr';
 
@@ -73,6 +73,18 @@ export async function GET() {
     if (entrees.length === 0) continue;
     lignes.push(`## ${fr}`);
     lignes.push('');
+    for (const e of entrees) lignes.push(ligne(e));
+    lignes.push('');
+  }
+
+  // Portail myHexa : documentation distincte (en francais seulement pour l'instant).
+  const accueilPortail = pages.find((e) => e.id === PORTAIL.dossier);
+  for (const { dossier, fr } of PORTAIL.sections) {
+    const entrees = dansSection('', dossier);
+    if (entrees.length === 0) continue;
+    lignes.push(`## ${PORTAIL.fr} : ${fr}`);
+    lignes.push('');
+    if (accueilPortail && dossier === PORTAIL.sections[0].dossier) lignes.push(ligne(accueilPortail));
     for (const e of entrees) lignes.push(ligne(e));
     lignes.push('');
   }
