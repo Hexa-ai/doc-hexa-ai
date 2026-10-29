@@ -17,16 +17,16 @@ Vous ne créez pas votre compte vous-même : un administrateur de votre entrepri
 2. Cliquez sur le lien : il ouvre le portail pour **choisir votre mot de passe**.
 3. Vous arrivez sur la liste de vos box.
 
-Le lien d'invitation a une durée de validité limitée. S'il a expiré, la page propose d'en demander un nouveau.
+Le lien d'invitation ne sert qu'une fois et a une durée de validité limitée. S'il a expiré ou déjà servi, la page propose d'en demander un nouveau. Le mot de passe doit faire au moins 8 caractères.
 
 :::tip
-Ouvrez le lien directement depuis l'e-mail. Un lien copié incomplet affiche « Lien incomplet ».
+Ouvrez le lien directement depuis l'e-mail. Un lien copié incomplet affiche « Lien incomplet : ouvrez-le directement depuis le mail ».
 :::
 
 ## Se connecter
 
 - **E-mail et mot de passe** : la méthode habituelle.
-- **Lien par e-mail** : sans mot de passe, vous recevez un lien de connexion à usage unique.
+- **Lien par email** : sans mot de passe ; si l'adresse correspond à un compte, vous recevez un lien de connexion à usage unique.
 - **Mot de passe oublié ?** : vous recevez un lien pour en choisir un nouveau.
 
 Pas encore d'accès ? Demandez à l'administrateur myHexa de votre entreprise.
@@ -35,7 +35,7 @@ Pas encore d'accès ? Demandez à l'administrateur myHexa de votre entreprise.
 
 Ce que le portail affiche dépend de votre rôle :
 
-- **Lecteur** : consulte les box, l'historique, les tableaux de bord et les alarmes de son périmètre.
-- **Administrateur** : peut en plus inviter des utilisateurs, régler les destinataires d'alarme et lancer les mises à jour des box.
+- **Viewer** (lecteur) : consulte les box, l'historique, les tableaux de bord et les alarmes de son périmètre.
+- **Admin** : peut en plus inviter des utilisateurs, composer les tableaux de bord et les rapports, modifier les destinataires d'alarme et lancer les mises à jour des box.
 
 Voir [Utilisateurs et accès](/portal/administration/users/).

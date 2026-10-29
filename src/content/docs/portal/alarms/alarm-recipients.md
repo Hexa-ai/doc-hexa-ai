@@ -9,8 +9,12 @@ Ce sont **les box qui préviennent** les personnes en cas d'alarme. Le portail s
 
 ![Destinataires d'alarme](./alarm_recipients.png)
 
+:::note[Fonction en version bêta]
+Cette fonction est récente et peut encore évoluer.
+:::
+
 :::note
-Cet écran est réservé aux administrateurs. Il s'appuie sur les box dont la version le permet : la colonne de chaque box indique si elle est compatible.
+Seuls les administrateurs modifient ces réglages ; les autres utilisateurs les consultent. Une box dont le logiciel ne permet pas ce réglage à distance est marquée **firmware non compatible**.
 :::
 
 ## Les personnes
@@ -30,7 +34,7 @@ Cet écran est réservé aux administrateurs. Il s'appuie sur les box dont la ve
 
 ## Escalade
 
-Pour une box, l'escalade prévient les personnes **par niveaux** : chaque niveau a son délai ; si l'alarme est toujours là une fois le délai écoulé, le niveau suivant est prévenu. Sans escalade, toutes les personnes sont prévenues immédiatement.
+Pour une box, l'escalade prévient les personnes **par niveaux** : chaque niveau a son délai ; si l'alarme est toujours là une fois le délai écoulé, le niveau suivant est prévenu. Sans escalade (mode **immédiat**), toutes les personnes sont prévenues tout de suite. Le délai de chaque niveau va de 1 à 1 440 minutes, et des options permettent de cumuler les niveaux, d'arrêter quand l'alarme disparaît ou de prévenir à la clôture.
 
 ## Envoyer aux box
 

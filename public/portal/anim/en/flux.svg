@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 400" font-family="Inter, 'Segoe UI', Arial, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">Data path between the box and the portal</title>
+  <desc id="d">The PLCs are read by the HAI-P200 box. The box sends its status and history to the myHexa portal over HTTPS; the portal shows them in the browser and the app. In parallel, the box itself notifies its alarm recipients.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1b1e"/><stop offset="1" stop-color="#10262a"/></linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#173338"/><stop offset="1" stop-color="#122a2e"/></linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <style>
+      .card{fill:url(#card);stroke:#2b5157;stroke-width:1.2}
+      .t{fill:#e6f4f1;font-size:15px;font-weight:600}
+      .s{fill:#8fb3ae;font-size:11.5px}
+      .lbl{fill:#7ff0da;font-size:11px;font-weight:600;letter-spacing:.06em}
+      .wire{fill:none;stroke:#2b5157;stroke-width:2;stroke-dasharray:4 5}
+      .alarm{fill:none;stroke:#7a3b2a;stroke-width:2;stroke-dasharray:4 5}
+      .ico{fill:none;stroke:#7ff0da;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .icoA{fill:none;stroke:#ffb59e;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+      .led{animation:blink 1.6s infinite}
+      .ledA{animation:blink .7s infinite}
+      @keyframes blink{0%,60%{opacity:1}80%{opacity:.25}100%{opacity:1}}
+    </style>
+  </defs>
+  <rect width="960" height="400" rx="16" fill="url(#bg)"/>
+
+  <!-- liaisons -->
+  <path id="p1" class="wire" d="M170 150 H 330"/>
+  <path id="p2" class="wire" d="M500 150 H 640"/>
+  <path id="p3" class="wire" d="M800 150 H 812"/>
+  <path id="pa" class="alarm" d="M415 205 V 300 H 640"/>
+
+  <!-- automates -->
+  <rect class="card" x="30" y="95" width="140" height="110" rx="12"/>
+  <g class="ico" transform="translate(84 112)"><rect x="0" y="0" width="32" height="26" rx="3"/><path d="M6 8h4M6 14h4M6 20h4M16 8h10M16 14h10M16 20h10"/></g>
+  <text class="t" x="100" y="160" text-anchor="middle">PLCs</text>
+  <text class="s" x="100" y="178" text-anchor="middle">and sensors</text>
+  <text class="lbl" x="250" y="140" text-anchor="middle">READ</text>
+
+  <!-- box -->
+  <rect class="card" x="330" y="80" width="170" height="125" rx="12" stroke="#00d4aa" stroke-opacity=".55"/>
+  <g transform="translate(395 98)"><rect x="0" y="0" width="40" height="26" rx="4" fill="#0d1b1e" stroke="#7ff0da" stroke-width="1.6"/><circle class="led" cx="9" cy="13" r="3" fill="#00d4aa"/><circle cx="19" cy="13" r="3" fill="#2b5157"/><path d="M27 9h8M27 17h8" stroke="#7ff0da" stroke-width="1.6"/></g>
+  <text class="t" x="415" y="148" text-anchor="middle">Box HAI-P200</text>
+  <text class="s" x="415" y="166" text-anchor="middle">on site</text>
+  <text class="s" x="415" y="183" text-anchor="middle">logs and monitors</text>
+  <text class="lbl" x="570" y="140" text-anchor="middle">HTTPS · 4G</text>
+  <text class="s" x="570" y="172" text-anchor="middle">status + history</text>
+
+  <!-- portail -->
+  <rect class="card" x="640" y="80" width="160" height="125" rx="12"/>
+  <g class="ico" transform="translate(700 97)"><path d="M6 22a10 10 0 0 1 2-19.8A13 13 0 0 1 32 7a8 8 0 0 1-1 15z"/></g>
+  <text class="t" x="720" y="148" text-anchor="middle">myHexa portal</text>
+  <text class="s" x="720" y="166" text-anchor="middle">hosted in Europe</text>
+  <text class="s" x="720" y="183" text-anchor="middle">fleet, dashboards, reports</text>
+
+  <!-- utilisateurs -->
+  <rect class="card" x="812" y="80" width="120" height="125" rx="12"/>
+  <g class="ico" transform="translate(842 98)"><rect x="0" y="2" width="34" height="22" rx="2"/><path d="M12 30h10"/><rect x="40" y="0" width="14" height="26" rx="3" transform="translate(-8 0)"/></g>
+  <text class="t" x="872" y="148" text-anchor="middle">You</text>
+  <text class="s" x="872" y="166" text-anchor="middle">browser</text>
+  <text class="s" x="872" y="183" text-anchor="middle">and app</text>
+
+  <!-- destinataires d'alarme -->
+  <rect class="card" x="640" y="255" width="292" height="95" rx="12" stroke="#b5533a" stroke-opacity=".7"/>
+  <g class="icoA" transform="translate(662 280)"><rect x="0" y="0" width="30" height="20" rx="2"/><path d="M0 2l15 10 15-10"/></g>
+  <g class="icoA" transform="translate(708 276)"><rect x="0" y="0" width="16" height="28" rx="3"/><path d="M6 23h4"/></g>
+  <g class="icoA" transform="translate(740 278)"><path d="M4 2c3 0 4 6 2 8 2 4 5 7 9 9 2-2 8-1 8 2v4c0 2-2 3-4 3C9 28 0 19 0 6c0-2 1-4 4-4z"/></g>
+  <circle class="ledA" cx="912" cy="276" r="5" fill="#ff7a59"/>
+  <text class="t" x="662" y="333">Alarm recipients</text>
+  <text class="s" x="790" y="294">email, SMS or call,</text>
+  <text class="s" x="790" y="310">sent by the box</text>
+  <text class="lbl" x="520" y="290" text-anchor="middle" fill="#ffb59e" style="fill:#ffb59e">ALARM</text>
+
+  <!-- paquets en mouvement -->
+  <g filter="url(#glow)">
+    <circle r="5" fill="#7ff0da"><animateMotion dur="1.8s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+    <circle r="5" fill="#7ff0da"><animateMotion dur="1.8s" begin="0.9s" repeatCount="indefinite"><mpath href="#p1"/></animateMotion></circle>
+    <rect width="12" height="8" rx="2" x="-6" y="-4" fill="#00d4aa"><animateMotion dur="2.4s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></rect>
+    <rect width="12" height="8" rx="2" x="-6" y="-4" fill="#00d4aa"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite"><mpath href="#p2"/></animateMotion></rect>
+    <circle r="6" fill="#ff7a59"><animateMotion dur="2.2s" repeatCount="indefinite" keyPoints="0;1;1" keyTimes="0;.7;1" calcMode="linear"><mpath href="#pa"/></animateMotion><animate attributeName="opacity" values="1;1;0" keyTimes="0;.7;1" dur="2.2s" repeatCount="indefinite"/></circle>
+  </g>
+  <text class="s" x="30" y="380">The box always opens the connection to the portal: no port to open on site.</text>
+</svg>

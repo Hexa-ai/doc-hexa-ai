@@ -15,7 +15,7 @@ Vous pouvez montrer un tableau de bord à un partenaire, un client final ou un b
 2. Saisissez l'**adresse e-mail du compte myHexa** de la personne.
 3. Validez : le tableau apparaît dans son portail.
 
-La personne doit déjà avoir un compte myHexa. Le bouton **Retirer** coupe l'accès immédiatement.
+Le partage est réservé aux administrateurs, pour les tableaux qui portent sur les box de votre entreprise. La personne doit déjà avoir un compte myHexa ; elle retrouve le tableau dans **Partagés avec moi**. Un tableau peut être partagé avec 50 personnes au plus. Le bouton **Retirer** coupe l'accès immédiatement.
 
 ## Ce que voit la personne invitée
 

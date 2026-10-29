@@ -9,6 +9,10 @@ La page **Mises à jour** liste vos box, leur version et la version disponible, 
 
 ![Mises à jour des box](./updates.png)
 
+:::note[Fonction en version bêta]
+Cette fonction est récente et peut encore évoluer.
+:::
+
 :::note
 Seul un administrateur de votre entreprise peut lancer une mise à jour.
 :::
@@ -28,4 +32,8 @@ Seul un administrateur de votre entreprise peut lancer une mise à jour.
 Choisissez un moment où une courte coupure de la supervision est acceptable.
 :::
 
-Une box qui n'a pas donné de nouvelles récemment est signalée : la mise à jour ne l'atteindra qu'à sa reconnexion.
+## Box concernées
+
+Seules les box en version **1.3.7 ou plus**, avec le pilotage à distance activé, se mettent à jour depuis le portail. Les autres sont indiquées **mise à jour sur site**.
+
+Une box sans nouvelles depuis plus de 2 heures est signalée : la mise à jour ne l'atteindra qu'à sa reconnexion. Tant qu'elle n'a pas encore été transmise à la box, une mise à jour programmée peut être annulée.

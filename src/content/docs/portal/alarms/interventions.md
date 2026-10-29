@@ -13,6 +13,6 @@ Pour chaque déclaration : date, catégorie (**Intervention**, **Incident**, **C
 
 - Filtres **Ouvertes**, **Résolues**, **Toutes**.
 - Cliquez sur une ligne pour le détail et les photos.
-- **Marquer résolue** clôt la déclaration ; **Rouvrir** la remet en cours.
+- **Marquer résolue** clôt la déclaration ; **Rouvrir** la remet en cours (réservé aux administrateurs).
 
-Le nombre d'interventions ouvertes apparaît dans l'en-tête du portail.
+Le nombre d'interventions ouvertes apparaît dans le menu, à côté de **Interventions**.

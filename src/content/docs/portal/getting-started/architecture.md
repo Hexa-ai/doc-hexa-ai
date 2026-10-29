@@ -19,6 +19,8 @@ Ce partage est volontaire : **le renvoi des alarmes est assuré par la box**, au
 
 ## Le trajet des données
 
+<img class="hai-anim" src="/portal/anim/flux.svg" alt="Animation : la box lit les automates, envoie statut et historique au portail en HTTPS, et prévient elle-même ses destinataires d'alarme" loading="lazy">
+
 1. Les **automates et capteurs** sont lus par la **box HAI-P200**, sur site.
 2. La box transmet ses données au **portail myHexa** en HTTPS, par la 4G ou le réseau du site.
 3. Vous consultez le portail depuis un **navigateur** ou l'**application** sur téléphone. Le portail envoie aussi les **rapports PDF** par e-mail.

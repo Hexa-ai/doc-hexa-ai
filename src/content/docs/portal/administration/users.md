@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-La page **Destinataires** liste les personnes qui ont accès au portail pour votre entreprise, et reçoivent ses e-mails (invitations, rapports).
+La page **Destinataires**, réservée aux administrateurs, liste les personnes qui ont accès au portail pour votre entreprise, et reçoivent ses e-mails (invitations, rapports).
 
 ![Utilisateurs](./recipients.png)
 
@@ -25,6 +25,6 @@ L'adresse e-mail ne peut plus être modifiée ensuite ; le rôle et l'accès, si
 
 ## Personne extérieure
 
-Cochez **Destinataire externe** pour une personne qui n'appartient pas à votre entreprise (un sous-traitant, un client final) : elle ne voit **que** les box que vous lui partagez.
+Cochez **Destinataire externe** pour une personne qui n'appartient pas à votre entreprise (un sous-traitant, un client final) : elle ne voit **que** les box que vous lui partagez (au moins une à choisir).
 
 Pour montrer un seul tableau, sans donner accès aux box, utilisez plutôt le [partage de tableau](/portal/dashboards/sharing/).

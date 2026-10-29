@@ -493,3 +493,32 @@ starlight-theme-select > label {
     overflow-x: auto;
   }
 }
+
+/* Courte video de demonstration (enregistrement d'ecran en boucle, sans son).
+   Usage, dans un .md, sur une ligne seule entouree de lignes vides :
+   <video class="hai-clip" autoplay loop muted playsinline poster="/portal/videos/x-poster.jpg">
+     <source src="/portal/videos/x.webm" type="video/webm"><source src="/portal/videos/x.mp4" type="video/mp4"></video> */
+.sl-markdown-content .hai-clip {
+  display: block;
+  width: 100%;
+  max-width: var(--hai-img-max-wide, 100%);
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-7);
+  box-shadow: 0 12px 32px -14px rgb(0 0 0 / 0.45);
+}
+
+/* Animation explicative (SVG anime), plein cadre sans bordure supplementaire. */
+.sl-markdown-content img.hai-anim {
+  max-width: var(--hai-img-max-wide, 100%);
+  max-height: none;
+  border: 0;
+  background: none;
+  border-radius: 16px;
+  box-shadow: 0 12px 32px -14px rgb(0 0 0 / 0.45);
+}
+@media (prefers-reduced-motion: reduce) {
+  .sl-markdown-content .hai-clip { animation: none; }
+}

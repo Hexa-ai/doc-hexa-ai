@@ -32,7 +32,7 @@ Sur téléphone, une barre d'onglets en bas de l'écran donne accès aux **Box**
 Vous êtes alors prévenu à **chaque nouvelle alarme de vos box**, même application fermée. Le réglage vaut pour cet appareil : activez-le sur chaque téléphone ou ordinateur concerné.
 
 :::note
-Sur iPhone, les notifications ne fonctionnent qu'avec l'application installée sur l'écran d'accueil (pas dans un onglet Safari).
+Sur iPhone, les notifications demandent iOS 16.4 ou plus, et ne fonctionnent qu'avec l'application installée sur l'écran d'accueil (pas dans un onglet Safari).
 :::
 
 :::caution

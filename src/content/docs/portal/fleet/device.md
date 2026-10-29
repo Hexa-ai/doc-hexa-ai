@@ -16,18 +16,18 @@ Le nom de la box, son modèle, l'heure de la **dernière télémétrie** et son 
 ## Les onglets
 
 - **Données** : adresse et carte, alarmes actives, puis les valeurs courantes classées en **Mesures**, **Compteurs** et **États**.
-- **État** : version du logiciel, temps de fonctionnement, fuseau horaire, interfaces réseau (Ethernet, Wi-Fi, 4G) et services.
-- **Configuration** : adresse de la box et son **QR code d'intervention terrain**. Les modifications sont réservées aux administrateurs.
+- **État** : version du logiciel, temps de fonctionnement, fuseau horaire (**Timezone**), interfaces réseau (Ethernet, Wi-Fi, 4G) et services.
+- **Configuration** : adresse de la box, son **QR code d'intervention terrain** et, selon la box, l'accès à distance à l'écran de l'automate (VNC). Les modifications sont réservées aux administrateurs.
 
 ## Documents
 
-Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo de l'installation**, ou autre.
+Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo installation**, ou autre. L'ajout et la modification sont réservés aux administrateurs.
 
 1. Section **Documents**, bouton **+ Ajouter**.
 2. Choisissez le fichier, son type et, si besoin, une description.
 3. Cochez **Accessible via QR code** pour le rendre visible sur la page d'intervention (sans connexion).
 
-Un document peut passer de **public** à **privé** à tout moment.
+Un document peut passer de public à privé (et inversement) à tout moment, avec les boutons **→ Privé** et **→ Public**.
 
 ## Page d'intervention et QR code
 
@@ -40,4 +40,4 @@ Les déclarations arrivent dans [Interventions](/portal/alarms/interventions/).
 
 ## Partager la box avec une personne
 
-**Partager avec un destinataire** donne accès à cette box à une personne, par son adresse e-mail. La liste **Partages actifs** permet de retirer un accès.
+**Partager avec un destinataire** permet à un administrateur de donner accès à cette box à une personne déjà enregistrée comme destinataire (voir [Utilisateurs et accès](/portal/administration/users/)), par son adresse e-mail. La liste **Partages actifs** permet de retirer un accès.
