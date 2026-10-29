@@ -79,7 +79,7 @@ Les seuils se lisent sur l'axe de gauche. L'échelle s'élargit si besoin pour q
 
 ## Bloc Signalements
 
-Le bloc **Signalements** met en avant ce que les techniciens ont déclaré sur le terrain (voir [Interventions et signalements](/portal/alarms/interventions/)) :
+Le bloc **Signalements** met en avant ce que les techniciens ont déclaré sur le terrain (voir [Interventions](/portal/alarms/interventions/)) :
 
 - le **dernier signalement en grand** : box, gravité, catégorie, auteur, description et **galerie de photos** ; un clic sur une photo l'agrandit ;
 - en dessous, les **précédents** ; un clic en affiche un en grand.

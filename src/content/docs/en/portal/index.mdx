@@ -1,0 +1,34 @@
+---
+title: myHexa portal
+description: "The myHexa portal brings your HAI-P200 boxes together: fleet status, history, dashboards, reports, alarms and interventions, from a browser or a phone."
+sidebar:
+  order: 0
+  label: Overview
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+
+**myHexa** is the online portal that brings all your HAI-P200 boxes together, at [my.hexa-ai.fr](https://my.hexa-ai.fr). Each box sends its measurements and alarms there: you monitor the whole fleet in one place, without connecting to the boxes one by one.
+
+This part of the documentation describes the portal. For installing and configuring a box (network, acquisition, embedded Data-Explorer), see the [HAI-P200 controller](/en/) documentation.
+
+<CardGrid>
+  <Card title="Monitor the fleet" icon="laptop">
+    The list of your boxes and their live status, the map, each box's page and the history of its variables.
+  </Card>
+  <Card title="Dashboards" icon="seti:pipeline">
+    Dashboards per box or per project, which you build yourself, with PDF reports sent automatically.
+  </Card>
+  <Card title="Alarms" icon="warning">
+    Current alarms and their history, phone notifications, and the recipients the boxes notify.
+  </Card>
+  <Card title="Field" icon="setting">
+    Technicians report their interventions by scanning the box's QR code, with photos.
+  </Card>
+</CardGrid>
+
+## Where to start
+
+<LinkCard title="How the portal works" description="What the box does, what the portal does, where your data is." href="/en/portal/getting-started/architecture/" />
+<LinkCard title="Log in and invite your teams" description="First access, password, invitations." href="/en/portal/getting-started/login/" />
+<LinkCard title="Install myHexa on your phone" description="App and alarm notifications." href="/en/portal/getting-started/mobile/" />
