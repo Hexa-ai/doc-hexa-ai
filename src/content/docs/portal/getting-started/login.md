@@ -35,7 +35,9 @@ Pas encore d'accès ? Demandez à l'administrateur myHexa de votre entreprise.
 
 Ce que le portail affiche dépend de votre rôle :
 
-- **Viewer** (lecteur) : consulte les box, l'historique, les tableaux de bord et les alarmes de son périmètre.
-- **Admin** : peut en plus inviter des utilisateurs, composer les tableaux de bord et les rapports, modifier les destinataires d'alarme et lancer les mises à jour des box.
+- **Lecteur** : consulte les box, l'historique, les tableaux de bord, les alarmes et les documents de son périmètre ;
+- **Opérateur** : en plus, acquitte les alarmes et envoie des commandes là où le pilotage est activé ;
+- **Gestionnaire** : en plus, modifie synoptiques, tableaux de bord, documents et réglages d'alarmes ;
+- **Administrateur** : en plus, gère les utilisateurs, les abonnements et les réglages de l'entreprise.
 
-Voir [Utilisateurs et accès](/portal/administration/users/).
+Le **périmètre** (toute l'entreprise, des projets ou des box) limite ce que vous voyez. Un client sans box voit un menu réduit à **Projets**. Voir [Rôles et périmètres](/portal/administration/roles/) et [Se repérer dans le portail](/portal/getting-started/navigation/).

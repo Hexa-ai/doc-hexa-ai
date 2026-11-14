@@ -11,7 +11,9 @@ The box page brings together everything about a box.
 
 ## Header
 
-The box name, its model, the time of the **last telemetry** and its status (**online** / **offline**). Two buttons lead to its [history](/en/portal/fleet/history/) and its [dashboard](/en/portal/dashboards/dashboards/).
+When you open a box (from the map, a project or **Ctrl K**), its **default dashboard** is displayed (see [Dashboards](/en/portal/dashboards/dashboards/)), with the period, **Direct** (live) mode, **CSV**, **Rapports**, **Partager** and the **Fiche de la box** (box sheet) button. The sheet shows the box name, its model, the time of the **last telemetry** and its status (**online** / **offline**); the [history](/en/portal/fleet/history/) of its variables opens from the sheet.
+
+![A box dashboard](../../../portal/fleet/box_tableau.png)
 
 ## The tabs
 
@@ -21,7 +23,7 @@ The box name, its model, the time of the **last telemetry** and its status (**on
 
 ## Documents
 
-Attach useful documents to the box: **plan électrique** (electrical diagram), **analyse fonctionnelle** (functional analysis), **manuel / notice** (manual / leaflet), **photo installation** (installation photo), or other. Only administrators can add and edit them.
+The sheet also shows the **project's documents** for the box (see [Documents](/en/portal/projects/documents/)). The sheet also shows the **project's documents** for the box (see [Documents](/en/portal/projects/documents/)). The sheet also shows the **project's documents** for the box (see [Documents](/en/portal/projects/documents/)). Attach useful documents to the box: **plan électrique** (electrical diagram), **analyse fonctionnelle** (functional analysis), **manuel / notice** (manual / leaflet), **photo installation** (installation photo), or other. Only administrators can add and edit them.
 
 1. In the **Documents** section, click **+ Ajouter** (Add).
 2. Choose the file, its type and, if needed, a description.
@@ -40,4 +42,4 @@ Reports arrive in [Interventions](/en/portal/alarms/interventions/).
 
 ## Share the box with a person
 
-**Partager avec un destinataire** (Share with a recipient) lets an administrator give access to this box to a person already registered as a recipient (see [Users and access](/en/portal/administration/users/)), using their email address. The **Partages actifs** (Active shares) list lets you remove access.
+The **↗ Partager** (Share) button gives access to this box alone to someone outside the company, with the **Lecteur** or **Opérateur** role and an optional end date. See [Sharing with an outside person](/en/portal/administration/external-sharing/). To give a colleague access to several boxes, use [roles and scopes](/en/portal/administration/roles/) instead.

@@ -1,30 +1,30 @@
 ---
 title: Utilisateurs et accès
-description: "Inviter des utilisateurs dans le portail myHexa, choisir leur rôle et les box auxquelles ils ont accès, y compris des personnes extérieures."
+description: "Inviter des utilisateurs dans le portail myHexa, choisir leur rôle et leur périmètre, modifier ou retirer un accès, régler leur page d'accueil et le suivi des projets."
 sidebar:
   order: 1
 ---
 
-La page **Destinataires**, réservée aux administrateurs, liste les personnes qui ont accès au portail pour votre entreprise, et reçoivent ses e-mails (invitations, rapports).
+La page **Destinataires** (menu **Administration**), réservée aux administrateurs, gère les personnes qui ont accès au portail pour votre entreprise. Elle a deux onglets : **Accès portail** (cette page) et **Alertes** (voir [Destinataires d'alarme](/portal/alarms/alarm-recipients/)).
 
-![Utilisateurs](./recipients.png)
+![Ajouter un utilisateur](./utilisateur_ajout.png)
+
+Dans **Accès portail**, deux sous-onglets : **Utilisateurs** et **Partages** (les accès donnés à des personnes extérieures, voir [Partager avec une personne extérieure](/portal/administration/external-sharing/)). La liste donne, pour chaque personne, son nom, son e-mail, son téléphone, son **rôle** et son **accès** (toute l'entreprise, N projets ou N box). Le champ de recherche filtre par nom ou e-mail.
 
 ## Inviter une personne
 
-1. **+ Ajouter**.
-2. Nom, e-mail et, si besoin, téléphone.
-3. Choisissez le **rôle** :
-   - **Viewer** (lecteur) : consulte ;
-   - **Admin** : peut aussi inviter, régler les alarmes et lancer les mises à jour.
-4. Choisissez l'**accès aux box** :
-   - **Tous les équipements** : y compris ceux ajoutés plus tard ;
-   - **Sélection limitée** : seulement les box cochées.
-5. **Créer + envoyer l'invitation** : la personne reçoit un mail pour choisir son mot de passe.
+1. **+ Ajouter un utilisateur**.
+2. Saisissez le **nom**, l'**e-mail** et, si besoin, le téléphone.
+3. Choisissez le **rôle** : **Lecteur**, **Opérateur**, **Gestionnaire** ou **Administrateur** ([détail des rôles](/portal/administration/roles/)).
+4. Choisissez le **périmètre** : **Toute l'entreprise**, **Des projets** (cochez les projets) ou **Des box** (cochez les box). Un administrateur couvre toujours toute l'entreprise.
+5. **Créer + envoyer l'invitation** : la personne reçoit un e-mail pour choisir son mot de passe.
 
-L'adresse e-mail ne peut plus être modifiée ensuite ; le rôle et l'accès, si.
+L'adresse e-mail ne peut plus être modifiée ensuite ; le nom, le téléphone, le rôle et le périmètre, si. **Éditer** modifie une personne, **Supprimer** retire son accès.
+
+## Page d'accueil et suivi des projets
+
+Dans la fiche d'une personne, vous pouvez régler sa **page d'accueil à la connexion** (une page ou un tableau de bord précis) et, pour chaque projet d'intégration, son **suivi par e-mail** : une personne suivie reçoit un récapitulatif des nouveautés, au plus un par jour. Voir [Suivre un projet d'intégration](/portal/projects/integration/).
 
 ## Personne extérieure
 
-Cochez **Destinataire externe** pour une personne qui n'appartient pas à votre entreprise (un sous-traitant, un client final) : elle ne voit **que** les box que vous lui partagez (au moins une à choisir).
-
-Pour montrer un seul tableau, sans donner accès aux box, utilisez plutôt le [partage de tableau](/portal/dashboards/sharing/).
+Pour quelqu'un qui n'appartient pas à votre entreprise, ne créez pas d'utilisateur : utilisez le bouton **Partager** du projet, de la box, du synoptique ou du tableau concerné. La personne n'est ni invitée à votre entreprise, ni comptée dans vos utilisateurs, et ne voit que ce que vous partagez.

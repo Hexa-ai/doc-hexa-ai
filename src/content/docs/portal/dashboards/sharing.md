@@ -1,6 +1,6 @@
 ---
-title: Partager un tableau
-description: "Partager un tableau de bord en lecture seule avec un compte myHexa d'une autre entreprise, et ce que voit la personne invitée."
+title: Partager un tableau de bord
+description: "Montrer un tableau de bord à un partenaire ou un client avec le bouton Partager, en lecture seule, sans lui ouvrir le reste de votre compte."
 sidebar:
   order: 3
 ---
@@ -11,11 +11,11 @@ Vous pouvez montrer un tableau de bord à un partenaire, un client final ou un b
 
 ## Partager
 
-1. Ouvrez le tableau, puis **Partager**.
-2. Saisissez l'**adresse e-mail du compte myHexa** de la personne.
-3. Validez : le tableau apparaît dans son portail.
+1. Ouvrez le tableau, puis **↗ Partager** (en haut du tableau).
+2. Saisissez l'**e-mail** de la personne, éventuellement une **fin du partage**.
+3. Validez : si la personne n'a pas encore de compte myHexa, elle reçoit une invitation par e-mail (« Invitation envoyée à… ») ; sinon le tableau apparaît dans son portail, rubrique **Partagés avec moi**.
 
-Le partage est réservé aux administrateurs, pour les tableaux qui portent sur les box de votre entreprise. La personne doit déjà avoir un compte myHexa ; elle retrouve le tableau dans **Partagés avec moi**. Un tableau peut être partagé avec 50 personnes au plus. Le bouton **Retirer** coupe l'accès immédiatement.
+La liste **Partages en cours** permet de **Retirer** l'accès à tout moment. Pour un tableau, le rôle proposé est **Lecteur** : la personne consulte le tableau en lecture seule, sans le modifier ni le repartager.
 
 ## Ce que voit la personne invitée
 
@@ -23,4 +23,4 @@ Le partage est réservé aux administrateurs, pour les tableaux qui portent sur 
 - Uniquement les données des blocs du tableau : pas la fiche de la box, ni l'historique complet, ni vos autres box.
 - Uniquement les documents placés dans un bloc **Documents** du tableau.
 
-Pour donner accès à une box entière, voir plutôt [Utilisateurs et accès](/portal/administration/users/).
+Le partage est réservé aux administrateurs de l'entreprise propriétaire. Le mécanisme est le même pour un projet, une box ou un synoptique, avec d'autres rôles possibles : voir [Partager avec une personne extérieure](/portal/administration/external-sharing/).

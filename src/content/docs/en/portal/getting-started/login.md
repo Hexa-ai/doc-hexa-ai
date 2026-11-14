@@ -35,7 +35,9 @@ No access yet? Ask your company's myHexa administrator.
 
 What the portal shows depends on your role:
 
-- **Viewer** (reader): views the boxes, history, dashboards and alarms within their scope.
-- **Admin**: can also invite users, build dashboards and reports, edit alarm recipients and start box updates.
+- **Lecteur** (Viewer): views boxes, history, dashboards, alarms and documents within their scope;
+- **Opérateur** (Operator): also acknowledges alarms and sends commands where remote control is enabled;
+- **Gestionnaire** (Manager): also edits synoptics, dashboards, documents and alarm settings;
+- **Administrateur** (Administrator): also manages users, subscriptions and company settings.
 
-See [Users and access](/en/portal/administration/users/).
+The **scope** (whole company, projects or boxes) limits what you see. A client without a box sees a menu reduced to **Projets**. See [Roles and scopes](/en/portal/administration/roles/) and [Finding your way around](/en/portal/getting-started/navigation/).

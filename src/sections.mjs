@@ -40,8 +40,11 @@ export const PORTAIL = {
   en: 'myHexa portal',
   sections: [
     { dossier: 'portal/getting-started', fr: 'Prise en main', en: 'Getting started' },
-    { dossier: 'portal/fleet', fr: 'Parc de box', en: 'Fleet' },
+    { dossier: 'portal/guides', fr: 'Guides pas à pas', en: 'Step-by-step guides' },
+    { dossier: 'portal/projects', fr: 'Projets', en: 'Projects' },
+    { dossier: 'portal/fleet', fr: 'Carte et box', en: 'Map and boxes' },
     { dossier: 'portal/dashboards', fr: 'Tableaux de bord', en: 'Dashboards' },
+    { dossier: 'portal/synoptics', fr: 'Synoptiques et schémas', en: 'Synoptics and diagrams' },
     { dossier: 'portal/alarms', fr: 'Alarmes & terrain', en: 'Alarms & field' },
     { dossier: 'portal/administration', fr: 'Administration', en: 'Administration' },
   ],

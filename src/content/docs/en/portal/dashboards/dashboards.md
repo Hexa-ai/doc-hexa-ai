@@ -16,7 +16,7 @@ A dashboard is attached to:
 - **one box**: its own variables;
 - **one project**: a group of boxes (a network, a site), to compare or add up.
 
-The **Tableaux de bord** (Dashboards) page lists them by box and by project.
+Dashboards are found in the **Tableaux de bord** tab of each [project](/en/portal/projects/projects/) (those of boxes without a project are in the **Général** space); **Nouveau tableau** creates one.
 
 ![Dashboard list](../../../portal/dashboards/dashboards.png)
 
@@ -32,11 +32,17 @@ The **Projets** (Projects) page creates groups of boxes: a name, a description, 
 
 At the top of the dashboard, choose the period: **24 h**, **7 jours** (7 days), **30 jours** (30 days), **Aujourd'hui** (Today), **Ce mois** (This month), or a custom range. The refresh menu updates the values automatically (from 30 s to 5 min, or **Arrêt** (Off)).
 
+The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
+
+The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
+
+The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
+
 The **CSV** button exports the dashboard data for the period displayed, in either the **Détaillée** (Detailed) version (5 min step, volumes per hour) or **Comme affiché** (As displayed) (lighter). A detailed export over a long period can take a few minutes.
 
 ## Build a dashboard
 
-Administrators build the dashboards; other users view them. **Modifier** (Edit) switches to edit mode: add blocks, reorder them by drag and drop, then **Enregistrer** (Save) (or **Enregistrer sous…** (Save as…) to make a new dashboard).
+Managers and administrators build the dashboards; other users view them. **Modifier** (Edit) switches to edit mode: add blocks, reorder them by drag and drop, then **Enregistrer** (Save) (or **Enregistrer sous…** (Save as…) to make a new dashboard).
 
 ![Adding a block](../../../portal/dashboards/dashboard_edit.png)
 
@@ -57,6 +63,15 @@ Available blocks:
 | **Documents** | Links to documents of the box |
 | **Signalements** (Field reports) | The latest field report, displayed large, with its photos (see [below](#field-reports-block)) |
 | **Image** / **Texte** (Text) | Diagram, photo, instructions |
+| **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
+| **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
+| **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
+| **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
+| **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
+| **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
 
 The settings of each block (title, variables, comparison period, width on large screens, etc.) open from the block in edit mode.
 

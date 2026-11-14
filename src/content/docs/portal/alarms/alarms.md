@@ -12,7 +12,7 @@ La page **Alarmes** regroupe les alarmes de toutes vos box.
 ## Trois vues
 
 - **Fil de l'eau** : les alarmes **en cours**, d'après le dernier statut envoyé par chaque box.
-- **Historique** : une ligne par occurrence (début, fin, durée, type, description), d'après les rapports journaliers des box. Les alarmes du jour y apparaissent **le lendemain** ; en attendant, elles sont dans le fil de l'eau.
+- **Historique** : une ligne par occurrence (début, fin, durée, type, description), d'après les rapports journaliers des box. Les alarmes du jour y figurent dès qu'elles surviennent, marquées **provisoire** (**prov.**), jusqu'à l'arrivée du rapport journalier qui les remplace.
 - **Signalements** : les anomalies déclarées par les techniciens depuis la page d'intervention.
 
 Les filtres **Toutes les box** et les sévérités (**Error**, **Warning**, **Info**) s'appliquent aux trois vues.
@@ -23,7 +23,9 @@ Par défaut, les éléments de sévérité **Info** sont masqués. Dès qu'une s
 
 <video class="hai-clip" autoplay loop muted playsinline preload="metadata" poster="/portal/videos/filtre-poster.jpg" aria-label="Bandeau Filtre actif puis Tout afficher sur la page Alarmes"><source src="/portal/videos/filtre.webm" type="video/webm"><source src="/portal/videos/filtre.mp4" type="video/mp4"></video>
 
-L'en-tête du portail affiche en permanence le nombre d'alarmes **à traiter**.
+L'en-tête du portail affiche en permanence le nombre d'alarmes **à traiter**, et le menu **Alarmes** une pastille rouge.
+
+Dans un [projet](/portal/projects/projects/), l'onglet **Alarmes** présente les alarmes de ses box seulement, avec des compteurs **Actives**, **Interventions** et **Historique**. Une alarme restée active alors que la box est perdue ou démontée peut être retirée avec le bouton **Retirer**.
 
 ## Notifications
 

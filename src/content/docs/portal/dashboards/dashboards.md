@@ -16,13 +16,13 @@ Un tableau est rattaché :
 - à **une box** : ses propres variables ;
 - à **un projet** : un groupe de box (un réseau, un site), pour comparer ou cumuler.
 
-La page **Tableaux de bord** les liste par box et par projet.
+Les tableaux se retrouvent dans l'onglet **Tableaux de bord** de chaque [projet](/portal/projects/projects/) (ceux des box sans projet sont dans l'espace **Général**) ; **Nouveau tableau** en crée un.
 
 ![Liste des tableaux de bord](./dashboards.png)
 
 ### Les projets
 
-La page **Projets** crée les regroupements de box : un nom, une description, puis les box qui en font partie. Une box appartient à un seul projet, ou à aucun.
+Un projet regroupe les box d'un site : un nom, une description, puis les box qui en font partie. Une box appartient à un seul projet, ou à aucun. La création et la gestion des projets sont décrites dans [Projets](/portal/projects/projects/).
 
 ![Projets](./projects.png)
 
@@ -32,11 +32,21 @@ La page **Projets** crée les regroupements de box : un nom, une description, pu
 
 En haut du tableau, choisissez la période : **24 h**, **7 jours**, **30 jours**, **Aujourd'hui**, **Ce mois**, ou une plage personnalisée. Le menu de rafraîchissement met les valeurs à jour automatiquement (de 30 s à 5 min, ou **Arrêt**).
 
+Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+
+Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+
+Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+
+Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+
+Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+
 Le bouton **CSV** exporte les données du tableau sur la période affichée, au choix en version **Détaillée** (pas de 5 min, volumes par heure) ou **Comme affiché** (plus léger). Un export détaillé sur une longue période peut prendre quelques minutes.
 
 ## Composer un tableau
 
-Les administrateurs composent les tableaux ; les autres utilisateurs les consultent. **Modifier** passe en édition : ajoutez des blocs, réordonnez-les par glisser-déposer, puis **Enregistrer** (ou **Enregistrer sous…** pour en faire un nouveau tableau).
+Les gestionnaires et les administrateurs composent les tableaux ; les autres utilisateurs les consultent. **Modifier** passe en édition : ajoutez des blocs, réordonnez-les par glisser-déposer, puis **Enregistrer** (ou **Enregistrer sous…** pour en faire un nouveau tableau).
 
 ![Ajout d'un bloc](./dashboard_edit.png)
 
@@ -57,6 +67,21 @@ Blocs disponibles :
 | **Documents** | Liens vers des documents de la box |
 | **Signalements** | Le dernier signalement de terrain en grand, avec ses photos (voir [plus bas](#bloc-signalements)) |
 | **Image** / **Texte** | Schéma, photo, consignes |
+| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
+| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
+| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
+| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
+| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
+| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
+| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
+| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
+| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
+| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
+| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
 
 Les réglages de chaque bloc (titre, variables, période de comparaison, largeur sur grand écran…) s'ouvrent depuis le bloc en mode édition.
 

@@ -11,7 +11,9 @@ La fiche rassemble tout ce qui concerne une box.
 
 ## En-tête
 
-Le nom de la box, son modèle, l'heure de la **dernière télémétrie** et son état (**en ligne** / **hors ligne**). Deux boutons mènent à son [historique](/portal/fleet/history/) et à son [tableau de bord](/portal/dashboards/dashboards/).
+Quand vous ouvrez une box (depuis la carte, un projet ou **Ctrl K**), c'est son **tableau de bord par défaut** qui s'affiche (voir [Tableaux de bord](/portal/dashboards/dashboards/)), avec la période, le mode **Direct**, **CSV**, **Rapports**, **Partager** et le bouton **Fiche de la box**. La fiche montre le nom de la box, son modèle, l'heure de la **dernière télémétrie** et son état (**en ligne** / **hors ligne**) ; l'[historique](/portal/fleet/history/) de ses variables s'ouvre depuis la fiche.
+
+![Tableau de bord d'une box](./box_tableau.png)
 
 ## Les onglets
 
@@ -21,7 +23,7 @@ Le nom de la box, son modèle, l'heure de la **dernière télémétrie** et son 
 
 ## Documents
 
-Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo installation**, ou autre. L'ajout et la modification sont réservés aux administrateurs.
+La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo installation**, ou autre. L'ajout et la modification sont réservés aux administrateurs.
 
 1. Section **Documents**, bouton **+ Ajouter**.
 2. Choisissez le fichier, son type et, si besoin, une description.
@@ -40,4 +42,4 @@ Les déclarations arrivent dans [Interventions](/portal/alarms/interventions/).
 
 ## Partager la box avec une personne
 
-**Partager avec un destinataire** permet à un administrateur de donner accès à cette box à une personne déjà enregistrée comme destinataire (voir [Utilisateurs et accès](/portal/administration/users/)), par son adresse e-mail. La liste **Partages actifs** permet de retirer un accès.
+Le bouton **↗ Partager** donne accès à cette box seule à une personne extérieure à l'entreprise, avec le rôle **Lecteur** ou **Opérateur** et une date de fin facultative. Voir [Partager avec une personne extérieure](/portal/administration/external-sharing/). Pour donner accès à plusieurs box à un collègue, utilisez plutôt les [rôles et périmètres](/portal/administration/roles/).

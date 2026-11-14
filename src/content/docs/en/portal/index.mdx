@@ -1,6 +1,6 @@
 ---
 title: myHexa portal
-description: "The myHexa portal brings your HAI-P200 boxes together: fleet status, history, dashboards, reports, alarms and interventions, from a browser or a phone."
+description: "What myHexa does: follow your boxes and projects, see your installations as animated diagrams, share with partners, be alerted, and learn to use it step by step."
 sidebar:
   order: 0
   label: Overview
@@ -8,27 +8,51 @@ sidebar:
 
 import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
 
-**myHexa** is the online portal that brings all your HAI-P200 boxes together, at [my.hexa-ai.fr](https://my.hexa-ai.fr). Each box sends its measurements and alarms there: you monitor the whole fleet in one place, without connecting to the boxes one by one.
+**myHexa** is Hexa-AI's online portal, at [my.hexa-ai.fr](https://my.hexa-ai.fr). Your HAI-P200 boxes send their measures and alarms there: you follow your installations from a browser or a phone, without connecting to each box. The portal interface is in French: labels are given in French in bold, with an English gloss on first use.
 
-This part of the documentation describes the portal. For installing and configuring a box (network, acquisition, embedded Data-Explorer), see the [HAI-P200 controller](/en/) documentation.
+To install and configure a box (network, acquisition, embedded Data-Explorer), see the [HAI-P200 controller](/en/) documentation.
+
+## What you can do
 
 <CardGrid>
-  <Card title="Monitor the fleet" icon="laptop">
-    The list of your boxes and their live status, the map, each box's page and the history of its variables.
+  <Card title="Organise by project" icon="open-book">
+    Group a site's boxes, alarms, dashboards and documents: [Projects](/en/portal/projects/projects/).
   </Card>
-  <Card title="Dashboards" icon="seti:pipeline">
-    Dashboards per box or per project, which you build yourself, with PDF reports sent automatically.
+  <Card title="See animated diagrams" icon="seti:pipeline">
+    Your installations as 2D, isometric or 3D synoptics, live: [Synoptics](/en/portal/synoptics/synoptics/).
   </Card>
-  <Card title="Alarms" icon="warning">
-    Current alarms and their history, phone notifications, and the recipients the boxes notify.
+  <Card title="Build dashboards" icon="laptop">
+    Curves, gauges, weather, automatic PDF reports: [Dashboards](/en/portal/dashboards/dashboards/).
   </Card>
-  <Card title="Field" icon="setting">
-    Technicians report their interventions by scanning the box's QR code, with photos.
+  <Card title="Be alerted" icon="warning">
+    Live alarms, phone notifications, escalating recipients: [Alarms](/en/portal/alarms/alarms/).
+  </Card>
+  <Card title="Control" icon="setting">
+    Go live, send commands to the PLC (beta): [Live, weather and commands](/en/portal/dashboards/commands/).
+  </Card>
+  <Card title="Share and manage rights" icon="add-document">
+    Four roles, three scopes, sharing with outside people: [Roles](/en/portal/administration/roles/).
   </Card>
 </CardGrid>
 
+<video class="hai-clip" autoplay loop muted playsinline preload="metadata" poster="/portal/videos/spotlight-poster.jpg" aria-label="The Spotlight: Ctrl K, type a few letters, land on the box"><source src="/portal/videos/spotlight.webm" type="video/webm" /><source src="/portal/videos/spotlight.mp4" type="video/mp4" /></video>
+
+*Ctrl K: find a page, a box, a document in a few letters ([Finding your way around](/en/portal/getting-started/navigation/)).*
+
 ## Where to start
 
-<LinkCard title="How the portal works" description="What the box does, what the portal does, where your data is." href="/en/portal/getting-started/architecture/" />
-<LinkCard title="Log in and invite your teams" description="First access, password, invitations." href="/en/portal/getting-started/login/" />
+<LinkCard title="How the portal works" description="What the box does, what the portal does, where your data lives." href="/en/portal/getting-started/architecture/" />
+<LinkCard title="Sign in and invite your teams" description="First access, password, invitations." href="/en/portal/getting-started/login/" />
+<LinkCard title="Finding your way around" description="Menu, Ctrl K search, home page." href="/en/portal/getting-started/navigation/" />
+<LinkCard title="Create your first project" description="A step-by-step guide." href="/en/portal/guides/premier-projet/" />
+<LinkCard title="All step-by-step guides" description="Invite, share, follow a project, handle an alarm, print a dossier…" href="/en/portal/guides/guides/" />
 <LinkCard title="Install myHexa on your phone" description="App and alarm notifications." href="/en/portal/getting-started/mobile/" />
+
+## By role
+
+| You are… | Start with |
+|---|---|
+| **Client following a project built by Hexa-AI** | [Following an integration project](/en/portal/projects/integration/) |
+| **Operator staff** (viewer, operator) | [Projects](/en/portal/projects/projects/), [Alarms](/en/portal/alarms/alarms/) |
+| **Site manager** | [Dashboards](/en/portal/dashboards/dashboards/), [Synoptics](/en/portal/synoptics/synoptics/) |
+| **Administrator** | [Roles](/en/portal/administration/roles/), [Users](/en/portal/administration/users/), [My subscriptions](/en/portal/administration/subscriptions/) |

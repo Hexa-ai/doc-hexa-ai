@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 330" font-family="Inter, 'Segoe UI', Arial, sans-serif" role="img" aria-labelledby="t d">
+<title id="t">A project gathers a whole site</title><desc id="d">A project brings together the boxes of one site or machine, with their alarms, dashboards, synoptics and documents.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d1b1e"/><stop offset="1" stop-color="#10262a"/></linearGradient>
+<style>.h{fill:#e6f4f1;font-size:17px;font-weight:600}.s{fill:#8fb3ae;font-size:13px}.r{fill:#0d1b1e;font-size:14px;font-weight:700}.c{fill:#e6f4f1;font-size:14px}</style></defs>
+<rect width="960" height="330" rx="16" fill="url(#bg)"/>
+<rect x="270" y="50" width="420" height="250" rx="16" fill="#122a2e" stroke="#7ff0da" stroke-width="2"/>
+<text class="h" x="480" y="86" text-anchor="middle">Project · West network</text>
+<g><animateTransform attributeName="transform" type="translate" values="60 90;300 110" begin="0.5s" dur="0.9s" fill="freeze"/><rect width="150" height="42" rx="9" fill="#2fa38f"/><text class="r" x="75" y="26" text-anchor="middle">Boxes</text></g>
+<g><animateTransform attributeName="transform" type="translate" values="60 200;480 110" begin="1.3s" dur="0.9s" fill="freeze"/><rect width="150" height="42" rx="9" fill="#2fa38f"/><text class="r" x="75" y="26" text-anchor="middle">Alarms</text></g>
+<g><animateTransform attributeName="transform" type="translate" values="750 90;300 170" begin="2.1s" dur="0.9s" fill="freeze"/><rect width="150" height="42" rx="9" fill="#2fa38f"/><text class="r" x="75" y="26" text-anchor="middle">Dashboards</text></g>
+<g><animateTransform attributeName="transform" type="translate" values="750 200;480 170" begin="2.9s" dur="0.9s" fill="freeze"/><rect width="150" height="42" rx="9" fill="#2fa38f"/><text class="r" x="75" y="26" text-anchor="middle">Synoptics</text></g>
+<g><animateTransform attributeName="transform" type="translate" values="400 330;390 230" begin="3.7s" dur="0.9s" fill="freeze"/><rect width="150" height="42" rx="9" fill="#2fa38f"/><text class="r" x="75" y="26" text-anchor="middle">Documents</text></g>
+</svg>
