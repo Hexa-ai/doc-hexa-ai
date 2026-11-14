@@ -12,7 +12,7 @@ La page **Interventions** est le registre des actions de terrain. Les déclarati
 Pour chaque déclaration : date, catégorie (**Intervention**, **Incident**, **Contrôle**, **Autre**), box concernée, technicien et ses coordonnées, message, photos et statut.
 
 - Filtres **Ouvertes**, **Résolues**, **Toutes**.
-- Cliquez sur une ligne pour le détail et les photos.
-- **Marquer résolue** clôt la déclaration ; **Rouvrir** la remet en cours (réservé aux administrateurs).
+- Cliquez sur une ligne pour le détail et les photos. Le registre affiche les 200 déclarations les plus récentes et se rafraîchit toutes les minutes.
+- **Marquer résolue** clôt la déclaration ; **Rouvrir** la remet en cours. Ces deux actions sont réservées aux **Gestionnaires** et **Administrateurs** (dans leur périmètre) ; un Lecteur ou un Opérateur voit seulement l'état **Ouverte** ou **Résolue**.
 
 Le nombre d'interventions ouvertes apparaît dans le menu, à côté de **Interventions**.

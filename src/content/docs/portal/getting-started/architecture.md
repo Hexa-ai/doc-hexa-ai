@@ -27,7 +27,7 @@ Ce partage est volontaire : **le renvoi des alarmes est assuré par la box**, au
 
 En parallèle, la box envoie elle-même les **alarmes** à ses destinataires (mail, SMS, appel selon sa configuration).
 
-- **En direct** : chaque box envoie régulièrement son statut (valeurs courantes, alarmes actives). Une box est affichée **en ligne** si elle a donné des nouvelles dans l'heure.
+- **En direct** : chaque box envoie régulièrement son statut (valeurs courantes, alarmes actives), environ toutes les 30 minutes. Une box est affichée **en ligne** si elle a donné des nouvelles dans l'heure.
 - **Historique** : la box transmet ses enregistrements par lots. L'historique du portail se remplit donc avec un léger différé par rapport au direct.
 - **Rapport journalier** : une synthèse par jour (alarmes, compteurs), qui alimente l'historique des alarmes et les rapports.
 
@@ -36,6 +36,6 @@ La box initie toujours la connexion vers le portail : aucun port n'est à ouvrir
 ## Vos données
 
 - **Hébergement en Europe** : la base de données et les fichiers sont hébergés dans l'Union européenne (Irlande).
-- **Cloisonnement** : chaque entreprise ne voit que ses box. Un utilisateur ne voit que les box auxquelles il a accès (voir [Utilisateurs et accès](/portal/administration/users/)).
+- **Cloisonnement** : chaque entreprise ne voit que ses box. Un utilisateur ne voit que les box de son périmètre (toute l'entreprise, certains projets ou certaines box) et agit selon son rôle (Lecteur, Opérateur, Gestionnaire, Administrateur) : voir [Utilisateurs et accès](/portal/administration/users/).
 - **Chiffrement** : tous les échanges, box comme navigateur, passent en HTTPS.
 - **Partage maîtrisé** : un tableau partagé avec une autre entreprise l'est en lecture seule, et rien d'autre de votre compte n'est visible (voir [Partager un tableau](/portal/dashboards/sharing/)).

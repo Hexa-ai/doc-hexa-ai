@@ -20,9 +20,9 @@ myHexa installs like an app, without going through an app store. Once installed,
 **On Android (Chrome)**
 
 1. Open [my.hexa-ai.fr](https://my.hexa-ai.fr) in **Chrome** and log in.
-2. In the **⋮** menu, choose **Installer l'application** (Install app) (or **Ajouter à l'écran d'accueil**, Add to Home screen).
+2. In the **⋮** menu, choose **Installer l'application** (Install app) (or **Ajouter à l'écran d'accueil**, Add to Home screen). When Chrome offers it, an **Installer l'application** button also appears at the bottom of the myHexa menu.
 
-On a phone, a tab bar at the bottom of the screen gives access to **Box**, **Tableaux** (Dashboards), **Projets** (Projects), **Alarmes** (Alarms) and the full **Menu**.
+On a phone, a tab bar at the bottom of the screen gives access to the **Carte** (Map), **Projets** (Projects), **Alarmes** (Alarms), **Recherche** (Search) and the full **Menu** (a customer with no box only sees **Projets**). A badge on **Alarmes** counts open alarms, a badge on **Menu** counts open interventions.
 
 ## Receive alarms as notifications
 

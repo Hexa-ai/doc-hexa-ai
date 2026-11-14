@@ -11,14 +11,14 @@ The history shows how a box's variables change over the period of your choice. Y
 
 ## Choose what to display
 
-- **Variables**: tick the ones to display (search by name, **tout cocher** (tick all), **aucune** (none)). Each variable has its own chart, with its unit.
-- **Période** (Period): duration buttons at the top of the page, or **Tout** (All) for the whole history.
+- **Variables**: the **Variables · n/N** button opens the list; tick the ones to display (search by name, **tout cocher** (tick all), **aucune** (none)), up to 40 at a time. Each variable has its own chart, with its unit.
+- **Période** (Period): buttons **24 h**, **3 j** (3 d), **7 j** (7 d, the default), **30 j**, **3 mois** (3 months), **6 mois**, **1 an** (1 year), or **Tout** (All) for the whole history. The clock button opens an exact **range** (**Du** (From) and **Au** (To) fields, shortcuts **Hier** (Yesterday), **Semaine dernière** (Last week), **Mois dernier** (Last month), 5 years at most).
 - **Navigation**: **◀** and **▶** to move back and forward, **−** to zoom out.
 - **min/max**: ticked by default; shows the minimum-maximum envelope in addition to the average, so you do not miss a peak.
 
 ## Zoom
 
-On a chart, click and drag over the area that interests you: the period narrows to it. Hovering shows the exact date and value.
+On a chart, drag the mouse over the area that interests you, or use the mouse wheel (on a phone, pinch): the period narrows to it and the resolution gets finer. **Shift + drag** moves the period. Hovering shows the exact date and value.
 
 <video class="hai-clip" autoplay loop muted playsinline preload="metadata" poster="/portal/videos/historique-poster.jpg" aria-label="Zooming with the mouse on a history curve"><source src="/portal/videos/historique.webm" type="video/webm"><source src="/portal/videos/historique.mp4" type="video/mp4"></video>
 

@@ -11,14 +11,14 @@ L'historique affiche l'évolution des variables d'une box sur la période de vot
 
 ## Choisir quoi afficher
 
-- **Variables** : cochez celles à afficher (recherche par nom, **tout cocher**, **aucune**). Chaque variable a son propre graphique, avec son unité.
-- **Période** : boutons de durée en haut de page, ou **Tout** pour l'ensemble de l'historique.
+- **Variables** : le bouton **Variables · n/N** ouvre la liste ; cochez celles à afficher (recherche par nom, **tout cocher**, **aucune**), jusqu'à 40 à la fois. Chaque variable a son propre graphique, avec son unité.
+- **Période** : boutons **24 h**, **3 j**, **7 j** (par défaut), **30 j**, **3 mois**, **6 mois**, **1 an**, ou **Tout** pour l'ensemble de l'historique. Le bouton horloge ouvre une **plage précise** (champs **Du** et **Au**, raccourcis **Hier**, **Semaine dernière**, **Mois dernier**, 5 ans au plus).
 - **Navigation** : **◀** et **▶** pour reculer et avancer, **−** pour dézoomer.
 - **min/max** : case cochée par défaut ; affiche l'enveloppe minimum-maximum en plus de la moyenne, pour ne pas manquer un pic.
 
 ## Zoomer
 
-Sur un graphique, cliquez-glissez sur la zone qui vous intéresse : la période se resserre dessus. Le survol affiche la date et la valeur exactes.
+Sur un graphique, faites glisser la souris sur la zone qui vous intéresse, ou utilisez la molette (sur téléphone, pincez) : la période se resserre dessus et la résolution s'affine. **Maj + glisser** déplace la période. Le survol affiche la date et la valeur exactes.
 
 <video class="hai-clip" autoplay loop muted playsinline preload="metadata" poster="/portal/videos/historique-poster.jpg" aria-label="Zoom à la souris sur une courbe de l'historique"><source src="/portal/videos/historique.webm" type="video/webm"><source src="/portal/videos/historique.mp4" type="video/mp4"></video>
 

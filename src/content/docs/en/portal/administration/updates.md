@@ -10,23 +10,23 @@ The **Mises à jour** (Updates) page lists your boxes, their version and the ava
 ![Box updates](../../../portal/administration/updates.png)
 
 :::note[Beta feature]
-This feature is recent and may still change.
+This feature is recent and may still change. The portal shows it with a "prototype" label.
 :::
 
 :::note
-Only an administrator of your company can start an update.
+Only an administrator of your company can start or cancel an update; other roles can view the page but not act.
 :::
 
 ## Start an update
 
-1. Tick the boxes to update (or **tout cocher** (tick all)). The option "seulement celles qui ont quelque chose à faire" (only those with something to do) hides the boxes that are already up to date.
-2. **Mettre à jour la sélection** (Update the selection), check the summary (current version → new version), then **Lancer la mise à jour** (Start the update).
+1. Tick the boxes to update (or **tout cocher** (tick all)). The option "seulement celles qui ont quelque chose à faire" (only those with something to do) hides the boxes that are already up to date. Only boxes shown as "v… disponible" (available) can be ticked.
+2. **Mettre à jour la sélection** (Update the selection) (or **Mettre à jour** on a box's own line), check the summary (current version → new version), then **Lancer la mise à jour** (Start the update).
 
 ## Before you start
 
 :::caution
 - The box **restarts** at the end: monitoring and alarms are cut off for **a few minutes**.
-- Confirmation can take **1 to 2 hours**: do not conclude it has failed before then.
+- The box downloads about 120 MB (sometimes over 4G) and contacts the portal about every 30 minutes: confirmation can take **1 to 2 hours**, so do not conclude it has failed before then.
 - There is **no rollback** to the previous version.
 
 Choose a time when a short interruption of monitoring is acceptable.
@@ -36,4 +36,4 @@ Choose a time when a short interruption of monitoring is acceptable.
 
 Only boxes running version **1.3.7 or later**, with remote control enabled, can be updated from the portal. The others are marked **mise à jour sur site** (update on site).
 
-A box that has not reported in for more than 2 hours is flagged: the update will only reach it when it reconnects. As long as it has not yet been sent to the box, a scheduled update can be cancelled.
+A box that has not reported in for more than 2 hours is flagged: the update will only reach it when it reconnects. As long as it has not yet been sent to the box (status "Mise à jour programmée", scheduled; it leaves at the box's next contact), an update can be cancelled with the **Annuler** (Cancel) button on its line.

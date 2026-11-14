@@ -27,7 +27,7 @@ This split is deliberate: **the box forwards the alarms**, as close to the insta
 
 In parallel, the box itself sends the **alarms** to its recipients (email, SMS, call, depending on its configuration).
 
-- **Live**: each box regularly sends its status (current values, active alarms). A box is shown as **online** if it has reported in within the last hour.
+- **Live**: each box regularly sends its status (current values, active alarms), about every 30 minutes. A box is shown as **online** if it has reported in within the last hour.
 - **History**: the box sends its records in batches. The portal history therefore fills in with a slight delay compared with the live view.
 - **Daily report**: one summary per day (alarms, counters), which feeds the alarm history and the reports.
 
@@ -36,6 +36,6 @@ The box always initiates the connection to the portal: no port needs to be opene
 ## Your data
 
 - **Hosted in Europe**: the database and the files are hosted in the European Union (Ireland).
-- **Separation**: each company sees only its own boxes. A user sees only the boxes they have access to (see [Users and access](/en/portal/administration/users/)).
+- **Separation**: each company sees only its own boxes. A user sees only the boxes in their scope (the whole company, some projects or some boxes) and acts according to their role (Lecteur/Viewer, Opérateur/Operator, Gestionnaire/Manager, Administrateur/Administrator): see [Users and access](/en/portal/administration/users/).
 - **Encryption**: all traffic, from the box and from the browser, goes over HTTPS.
 - **Controlled sharing**: a dashboard shared with another company is read-only, and nothing else in your account is visible (see [Share a dashboard](/en/portal/dashboards/sharing/)).

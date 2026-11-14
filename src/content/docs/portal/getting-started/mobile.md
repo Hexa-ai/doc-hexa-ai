@@ -20,9 +20,9 @@ myHexa s'installe comme une application, sans passer par un magasin d'applicatio
 **Sur Android (Chrome)**
 
 1. Ouvrez [my.hexa-ai.fr](https://my.hexa-ai.fr) dans **Chrome** et connectez-vous.
-2. Dans le menu **⋮**, choisissez **Installer l'application** (ou **Ajouter à l'écran d'accueil**).
+2. Dans le menu **⋮**, choisissez **Installer l'application** (ou **Ajouter à l'écran d'accueil**). Si Chrome le propose, le bouton **Installer l'application** apparaît aussi en bas du menu de myHexa.
 
-Sur téléphone, une barre d'onglets en bas de l'écran donne accès aux **Box**, aux **Tableaux**, aux **Projets**, aux **Alarmes** et au **Menu** complet.
+Sur téléphone, une barre d'onglets en bas de l'écran donne accès à la **Carte**, aux **Projets**, aux **Alarmes**, à la **Recherche** et au **Menu** complet (un client sans box n'y voit que **Projets**). Un badge sur **Alarmes** compte les alarmes ouvertes, un badge sur **Menu** les interventions ouvertes.
 
 ## Recevoir les alarmes en notification
 
