@@ -21,7 +21,7 @@ L'onglet **Documents** d'un projet est un explorateur : un dossier par box du pr
 - **Nouveau dossier** : créez l'arborescence qui vous convient (le dossier d'une box ne contient pas de sous-dossier : une box se range seule).
 - Vous pouvez aussi **glisser des fichiers sur un dossier** pour les y déposer.
 
-À l'ajout, indiquez le **Titre**, le **Type** et la **Visibilité** ; la case **Public** rend le document consultable sans connexion depuis la page d'intervention de la box (QR code). L'ajout, le déplacement et la suppression demandent le rôle **Gestionnaire** ou **Administrateur** ([Rôles et périmètres](/portal/administration/roles/)) ; un **Lecteur** ou un **Opérateur** consulte et télécharge.
+À l'ajout, indiquez le **Titre**, le **Type** et la **Visibilité** ; la case **Public** rend le document consultable sans connexion depuis la page d'intervention de la box (QR code). L'ajout, le déplacement et la suppression dépendent de votre rôle ([Rôles et périmètres](/portal/administration/roles/)) ; un **Lecteur** ou un **Opérateur** consulte et télécharge.
 
 ## Retrouver un document
 

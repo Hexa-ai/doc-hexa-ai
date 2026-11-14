@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Fonction en version bêta]
-Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+Cette fonction est en version bêta : son fonctionnement peut évoluer.
 :::
 
 Le **Designer** est l'option qui vous permet de dessiner **vos propres** synoptiques et schémas dans le portail. Hexa-AI peut aussi les préparer pour vous.
@@ -35,6 +35,6 @@ La limite est comptée sur l'ensemble de l'entreprise (synoptiques IHM et schém
 
 ## Demander l'option
 
-Le bouton **Demander un prix** (dans l'encart, la page Mes abonnements ou l'avis d'export) envoie votre demande à Hexa-AI, avec un commentaire facultatif (nombre de synoptiques, besoin, délai). Hexa-AI vous répond par e-mail. Le bouton est réservé aux utilisateurs de l'entreprise.
+Le bouton **Demander un prix** (dans l'encart, la page Mes abonnements ou l'avis d'export) envoie votre demande à Hexa-AI, avec un commentaire facultatif (nombre de synoptiques, besoin, délai). Le bouton est réservé aux utilisateurs de l'entreprise.
 
 À l'approche de l'échéance, un rappel vous est envoyé. Pour renouveler, contactez Hexa-AI.

@@ -9,12 +9,12 @@ sidebar:
 ---
 
 :::caution[Fonction en version bêta]
-Le bloc Commande (pilotage de l'automate) est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+Le bloc Commande (pilotage de l'automate) est en version bêta : son fonctionnement peut évoluer.
 :::
 
 ## Le mode Direct
 
-Par défaut, les valeurs d'une box sont relevées toutes les 30 minutes. Le bouton **Direct**, en haut d'un tableau, les rafraîchit **toutes les 1 à 2 secondes pendant 15 minutes**, puis le tableau revient au rythme normal. Un message indique l'âge de la dernière valeur et le temps restant.
+Par défaut, les valeurs d'une box sont relevées toutes les 30 minutes. Le bouton **Direct**, en haut d'un tableau, les rafraîchit **environ toutes les 2 secondes pendant 15 minutes**, puis le tableau revient au rythme normal. Un message indique l'âge de la dernière valeur et le temps restant.
 
 Pour un écran mural, cochez **affichage permanent** en mode édition : les valeurs sont mises à jour toutes les 10 secondes environ, sans limite de durée (**Direct · permanent**).
 

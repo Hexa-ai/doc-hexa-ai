@@ -9,12 +9,12 @@ sidebar:
 ---
 
 :::caution[Beta feature]
-The Command block (PLC control) is usable but may still change. Your feedback is welcome.
+The Command block (PLC control) is in beta: how it works may change.
 :::
 
 ## Live mode
 
-By default, a box's values are sampled every 30 minutes. The **Direct** (Live) button at the top of a dashboard refreshes them **every 1 to 2 seconds for 15 minutes**, then the dashboard returns to the normal pace. A message shows the age of the last value and the time left.
+By default, a box's values are sampled every 30 minutes. The **Direct** (Live) button at the top of a dashboard refreshes them **about every 2 seconds for 15 minutes**, then the dashboard returns to the normal pace. A message shows the age of the last value and the time left.
 
 For a wall screen, tick **affichage permanent** (permanent display) in edit mode: values update about every 10 seconds, with no time limit (**Direct · permanent**).
 

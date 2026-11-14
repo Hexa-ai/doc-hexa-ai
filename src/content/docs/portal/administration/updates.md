@@ -9,8 +9,6 @@ La page **Mises à jour** liste vos box, leur version et la version disponible, 
 
 ![Mises à jour des box](./updates.png)
 
-Le portail affiche cette fonction avec l'étiquette « prototype ».
-
 :::note
 Seul un administrateur de votre entreprise peut lancer ou annuler une mise à jour ; les autres rôles consultent la page sans pouvoir agir.
 :::
@@ -25,7 +23,7 @@ Seul un administrateur de votre entreprise peut lancer ou annuler une mise à jo
 :::caution
 - La box **redémarre** à la fin : supervision et alarmes sont coupées **quelques minutes**.
 - La box télécharge environ 120 Mo (parfois en 4G) puis contacte le portail toutes les 30 minutes environ : la confirmation peut prendre **1 à 2 heures**, ne concluez pas à un échec avant.
-- Il n'y a **pas de retour** à la version précédente.
+- Le retour à la version précédente n'est pas proposé depuis le portail.
 
 Choisissez un moment où une courte coupure de la supervision est acceptable.
 :::

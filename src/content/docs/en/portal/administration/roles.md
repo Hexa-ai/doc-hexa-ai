@@ -17,7 +17,7 @@ Roles **add up**: each includes everything the previous one allows.
 |---|---|
 | **Lecteur** (Viewer) | Views measures, alarms, dashboards, documents. Does not acknowledge alarms, send commands or edit anything. |
 | **Opérateur** (Operator) | As viewer, plus **acknowledges alarms** and **sends commands** on boxes where remote control is enabled. Does not edit synoptics, dashboards, documents or alarm settings. |
-| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards, documents and alarm settings within their scope. No users, subscriptions or company settings. |
+| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards and documents within their scope. No users, subscriptions or company settings. |
 | **Administrateur** (Administrator) | The whole company: users, subscriptions, settings. Never restricted. |
 
 ## The three scopes

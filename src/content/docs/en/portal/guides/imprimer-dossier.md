@@ -6,7 +6,7 @@ sidebar:
 ---
 
 :::caution[Beta feature]
-This feature is usable but may still change. Your feedback is welcome.
+This feature is in beta: how it works may change.
 :::
 
 1. **Administration ▸ Mon entreprise ▸ Plans et impression**: choose the title block style, company, author and text sizes. **Enregistrer**.

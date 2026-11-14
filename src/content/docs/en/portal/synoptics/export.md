@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Beta feature]
-This feature is usable but may still change. Your feedback is welcome.
+This feature is in beta: how it works may change.
 :::
 
 A synoptic or diagram can leave the portal: image, single-page PDF, full dossier or images ready for an HMI screen. These actions are in the editor (**…** button, **Mise en page**) and in the folder menu.

@@ -41,6 +41,6 @@ Press **Ctrl K** (**⌘ K** on Mac), or click the **Ctrl K** field in the header
 
 - **Par défaut** (default): the **Projets** page (the **Carte** if you see no project); a client with no box and a single project lands directly on it;
 - **Carte**;
-- **a specific dashboard**, chosen from the list: handy for a monitoring screen.
+- **a specific dashboard**, chosen from the list: for example for a monitoring screen.
 
 **Enregistrer** (Save) validates your choice, **Ouvrir ma page d'accueil** shows it immediately. If the chosen dashboard disappears or becomes inaccessible, you land on the default page. An administrator can also set another user's home page ([Users and access](/en/portal/administration/users/)).

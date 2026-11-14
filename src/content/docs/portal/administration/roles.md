@@ -17,7 +17,7 @@ Les rôles **s'additionnent** : chacun reprend tout ce que permet le précédent
 |---|---|
 | **Lecteur** | Consulte : mesures, alarmes, tableaux de bord, documents. N'acquitte pas les alarmes, n'envoie aucune commande, ne modifie rien. |
 | **Opérateur** | Comme le lecteur, et **acquitte les alarmes** et **envoie des commandes** sur les box où le pilotage est activé. Ne modifie ni synoptiques, ni tableaux, ni documents, ni réglages d'alarmes. |
-| **Gestionnaire** | Comme l'opérateur, et **modifie** synoptiques, tableaux de bord, documents et réglages d'alarmes de son périmètre. Ni utilisateurs, ni abonnements, ni réglages de l'entreprise. |
+| **Gestionnaire** | Comme l'opérateur, et **modifie** synoptiques, tableaux de bord et documents de son périmètre. Ni utilisateurs, ni abonnements, ni réglages de l'entreprise. |
 | **Administrateur** | Toute l'entreprise : utilisateurs, abonnements, réglages. Jamais restreint. |
 
 ## Les trois périmètres

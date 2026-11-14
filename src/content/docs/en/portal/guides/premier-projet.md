@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-**Goal**: find on one page a site's boxes, their alarms, a dashboard and their documents. **Role needed**: Manager or Administrator.
+**Goal**: find on one page a site's boxes, their alarms, a dashboard and their documents. **Role needed**: Administrator.
 
 1. In the menu, open **Projets**, then **+ Nouveau projet**.
 2. Give a **name** (the site or machine) and, if you wish, a description.

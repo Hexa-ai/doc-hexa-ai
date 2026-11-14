@@ -6,7 +6,7 @@ sidebar:
 ---
 
 :::caution[Fonction en version bêta]
-Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+Cette fonction est en version bêta : son fonctionnement peut évoluer.
 :::
 
 1. **Administration ▸ Mon entreprise ▸ Plans et impression** : choisissez le style de cartouche, la société, l'auteur et les tailles de texte. **Enregistrer**.

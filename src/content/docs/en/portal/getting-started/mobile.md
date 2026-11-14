@@ -29,7 +29,7 @@ On a phone, a tab bar at the bottom of the screen gives access to the **Carte** 
 1. Open the **Alarmes** (Alarms) tab.
 2. In the **Notifications sur cet appareil** (Notifications on this device) panel, tap **Activer** (Enable) and accept the phone's request.
 
-You are then notified of **every new alarm on your boxes**, even when the app is closed. The setting applies to this device: enable it on each phone or computer concerned.
+You are then notified of new alarms on your boxes, even when the app is closed. The setting applies to this device: enable it on each phone or computer concerned.
 
 :::note
 On iPhone, notifications require iOS 16.4 or later, and only work with the app installed on the home screen (not in a Safari tab).

@@ -11,7 +11,7 @@ The **Mon entreprise** (My company) page (**Administration** menu, visible to ad
 
 ![Company identity](../../../portal/administration/entreprise_identite.png)
 
-The **brand image** dresses your portal: the **logo** appears next to Hexa-AI's (PNG or JPEG, 2 MB), with an optional **dark theme** variant and a **square icon** used when the menu is collapsed and as tab icon. The **website** becomes the logo link. The **main colour** tints buttons and accents (bright red stays reserved for alarms and is not applied). A preview shows the menu open and collapsed.
+The **brand image** applies your branding to the portal: the **logo** appears next to Hexa-AI's (PNG or JPEG, 2 MB), with an optional **dark theme** variant and a **square icon** used when the menu is collapsed and as tab icon. The **website** becomes the logo link. The **main colour** tints buttons and accents (bright red stays reserved for alarms and is not applied). A preview shows the menu open and collapsed.
 
 The **export footer** (A4 layout, PDF) prints, besides the website, the address, phone, contact e-mail and up to 3 free lines (company ID, legal notice, tagline…). Only the information you enter is printed.
 

@@ -5,7 +5,7 @@ sidebar:
   order: 1
 ---
 
-**Objectif** : retrouver sur une seule page les box d'un site, leurs alarmes, un tableau de bord et leurs documents. **Rôle nécessaire** : Gestionnaire ou Administrateur.
+**Objectif** : retrouver sur une seule page les box d'un site, leurs alarmes, un tableau de bord et leurs documents. **Rôle nécessaire** : Administrateur.
 
 1. Dans le menu, ouvrez **Projets**, puis **+ Nouveau projet**.
 2. Donnez un **nom** (le site ou la machine) et, si vous voulez, une description.

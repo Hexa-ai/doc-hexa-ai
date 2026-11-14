@@ -32,7 +32,7 @@ Un projet regroupe les box d'un site : un nom, une description, puis les box qui
 
 En haut du tableau, choisissez la période : **24 h**, **7 jours**, **30 jours**, **Aujourd'hui**, **Ce mois**, ou une plage personnalisée. Le menu de rafraîchissement met les valeurs à jour automatiquement (de 30 s à 5 min, ou **Arrêt**).
 
-Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
+Le bouton **Direct** rafraîchit les valeurs environ toutes les 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
 
 Le bouton **CSV** exporte les données du tableau sur la période affichée, au choix en version **Détaillée** (pas de 5 min, volumes par heure) ou **Comme affiché** (plus léger). Un export détaillé sur une longue période peut prendre quelques minutes.
 
@@ -67,7 +67,7 @@ Les réglages de chaque bloc (titre, variables, période de comparaison, largeur
 
 ## Seuils sur les courbes
 
-Sur un bloc **Courbe** ou **Barres**, ajoutez des **seuils** : un trait horizontal en pointillés, avec sa description et sa valeur, par exemple *Niveau haut · 2,6 m*. Pratique pour voir d'un coup d'œil si une mesure approche d'une limite.
+Sur un bloc **Courbe** ou **Barres**, ajoutez des **seuils** : un trait horizontal en pointillés, avec sa description et sa valeur, par exemple *Niveau haut · 2,6 m*. Elles montrent si une mesure approche d'une limite.
 
 <video class="hai-clip" autoplay loop muted playsinline preload="metadata" poster="/portal/videos/seuils-poster.jpg" aria-label="Ajout d'un seuil sur une courbe d'un tableau de bord"><source src="/portal/videos/seuils.webm" type="video/webm"><source src="/portal/videos/seuils.mp4" type="video/mp4"></video>
 

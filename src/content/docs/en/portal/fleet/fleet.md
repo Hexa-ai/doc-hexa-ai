@@ -14,7 +14,7 @@ The **Carte** (Map) page places your boxes on a map, from the address or coordin
 - Boxes of the same [project](/en/portal/projects/projects/) share a single marker, with a summary of their boxes; the **Par projet** (by project) box turns this grouping on or off. Boxes without a project each have their own.
 - The **Projets** panel lists your projects: untick some to hide them, **Tous** / **Aucun** (all / none).
 - A marker in alarm is flagged; click a marker for the summary, then a box to open its page.
-- **Mode kiosque** (kiosk mode) steps through the markers automatically every 12 seconds: handy for a monitoring screen.
+- **Mode kiosque** (kiosk mode) steps through the markers automatically every 12 seconds, for example for a monitoring screen.
 
 The map is the home page of a person who sees no project; otherwise it is the **Projets** page.
 

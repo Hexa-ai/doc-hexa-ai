@@ -14,7 +14,7 @@ La page **Carte** place vos box sur une carte, à partir de l'adresse ou des coo
 - Les box d'un même [projet](/portal/projects/projects/) partagent un seul repère, avec la synthèse de leurs box ; la case **Par projet** active ou désactive ce regroupement. Les box sans projet ont chacune le leur.
 - Le panneau **Projets** liste vos projets : décochez-en pour les masquer, **Tous** / **Aucun** pour tout cocher ou décocher.
 - Un repère en alarme est signalé ; cliquez sur un repère pour la synthèse, puis sur une box pour ouvrir sa page.
-- **Mode kiosque** passe les repères en revue automatiquement, toutes les 12 secondes : pratique pour un écran de supervision.
+- **Mode kiosque** passe les repères en revue automatiquement, toutes les 12 secondes, par exemple pour un écran de supervision.
 
 La carte est la page d'accueil d'une personne qui ne voit aucun projet ; sinon, c'est la page **Projets**.
 

@@ -15,7 +15,7 @@ Le portail ne remplace pas la box : chacun a son rôle.
 | Alarmes | Détecte les alarmes et **prévient elle-même** ses destinataires | Affiche les alarmes, envoie une notification sur l'application |
 | Configuration | Variables, protocoles, réseau | Destinataires d'alarme, tableaux de bord, rapports |
 
-Ce partage est volontaire : **le renvoi des alarmes est assuré par la box**, au plus près de l'installation. Une coupure du portail ou d'internet entre le portail et vous ne bloque donc pas l'envoi des alarmes par la box.
+Ce partage est volontaire : **le renvoi des alarmes est assuré par la box**, au plus près de l'installation. Les alarmes ne transitent pas par le portail : elles partent de la box vers ses destinataires.
 
 ## Le trajet des données
 
@@ -37,5 +37,5 @@ La box initie toujours la connexion vers le portail : aucun port n'est à ouvrir
 
 - **Hébergement en Europe** : la base de données et les fichiers sont hébergés dans l'Union européenne (Irlande).
 - **Cloisonnement** : chaque entreprise ne voit que ses box. Un utilisateur ne voit que les box de son périmètre (toute l'entreprise, certains projets ou certaines box) et agit selon son rôle (Lecteur, Opérateur, Gestionnaire, Administrateur) : voir [Utilisateurs et accès](/portal/administration/users/).
-- **Chiffrement** : tous les échanges, box comme navigateur, passent en HTTPS.
+- **Chiffrement** : les échanges, box comme navigateur, utilisent HTTPS.
 - **Partage maîtrisé** : un tableau partagé avec une autre entreprise l'est en lecture seule, et rien d'autre de votre compte n'est visible (voir [Partager un tableau](/portal/dashboards/sharing/)).

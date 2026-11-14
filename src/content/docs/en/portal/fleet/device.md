@@ -23,7 +23,7 @@ When you open a box (from the map, a project or **Ctrl K**), its **default dashb
 
 ## Documents
 
-The sheet also shows the **project's documents** for the box (see [Documents](/en/portal/projects/documents/)). Attach useful documents to the box: **plan électrique** (electrical diagram), **analyse fonctionnelle** (functional analysis), **manuel / notice** (manual / leaflet), **photo installation** (installation photo), or other. Only administrators can add and edit them.
+The sheet also shows the **project's documents** for the box (see [Documents](/en/portal/projects/documents/)). Attach useful documents to the box: **plan électrique** (electrical diagram), **analyse fonctionnelle** (functional analysis), **manuel / notice** (manual / leaflet), **photo installation** (installation photo), or other. Adding and editing depend on your role.
 
 1. In the **Documents** section, click **+ Ajouter** (Add).
 2. Choose the file, its type and, if needed, a description.

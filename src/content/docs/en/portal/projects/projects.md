@@ -19,7 +19,7 @@ The **Général** card is special: it gathers everything not attached to any pro
 
 ## Create a project
 
-The **+ Nouveau projet** (New project) button is for administrators and managers (see [Roles and scopes](/en/portal/administration/roles/)).
+The **+ Nouveau projet** (New project) button is for administrators (see [Roles and scopes](/en/portal/administration/roles/)).
 
 1. Click **+ Nouveau projet**.
 2. Enter the **project name** (site, machine, plant…) and optionally a description.

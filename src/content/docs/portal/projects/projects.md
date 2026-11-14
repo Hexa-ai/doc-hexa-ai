@@ -19,7 +19,7 @@ La carte **Général** est particulière : elle réunit tout ce qui n'est rattac
 
 ## Créer un projet
 
-Le bouton **+ Nouveau projet** est réservé aux administrateurs et aux gestionnaires (voir [Rôles et périmètres](/portal/administration/roles/)).
+Le bouton **+ Nouveau projet** est réservé aux administrateurs (voir [Rôles et périmètres](/portal/administration/roles/)).
 
 1. **+ Nouveau projet**.
 2. Saisissez le **nom du projet** (site, machine, installation…) et, si vous voulez, une description.

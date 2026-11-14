@@ -29,7 +29,7 @@ Sur téléphone, une barre d'onglets en bas de l'écran donne accès à la **Car
 1. Ouvrez l'onglet **Alarmes**.
 2. Dans le cadre **Notifications sur cet appareil**, touchez **Activer** et acceptez la demande du téléphone.
 
-Vous êtes alors prévenu à **chaque nouvelle alarme de vos box**, même application fermée. Le réglage vaut pour cet appareil : activez-le sur chaque téléphone ou ordinateur concerné.
+Vous êtes alors prévenu des nouvelles alarmes de vos box, même application fermée. Le réglage vaut pour cet appareil : activez-le sur chaque téléphone ou ordinateur concerné.
 
 :::note
 Sur iPhone, les notifications demandent iOS 16.4 ou plus, et ne fonctionnent qu'avec l'application installée sur l'écran d'accueil (pas dans un onglet Safari).

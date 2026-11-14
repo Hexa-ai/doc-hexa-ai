@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Beta feature]
-This feature is usable but may still change. Your feedback is welcome.
+This feature is in beta: how it works may change.
 :::
 
 The **Designer** is the option that lets you draw **your own** synoptics and diagrams in the portal. Hexa-AI can also prepare them for you.
@@ -35,6 +35,6 @@ The limit is counted across the company (HMI synoptics and diagrams together). H
 
 ## Ask for the option
 
-The **Demander un prix** (Ask for a quote) button, in the banner, the subscriptions page or the export notice, sends your request to Hexa-AI with an optional comment (number of synoptics, need, deadline). Hexa-AI answers by e-mail. The button is for the company's users.
+The **Demander un prix** (Ask for a quote) button, in the banner, the subscriptions page or the export notice, sends your request to Hexa-AI with an optional comment (number of synoptics, need, deadline). The button is for the company's users.
 
 A reminder is sent as the end date approaches. To renew, contact Hexa-AI.

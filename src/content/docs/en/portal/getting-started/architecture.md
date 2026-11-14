@@ -15,7 +15,7 @@ The portal does not replace the box: each has its own role.
 | Alarms | Detects alarms and **notifies its recipients itself** | Shows the alarms, sends a notification to the app |
 | Configuration | Variables, protocols, network | Alarm recipients, dashboards, reports |
 
-This split is deliberate: **the box forwards the alarms**, as close to the installation as possible. If the portal goes down, or the internet link between the portal and you is cut, the box still sends its alarms.
+This split is deliberate: **the box forwards the alarms**, as close to the installation as possible. The alarms do not go through the portal: they are sent from the box to its recipients.
 
 ## The data path
 
@@ -37,5 +37,5 @@ The box always initiates the connection to the portal: no port needs to be opene
 
 - **Hosted in Europe**: the database and the files are hosted in the European Union (Ireland).
 - **Separation**: each company sees only its own boxes. A user sees only the boxes in their scope (the whole company, some projects or some boxes) and acts according to their role (Lecteur/Viewer, Opérateur/Operator, Gestionnaire/Manager, Administrateur/Administrator): see [Users and access](/en/portal/administration/users/).
-- **Encryption**: all traffic, from the box and from the browser, goes over HTTPS.
+- **Encryption**: exchanges, from the box and from the browser, use HTTPS.
 - **Controlled sharing**: a dashboard shared with another company is read-only, and nothing else in your account is visible (see [Share a dashboard](/en/portal/dashboards/sharing/)).

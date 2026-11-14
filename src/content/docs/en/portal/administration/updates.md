@@ -9,8 +9,6 @@ The **Mises à jour** (Updates) page lists your boxes, their version and the ava
 
 ![Box updates](../../../portal/administration/updates.png)
 
-The portal shows this feature with a "prototype" label.
-
 :::note
 Only an administrator of your company can start or cancel an update; other roles can view the page but not act.
 :::
@@ -25,7 +23,7 @@ Only an administrator of your company can start or cancel an update; other roles
 :::caution
 - The box **restarts** at the end: monitoring and alarms are cut off for **a few minutes**.
 - The box downloads about 120 MB (sometimes over 4G) and contacts the portal about every 30 minutes: confirmation can take **1 to 2 hours**, so do not conclude it has failed before then.
-- There is **no rollback** to the previous version.
+- Returning to the previous version is not offered from the portal.
 
 Choose a time when a short interruption of monitoring is acceptable.
 :::

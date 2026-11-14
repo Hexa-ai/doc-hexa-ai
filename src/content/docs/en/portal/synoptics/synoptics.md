@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Beta feature]
-This feature is usable but may still change. Your feedback is welcome.
+This feature is in beta: how it works may change.
 :::
 
 A **synoptique** (synoptic) is the animated diagram of your installation: tanks, pumps, valves, pipes, measures. Each element is linked to box variables, so the diagram is live: a pump changes colour when it starts, a value appears next to its sensor.

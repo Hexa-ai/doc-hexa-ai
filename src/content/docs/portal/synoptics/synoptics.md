@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Fonction en version bêta]
-Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+Cette fonction est en version bêta : son fonctionnement peut évoluer.
 :::
 
 Un **synoptique** est le schéma animé de votre installation : cuves, pompes, vannes, tuyaux, mesures. Chaque élément est relié aux variables des box, donc le schéma vit en direct : une pompe change de couleur quand elle démarre, une valeur s'affiche à côté du capteur.

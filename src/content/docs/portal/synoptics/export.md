@@ -9,7 +9,7 @@ sidebar:
 ---
 
 :::caution[Fonction en version bêta]
-Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+Cette fonction est en version bêta : son fonctionnement peut évoluer.
 :::
 
 Un synoptique ou un schéma peut sortir du portail : image, PDF d'une page, dossier complet ou images prêtes pour un écran d'IHM. Ces actions sont dans l'éditeur (bouton **…**, **Mise en page**) et dans le menu d'un dossier.
