@@ -34,14 +34,6 @@ En haut du tableau, choisissez la période : **24 h**, **7 jours**, **30 jours**
 
 Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
 
-Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
-
-Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
-
-Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
-
-Le bouton **Direct** rafraîchit les valeurs toutes les 1 à 2 secondes pendant 15 minutes (voir [Direct, météo et commandes](/portal/dashboards/commands/)).
-
 Le bouton **CSV** exporte les données du tableau sur la période affichée, au choix en version **Détaillée** (pas de 5 min, volumes par heure) ou **Comme affiché** (plus léger). Un export détaillé sur une longue période peut prendre quelques minutes.
 
 ## Composer un tableau

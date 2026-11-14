@@ -34,10 +34,6 @@ At the top of the dashboard, choose the period: **24 h**, **7 jours** (7 days), 
 
 The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
 
-The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
-
-The **Direct** (Live) button refreshes values every 1 to 2 seconds for 15 minutes (see [Live, weather and commands](/en/portal/dashboards/commands/)).
-
 The **CSV** button exports the dashboard data for the period displayed, in either the **Détaillée** (Detailed) version (5 min step, volumes per hour) or **Comme affiché** (As displayed) (lighter). A detailed export over a long period can take a few minutes.
 
 ## Build a dashboard

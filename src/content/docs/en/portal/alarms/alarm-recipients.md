@@ -28,28 +28,6 @@ These e-mails are sent by the **portal**, not by the boxes. They can only be vie
 
 A person without portal access can receive these e-mails (on-call staff, for instance).
 
-This page opens through **Administration ▸ Destinataires ▸ Alertes** tab, which holds two sub-tabs: **Alarmes procédé** (process alarms, sent by the boxes, described below) and **Alarmes box** (box alarms).
-
-## Box alarms: link loss and summary
-
-These e-mails are sent by the **portal**, not by the boxes. They can only be viewed except by administrators.
-
-- **Box link loss**: a box that is cut off cannot warn by itself. The portal sends an e-mail when it has not reported for the chosen **delay** (**4 heures**, **24 heures** or **7 jours**), then another when it is back. One e-mail per person groups the boxes concerned. Choose **who receives** (all administrators, all members, or nobody) and put a box in **Maintenance** to pause its alerts, then **Reprendre** (Resume).
-- **Status summary**: an e-mail summarising online, inactive and alarmed boxes, sent around 6 am (**jamais** never, **tous les jours** daily or **chaque semaine** weekly), to each person for the boxes they can see. An option **Ajouter un résumé rédigé par l'IA** sends the boxes' status to Google (Gemini) to write the summary.
-
-A person without portal access can receive these e-mails (on-call staff, for instance).
-
-This page opens through **Administration ▸ Destinataires ▸ Alertes** tab, which holds two sub-tabs: **Alarmes procédé** (process alarms, sent by the boxes, described below) and **Alarmes box** (box alarms).
-
-## Box alarms: link loss and summary
-
-These e-mails are sent by the **portal**, not by the boxes. They can only be viewed except by administrators.
-
-- **Box link loss**: a box that is cut off cannot warn by itself. The portal sends an e-mail when it has not reported for the chosen **delay** (**4 heures**, **24 heures** or **7 jours**), then another when it is back. One e-mail per person groups the boxes concerned. Choose **who receives** (all administrators, all members, or nobody) and put a box in **Maintenance** to pause its alerts, then **Reprendre** (Resume).
-- **Status summary**: an e-mail summarising online, inactive and alarmed boxes, sent around 6 am (**jamais** never, **tous les jours** daily or **chaque semaine** weekly), to each person for the boxes they can see. An option **Ajouter un résumé rédigé par l'IA** sends the boxes' status to Google (Gemini) to write the summary.
-
-A person without portal access can receive these e-mails (on-call staff, for instance).
-
 ## People
 
 **+ Personne** (Person) adds someone to notify: name, email, phone number. An on-call person does not necessarily need portal access:
