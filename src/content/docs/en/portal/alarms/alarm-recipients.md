@@ -17,10 +17,10 @@ This page opens through **Administration ▸ Destinataires ▸ Alertes** tab, wh
 
 ## Box alarms: link loss and summary
 
-These e-mails are sent by the **portal**, not by the boxes. They can only be viewed except by administrators.
+These e-mails are sent by the **portal**, not by the boxes. Only administrators can change these settings; other users can view them.
 
 - **Box link loss**: a box that is cut off cannot warn by itself. The portal sends an e-mail when it has not reported for the chosen **delay** (**4 heures**, **24 heures** or **7 jours**), then another when it is back. One e-mail per person groups the boxes concerned. Choose **who receives** (all administrators, all members, or nobody) and put a box in **Maintenance** to pause its alerts, then **Reprendre** (Resume).
-- **Status summary**: an e-mail summarising online, inactive and alarmed boxes, sent around 6 am (**jamais** never, **tous les jours** daily or **chaque semaine** weekly), to each person for the boxes they can see. An option **Ajouter un résumé rédigé par l'IA** sends the boxes' status to Google (Gemini) to write the summary.
+- **Status summary**: an e-mail summarising online, inactive and alarmed boxes, at the chosen frequency (**jamais** never, **tous les jours** daily or **chaque semaine** weekly), to each person for the boxes they can see. An option **Ajouter un résumé rédigé par l'IA** sends the boxes' status to Google (Gemini) to write the summary.
 
 A person without portal access can receive these e-mails (on-call staff, for instance).
 
