@@ -9,9 +9,7 @@ La page **Mises à jour** liste vos box, leur version et la version disponible, 
 
 ![Mises à jour des box](./updates.png)
 
-:::note[Fonction en version bêta]
-Cette fonction est récente et peut encore évoluer. Le portail l'affiche avec l'étiquette « prototype ».
-:::
+Le portail affiche cette fonction avec l'étiquette « prototype ».
 
 :::note
 Seul un administrateur de votre entreprise peut lancer ou annuler une mise à jour ; les autres rôles consultent la page sans pouvoir agir.

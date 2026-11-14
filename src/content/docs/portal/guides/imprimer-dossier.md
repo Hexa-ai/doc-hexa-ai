@@ -5,6 +5,10 @@ sidebar:
   order: 7
 ---
 
+:::caution[Fonction en version bêta]
+Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+:::
+
 1. **Administration ▸ Mon entreprise ▸ Plans et impression** : choisissez le style de cartouche, la société, l'auteur et les tailles de texte. **Enregistrer**.
 2. Dans l'onglet **Schémas** ou **Synoptiques** du projet, faites un clic droit sur le dossier ▸ **Réglages du plan** : titre du projet, préfixe des folios, indice et date de révision.
 3. Vérifiez la **Mise en page** d'un folio (éditeur ▸ **…** ▸ **Mise en page**).

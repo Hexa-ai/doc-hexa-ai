@@ -17,7 +17,7 @@ The left menu gives access to the portal pages. What you see depends on your [ro
 | **Interventions** | The register of field reports. See [Interventions](/en/portal/alarms/interventions/). |
 | **Administration** | **Destinataires** (Recipients), **Mises à jour** (Updates), **Mes abonnements** (My subscriptions), **Mon entreprise** (My company), depending on your rights. |
 
-If your company has no box yet (a client following an [integration project](/en/portal/projects/integration/), for example), the menu shrinks to **Projets**. The former "Mes box" and "Tableaux de bord" addresses redirect to **Carte** and **Projets**: your bookmarks still work.
+If your company has no box yet (a client whose project is handled with Hexa-AI, for example), the menu shrinks to **Projets**. The former "Mes box" and "Tableaux de bord" addresses redirect to **Carte** and **Projets**: your bookmarks still work.
 
 At the bottom of the menu, **Mon compte** (My account) opens your settings, **Déconnexion** (Sign out) ends the session and **Réduire** (Collapse) folds the menu. The moon button at the top right switches between light and dark theme. The header also shows the number of alarms **à traiter** (to handle), the **Live** indicator and the time.
 
@@ -39,7 +39,7 @@ Press **Ctrl K** (**⌘ K** on Mac), or click the **Ctrl K** field in the header
 
 ![My account](../../../portal/getting-started/compte.png)
 
-- **Par défaut** (default): the **Projets** page (the **Carte** if you see no project); a client without box following a single integration project lands directly on it;
+- **Par défaut** (default): the **Projets** page (the **Carte** if you see no project); a client with no box and a single project lands directly on it;
 - **Carte**;
 - **a specific dashboard**, chosen from the list: handy for a monitoring screen.
 

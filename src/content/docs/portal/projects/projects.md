@@ -65,6 +65,6 @@ L'espace **Général** est un projet « virtuel » : il contient ce qui n'est ra
 
 ![L'espace Général](./projet_general.png)
 
-## Projets d'intégration
+## Projets réalisés avec Hexa-AI
 
-Si Hexa-AI réalise votre installation, votre projet est un **projet d'intégration** : il suit l'avancement, les questions de l'équipe et les documents de la réalisation. Voir [Suivre un projet d'intégration](/portal/projects/integration/).
+Certains projets sont gérés avec Hexa-AI : votre interlocuteur vous présente alors le fonctionnement.

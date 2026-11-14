@@ -3,7 +3,14 @@ title: The Designer option
 description: "What the Designer option changes: unlimited synoptic creation and watermark-free exports; what stays possible without it, and how to ask for a quote."
 sidebar:
   order: 2
+  badge:
+    text: Beta
+    variant: caution
 ---
+
+:::caution[Beta feature]
+This feature is usable but may still change. Your feedback is welcome.
+:::
 
 The **Designer** is the option that lets you draw **your own** synoptics and diagrams in the portal. Hexa-AI can also prepare them for you.
 

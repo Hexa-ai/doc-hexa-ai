@@ -3,13 +3,16 @@ title: Layout, printing and export
 description: "Set a synoptic or diagram's page layout, export a page as PNG, JPEG or PDF, print a whole dossier as one PDF, export images for a local HMI screen."
 sidebar:
   order: 3
+  badge:
+    text: Beta
+    variant: caution
 ---
 
-A synoptic or diagram can leave the portal: image, single-page PDF, full dossier or images ready for an HMI screen. These actions are in the editor (**…** button, **Mise en page**) and in the folder menu.
-
-:::note[Beta feature]
-Synoptics, diagrams and their exports are open to all but still evolving. Your feedback is welcome.
+:::caution[Beta feature]
+This feature is usable but may still change. Your feedback is welcome.
 :::
+
+A synoptic or diagram can leave the portal: image, single-page PDF, full dossier or images ready for an HMI screen. These actions are in the editor (**…** button, **Mise en page**) and in the folder menu.
 
 ## Sheet layout
 

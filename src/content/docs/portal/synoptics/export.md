@@ -3,13 +3,16 @@ title: Mise en page, impression et export
 description: "Régler la mise en page d'un synoptique ou d'un schéma, exporter une page en PNG, JPEG ou PDF, imprimer un dossier complet en un seul PDF, exporter les images pour un écran d'IHM locale."
 sidebar:
   order: 3
+  badge:
+    text: Bêta
+    variant: caution
 ---
 
-Un synoptique ou un schéma peut sortir du portail : image, PDF d'une page, dossier complet ou images prêtes pour un écran d'IHM. Ces actions sont dans l'éditeur (bouton **…**, **Mise en page**) et dans le menu d'un dossier.
-
-:::note[Fonction en version bêta]
-Les synoptiques, schémas et leurs exports sont ouverts à tous mais évoluent encore. Vos retours sont les bienvenus.
+:::caution[Fonction en version bêta]
+Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
 :::
+
+Un synoptique ou un schéma peut sortir du portail : image, PDF d'une page, dossier complet ou images prêtes pour un écran d'IHM. Ces actions sont dans l'éditeur (bouton **…**, **Mise en page**) et dans le menu d'un dossier.
 
 ## Mise en page d'un folio
 

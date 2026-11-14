@@ -9,9 +9,7 @@ The **Mises à jour** (Updates) page lists your boxes, their version and the ava
 
 ![Box updates](../../../portal/administration/updates.png)
 
-:::note[Beta feature]
-This feature is recent and may still change. The portal shows it with a "prototype" label.
-:::
+The portal shows this feature with a "prototype" label.
 
 :::note
 Only an administrator of your company can start or cancel an update; other roles can view the page but not act.

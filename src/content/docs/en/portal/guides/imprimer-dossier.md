@@ -5,6 +5,10 @@ sidebar:
   order: 7
 ---
 
+:::caution[Beta feature]
+This feature is usable but may still change. Your feedback is welcome.
+:::
+
 1. **Administration ▸ Mon entreprise ▸ Plans et impression**: choose the title block style, company, author and text sizes. **Enregistrer**.
 2. In the project's **Schémas** or **Synoptiques** tab, right-click the folder ▸ **Réglages du plan**: project title, sheet prefix, revision index and date.
 3. Check a sheet's **Mise en page** (editor ▸ **…** ▸ **Mise en page**).

@@ -62,12 +62,6 @@ Available blocks:
 | **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
 | **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
 | **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
-| **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
-| **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
-| **Météo** (Weather) | Weather at the box's address (see [Live, weather and commands](/en/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | An animated [synoptic](/en/portal/synoptics/synoptics/) embedded in the dashboard |
-| **Commande (bêta)** | Send a setpoint or order to the PLC (see [Live, weather and commands](/en/portal/dashboards/commands/#the-command-block-beta)) |
 
 The settings of each block (title, variables, comparison period, width on large screens, etc.) open from the block in edit mode.
 

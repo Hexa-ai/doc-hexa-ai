@@ -9,10 +9,6 @@ sidebar:
 
 ![Alarm recipients](../../../portal/alarms/alarm_recipients.png)
 
-:::note[Beta feature]
-This feature is recent and may still change.
-:::
-
 :::note
 Only administrators can edit these settings; other users can view them. A box whose software does not allow this remote setting is marked **firmware non compatible** (firmware not compatible).
 :::

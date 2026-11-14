@@ -62,18 +62,6 @@ Blocs disponibles :
 | **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
 | **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
 | **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
-| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
-| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
-| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
-| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
-| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
-| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
-| **Météo** | Météo à l'adresse de la box (voir [Direct, météo et commandes](/portal/dashboards/commands/)) |
-| **Synoptique (bêta)** | Un [synoptique](/portal/synoptics/synoptics/) animé inséré dans le tableau |
-| **Commande (bêta)** | Envoyer une consigne ou un ordre à l'automate (voir [Direct, météo et commandes](/portal/dashboards/commands/#le-bloc-commande-bêta)) |
 
 Les réglages de chaque bloc (titre, variables, période de comparaison, largeur sur grand écran…) s'ouvrent depuis le bloc en mode édition.
 

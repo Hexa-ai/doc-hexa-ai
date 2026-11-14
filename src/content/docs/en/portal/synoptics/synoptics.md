@@ -3,15 +3,18 @@ title: Synoptics
 description: "See an installation as an animated diagram: view a synoptic, draw it in the Designer (2D, isometric, 3D), organise it in folders and sheets, and embed it in a dashboard."
 sidebar:
   order: 1
+  badge:
+    text: Beta
+    variant: caution
 ---
+
+:::caution[Beta feature]
+This feature is usable but may still change. Your feedback is welcome.
+:::
 
 A **synoptique** (synoptic) is the animated diagram of your installation: tanks, pumps, valves, pipes, measures. Each element is linked to box variables, so the diagram is live: a pump changes colour when it starts, a value appears next to its sensor.
 
 ![A synoptic in view mode](../../../portal/synoptics/synoptique_vue.png)
-
-:::note[Beta feature]
-Synoptics, the Designer and their exports are open to all companies but still evolving. Your feedback is welcome.
-:::
 
 ## View
 

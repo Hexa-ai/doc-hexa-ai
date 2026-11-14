@@ -3,7 +3,14 @@ title: Live, weather and commands
 description: "Recent dashboard features: switch to live, show a box's weather, and send commands to the PLC (beta) with confirmation and read-back."
 sidebar:
   order: 4
+  badge:
+    text: Beta
+    variant: caution
 ---
+
+:::caution[Beta feature]
+The Command block (PLC control) is usable but may still change. Your feedback is welcome.
+:::
 
 ## Live mode
 
@@ -16,10 +23,6 @@ For a wall screen, tick **affichage permanent** (permanent display) in edit mode
 The **Météo** block shows the weather at the **box's address**: now, next 24 hours or 5 days, with the information you choose. The portal fetches it every 15 minutes. Without an address, the block says so ("renseignez son adresse dans sa fiche", fill in its address in its sheet).
 
 ## The Command block (beta)
-
-:::note[Beta feature]
-Sending commands to the PLC is still evolving.
-:::
 
 The **Commande** block sends a setpoint or a start/stop order to a box's PLC.
 

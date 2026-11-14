@@ -3,15 +3,18 @@ title: Synoptiques
 description: "Voir une installation en schéma animé : consulter un synoptique, le dessiner dans le Designer (2D, iso, 3D), le ranger en dossiers et folios, et l'insérer dans un tableau de bord."
 sidebar:
   order: 1
+  badge:
+    text: Bêta
+    variant: caution
 ---
+
+:::caution[Fonction en version bêta]
+Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+:::
 
 Un **synoptique** est le schéma animé de votre installation : cuves, pompes, vannes, tuyaux, mesures. Chaque élément est relié aux variables des box, donc le schéma vit en direct : une pompe change de couleur quand elle démarre, une valeur s'affiche à côté du capteur.
 
 ![Un synoptique en vue lecture](./synoptique_vue.png)
-
-:::note[Fonction en version bêta]
-Les synoptiques, le Designer et leurs exports sont ouverts à toutes les entreprises mais évoluent encore. Vos retours sont les bienvenus.
-:::
 
 ## Consulter
 

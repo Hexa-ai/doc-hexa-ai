@@ -3,7 +3,14 @@ title: Direct, météo et commandes
 description: "Les blocs récents des tableaux de bord : passer en direct, afficher la météo d'une box, et envoyer des commandes à l'automate (bêta) avec confirmation et relecture."
 sidebar:
   order: 4
+  badge:
+    text: Bêta
+    variant: caution
 ---
+
+:::caution[Fonction en version bêta]
+Le bloc Commande (pilotage de l'automate) est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+:::
 
 ## Le mode Direct
 
@@ -16,10 +23,6 @@ Pour un écran mural, cochez **affichage permanent** en mode édition : les vale
 Le bloc **Météo** affiche la météo à l'**adresse de la box** : maintenant, prochaines 24 heures ou 5 jours, avec les informations de votre choix. Elle est relevée par le portail toutes les 15 minutes. Sans adresse, le bloc l'indique : « renseignez son adresse dans sa fiche ».
 
 ## Le bloc Commande (bêta)
-
-:::note[Fonction en version bêta]
-L'envoi de commandes vers l'automate évolue encore.
-:::
 
 Le bloc **Commande** envoie une consigne ou un ordre de marche/arrêt à l'automate d'une box.
 

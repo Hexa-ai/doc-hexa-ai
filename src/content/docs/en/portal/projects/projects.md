@@ -65,6 +65,6 @@ The **Général** space is a "virtual" project: it holds what is attached to no 
 
 ![The General space](../../../portal/projects/projet_general.png)
 
-## Integration projects
+## Projects handled with Hexa-AI
 
-If Hexa-AI builds your installation, your project is an **integration project**: it tracks progress, the team's questions and the documents of the work. See [Following an integration project](/en/portal/projects/integration/).
+Some projects are handled with Hexa-AI: your contact will walk you through how it works.

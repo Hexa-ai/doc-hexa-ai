@@ -9,10 +9,6 @@ Ce sont **les box qui préviennent** les personnes en cas d'alarme. Le portail s
 
 ![Destinataires d'alarme](./alarm_recipients.png)
 
-:::note[Fonction en version bêta]
-Cette fonction est récente et peut encore évoluer.
-:::
-
 :::note
 Seuls les administrateurs modifient ces réglages ; les autres utilisateurs les consultent. Une box dont le logiciel ne permet pas ce réglage à distance est marquée **firmware non compatible**.
 :::

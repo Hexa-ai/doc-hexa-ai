@@ -17,7 +17,7 @@ Le menu de gauche donne accès aux pages du portail. Ce que vous y voyez dépend
 | **Interventions** | Le registre des déclarations de terrain. Voir [Interventions](/portal/alarms/interventions/). |
 | **Administration** | **Destinataires**, **Mises à jour**, **Mes abonnements**, **Mon entreprise** (selon vos droits). |
 
-Si votre entreprise n'a encore aucune box (par exemple un client qui suit un [projet d'intégration](/portal/projects/integration/)), le menu se réduit à **Projets**. Les anciennes adresses « Mes box » et « Tableaux de bord » redirigent vers **Carte** et **Projets** : vos favoris restent valables.
+Si votre entreprise n'a encore aucune box (par exemple un client dont le projet est géré avec Hexa-AI), le menu se réduit à **Projets**. Les anciennes adresses « Mes box » et « Tableaux de bord » redirigent vers **Carte** et **Projets** : vos favoris restent valables.
 
 En bas du menu, **Mon compte** ouvre vos réglages, **Déconnexion** ferme la session et **Réduire** replie le menu. Le bouton en forme de lune, en haut à droite, passe du thème clair au thème sombre. L'en-tête affiche aussi le nombre d'alarmes **à traiter**, l'indicateur **Live** et l'heure.
 
@@ -39,7 +39,7 @@ Appuyez sur **Ctrl K** (**⌘ K** sur Mac), ou cliquez sur le champ **Ctrl K** d
 
 ![Mon compte](./compte.png)
 
-- **Par défaut** : la page **Projets** (la **Carte** si vous ne voyez aucun projet) ; un client sans box qui suit un seul projet d'intégration arrive directement dessus ;
+- **Par défaut** : la page **Projets** (la **Carte** si vous ne voyez aucun projet) ; un client sans box et avec un seul projet arrive directement dessus ;
 - **Carte** ;
 - **Un tableau de bord précis** : à choisir dans la liste, utile pour un écran de supervision.
 

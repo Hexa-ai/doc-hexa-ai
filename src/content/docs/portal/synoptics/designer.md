@@ -3,7 +3,14 @@ title: L'option Designer
 description: "Ce que change l'option Designer : création de synoptiques illimitée, exports sans filigrane ; ce qui reste possible sans l'option, et comment demander un prix."
 sidebar:
   order: 2
+  badge:
+    text: Bêta
+    variant: caution
 ---
+
+:::caution[Fonction en version bêta]
+Cette fonction est utilisable mais susceptible d'évoluer. Vos retours sont les bienvenus.
+:::
 
 Le **Designer** est l'option qui vous permet de dessiner **vos propres** synoptiques et schémas dans le portail. Hexa-AI peut aussi les préparer pour vous.
 

@@ -1,6 +1,6 @@
 ---
 title: Users and access
-description: "Invite users to the myHexa portal, choose their role and scope, edit or remove access, set their home page and project follow-up."
+description: "Invite users to the myHexa portal, choose their role and scope, edit or remove access, set their home page."
 sidebar:
   order: 1
 ---
@@ -21,9 +21,9 @@ In **Accès portail**, two sub-tabs: **Utilisateurs** (Users) and **Partages** (
 
 The e-mail address cannot be changed afterwards; name, phone, role and scope can. **Éditer** (Edit) modifies a person, **Supprimer** (Delete) removes their access.
 
-## Home page and project follow-up
+## Home page
 
-In a person's sheet you can set their **home page at sign-in** (a page or a specific dashboard) and, for each integration project, their **e-mail follow-up**: a followed person receives a summary of news, at most one per day. See [Following an integration project](/en/portal/projects/integration/).
+In a person's sheet you can set their **home page at sign-in** (a page or a specific dashboard).
 
 ## Outside person
 

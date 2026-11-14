@@ -1,6 +1,6 @@
 ---
 title: Utilisateurs et accès
-description: "Inviter des utilisateurs dans le portail myHexa, choisir leur rôle et leur périmètre, modifier ou retirer un accès, régler leur page d'accueil et le suivi des projets."
+description: "Inviter des utilisateurs dans le portail myHexa, choisir leur rôle et leur périmètre, modifier ou retirer un accès, régler leur page d'accueil."
 sidebar:
   order: 1
 ---
@@ -21,9 +21,9 @@ Dans **Accès portail**, deux sous-onglets : **Utilisateurs** et **Partages** (l
 
 L'adresse e-mail ne peut plus être modifiée ensuite ; le nom, le téléphone, le rôle et le périmètre, si. **Éditer** modifie une personne, **Supprimer** retire son accès.
 
-## Page d'accueil et suivi des projets
+## Page d'accueil
 
-Dans la fiche d'une personne, vous pouvez régler sa **page d'accueil à la connexion** (une page ou un tableau de bord précis) et, pour chaque projet d'intégration, son **suivi par e-mail** : une personne suivie reçoit un récapitulatif des nouveautés, au plus un par jour. Voir [Suivre un projet d'intégration](/portal/projects/integration/).
+Dans la fiche d'une personne, vous pouvez régler sa **page d'accueil à la connexion** (une page ou un tableau de bord précis).
 
 ## Personne extérieure
 
