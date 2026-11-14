@@ -17,7 +17,7 @@ Les rôles **s'additionnent** : chacun reprend tout ce que permet le précédent
 |---|---|
 | **Lecteur** | Consulte : mesures, alarmes, tableaux de bord, documents. N'acquitte pas les alarmes, n'envoie aucune commande, ne modifie rien. |
 | **Opérateur** | Comme le lecteur, et **acquitte les alarmes** et **envoie des commandes** sur les box où le pilotage est activé. Ne modifie ni synoptiques, ni tableaux, ni documents, ni réglages d'alarmes. |
-| **Gestionnaire** | Comme l'opérateur, et **modifie** synoptiques, tableaux de bord et documents de son périmètre, et gère les abonnements d'alarme des box de son périmètre. Ni utilisateurs, ni abonnements commerciaux, ni réglages d'alarmes de l'entreprise (détail ci-dessous). |
+| **Gestionnaire** | Comme l'opérateur, et **modifie** synoptiques, tableaux de bord (et leurs rapports périodiques) et documents de son périmètre, et gère les abonnements d'alarme des box de son périmètre. Ni utilisateurs, ni abonnements commerciaux, ni réglages d'alarmes de l'entreprise (détail ci-dessous). |
 | **Administrateur** | Toute l'entreprise : utilisateurs, abonnements, réglages (dont ceux des alarmes). Jamais restreint. |
 
 ## Les trois périmètres
@@ -38,6 +38,7 @@ Dans son périmètre, un gestionnaire modifie ce que modifie un administrateur, 
 |---|---|---|
 | Synoptiques | Oui | Oui |
 | Tableaux de bord, y compris l'**affichage permanent (écran mural)** | Oui : tableaux des projets et des box de son périmètre | Oui |
+| **Rapports périodiques** des tableaux (créer, modifier, activer ou désactiver, supprimer, **Envoyer maintenant**) | Oui : rapports des tableaux de son périmètre (le logo des rapports reste un réglage d'entreprise) | Oui |
 | Documents (ajouter, modifier, supprimer) | Oui : documents des box et des projets de son périmètre | Oui |
 | Abonnements d'alarme et de perte de liaison, envoi aux box, escalade, copie vers d'autres box, **Maintenance** des alertes | Oui : sur les box de son périmètre | Oui |
 | Personnes à prévenir **sans accès au portail** (ajout, modification, suppression) | Oui | Oui |

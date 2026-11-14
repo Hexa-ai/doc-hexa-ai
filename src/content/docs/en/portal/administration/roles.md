@@ -17,7 +17,7 @@ Roles **add up**: each includes everything the previous one allows.
 |---|---|
 | **Lecteur** (Viewer) | Views measures, alarms, dashboards, documents. Does not acknowledge alarms, send commands or edit anything. |
 | **Opérateur** (Operator) | As viewer, plus **acknowledges alarms** and **sends commands** on boxes where remote control is enabled. Does not edit synoptics, dashboards, documents or alarm settings. |
-| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards and documents within their scope, and manages alarm subscriptions for the boxes in their scope. No users, commercial subscriptions or company alarm settings (details below). |
+| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards (and their periodic reports) and documents within their scope, and manages alarm subscriptions for the boxes in their scope. No users, commercial subscriptions or company alarm settings (details below). |
 | **Administrateur** (Administrator) | The whole company: users, subscriptions, settings (including alarm settings). Never restricted. |
 
 ## The three scopes
@@ -38,6 +38,7 @@ Within their scope, a manager edits what an administrator edits, except what con
 |---|---|---|
 | Synoptics | Yes | Yes |
 | Dashboards, including the **affichage permanent (écran mural)** (permanent display, wall screen) | Yes: dashboards of the projects and boxes in their scope | Yes |
+| **Periodic reports** of dashboards (create, edit, enable or disable, delete, **Envoyer maintenant** (Send now)) | Yes: reports of the dashboards in their scope (the report logo remains a company setting) | Yes |
 | Documents (add, edit, delete) | Yes: documents of the boxes and projects in their scope | Yes |
 | Alarm and link-loss subscriptions, sending to the boxes, escalation, copying to other boxes, alert **Maintenance** | Yes: on the boxes in their scope | Yes |
 | People to notify **without portal access** (add, edit, delete) | Yes | Yes |
