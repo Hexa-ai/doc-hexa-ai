@@ -20,9 +20,13 @@ This page opens through **Administration ▸ Destinataires ▸ Alertes** tab, wh
 These e-mails are sent by the **portal**, not by the boxes. Only administrators can change these settings; other users can view them.
 
 - **Box link loss**: a box that is cut off cannot warn by itself. The portal sends an e-mail when it has not reported for the chosen **delay** (**4 heures**, **24 heures** or **7 jours**), then another when it is back. One e-mail per person groups the boxes concerned. Choose **who receives** (all administrators, all members, or nobody) and put a box in **Maintenance** to pause its alerts, then **Reprendre** (Resume).
-- **Status summary**: an e-mail summarising online, inactive and alarmed boxes, at the chosen frequency (**jamais** never, **tous les jours** daily or **chaque semaine** weekly), to each person for the boxes they can see. An option **Ajouter un résumé rédigé par l'IA** sends the boxes' status to Google (Gemini) to write the summary.
+- **Status summary**: an e-mail summarising the state of the boxes (online, offline, active alarms), with a link to the portal.
+  - **Fréquence** (Frequency): **jamais** (never), **tous les jours** (daily) or **chaque semaine** (weekly); for a weekly e-mail, choose the **day** (Tuesday by default). This setting applies to the whole company.
+  - **Sending time**: the summary is sent early in the morning at a fixed time (around 6 am Paris time in winter, around 7 am in summer). The time cannot be changed.
+  - **Recipients**: the people ticked in the list, provided they have portal access. Each person receives the state of the boxes they can see.
+  - **AI summary**: the **Ajouter un résumé rédigé par l'IA** (Add an AI-written summary) option sends the boxes' status to Google (Gemini) to write a short summary at the top of the e-mail.
 
-A person without portal access can receive these e-mails (on-call staff, for instance).
+A person without portal access can receive link-loss e-mails (on-call staff, for instance), but not the status summary.
 
 ## People
 

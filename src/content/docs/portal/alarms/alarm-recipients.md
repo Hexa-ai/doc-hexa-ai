@@ -20,9 +20,13 @@ La page s'ouvre par **Administration ▸ Destinataires ▸ onglet Alertes**, qui
 Ces e-mails sont envoyés par le **portail**, pas par les box. Ils sont réservés à la consultation sauf pour les administrateurs.
 
 - **Perte de liaison d'une box** : une box coupée ne peut pas prévenir elle-même. Le portail envoie un e-mail quand elle n'a plus donné de nouvelles depuis le **délai** choisi (**4 heures**, **24 heures** ou **7 jours**), puis un autre à son retour. Un seul e-mail par personne regroupe les box concernées. Choisissez **qui reçoit** (tous les administrateurs, tous les membres, ou personne) et mettez une box en **Maintenance** pour suspendre ses alertes, puis **Reprendre**.
-- **Récapitulatif d'état** : un e-mail qui résume les box en ligne, inactives et en alarme, selon la fréquence choisie (**jamais**, **tous les jours** ou **chaque semaine**), à chaque personne pour les box qu'elle voit. Une option **Ajouter un résumé rédigé par l'IA** transmet l'état des box à Google (Gemini) pour rédiger le résumé.
+- **Récapitulatif d'état** : un e-mail qui résume l'état des box (en ligne, hors ligne, alarmes actives), avec un lien vers le portail.
+  - **Fréquence** : **jamais**, **tous les jours** ou **chaque semaine** ; pour un envoi hebdomadaire, choisissez le **jour** (mardi par défaut). Ce réglage vaut pour toute l'entreprise.
+  - **Heure d'envoi** : le récapitulatif part tôt le matin, à heure fixe (vers 6 h, heure de Paris, en hiver ; vers 7 h en été). L'heure n'est pas réglable.
+  - **Destinataires** : les personnes cochées dans la liste, à condition qu'elles aient un accès au portail. Chacune reçoit l'état des seules box qu'elle peut voir.
+  - **Résumé par l'IA** : l'option **Ajouter un résumé rédigé par l'IA** transmet l'état des box à Google (Gemini) pour rédiger un court résumé en tête de l'e-mail.
 
-Une personne sans accès au portail peut recevoir ces e-mails (astreinte, par exemple).
+Une personne sans accès au portail peut recevoir les e-mails de perte de liaison (astreinte, par exemple), mais pas le récapitulatif d'état.
 
 ## Les personnes
 
