@@ -21,7 +21,7 @@ A project's **Documents** tab is an explorer: one folder per box of the project,
 - **Nouveau dossier** (New folder): build the tree you need (a box folder holds no subfolder: a box stands alone).
 - You can also **drag files onto a folder** to drop them in.
 
-When adding, set the **Titre**, **Type** and **Visibilité**; the **Public** box makes the document readable without signing in from the box's intervention page (QR code). Adding, moving and deleting depend on your role ([Roles and scopes](/en/portal/administration/roles/)); a **Lecteur** (Viewer) or **Opérateur** (Operator) browses and downloads.
+When adding, set the **Titre**, **Type** and **Visibilité**; the **Public** box makes the document readable without signing in from the box's intervention page (QR code). Adding, moving and deleting are open to **Administrateurs** (Administrators) and, within their scope, to **Gestionnaires** (Managers); the **Général** (General) space can be edited by a manager only if their scope covers the whole company: see [Roles and scopes](/en/portal/administration/roles/#what-a-manager-can-edit); a **Lecteur** (Viewer) or **Opérateur** (Operator) browses and downloads.
 
 ## Find a document
 

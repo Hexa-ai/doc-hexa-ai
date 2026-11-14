@@ -38,7 +38,7 @@ The **CSV** button exports the dashboard data for the period displayed, in eithe
 
 ## Build a dashboard
 
-Managers and administrators build the dashboards; other users view them. **Modifier** (Edit) switches to edit mode: add blocks, reorder them by drag and drop, then **Enregistrer** (Save) (or **Enregistrer sous…** (Save as…) to make a new dashboard).
+Administrators build the dashboards, and managers those in their scope; other users view them. **Modifier** (Edit) switches to edit mode: add blocks, reorder them by drag and drop, then **Enregistrer** (Save) (or **Enregistrer sous…** (Save as…) to make a new dashboard).
 
 ![Adding a block](../../../portal/dashboards/dashboard_edit.png)
 

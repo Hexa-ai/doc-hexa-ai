@@ -38,7 +38,7 @@ Le bouton **CSV** exporte les données du tableau sur la période affichée, au 
 
 ## Composer un tableau
 
-Les gestionnaires et les administrateurs composent les tableaux ; les autres utilisateurs les consultent. **Modifier** passe en édition : ajoutez des blocs, réordonnez-les par glisser-déposer, puis **Enregistrer** (ou **Enregistrer sous…** pour en faire un nouveau tableau).
+Les administrateurs composent les tableaux, et les gestionnaires ceux de leur périmètre ; les autres utilisateurs les consultent. **Modifier** passe en édition : ajoutez des blocs, réordonnez-les par glisser-déposer, puis **Enregistrer** (ou **Enregistrer sous…** pour en faire un nouveau tableau).
 
 ![Ajout d'un bloc](./dashboard_edit.png)
 

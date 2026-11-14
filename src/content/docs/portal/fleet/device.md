@@ -23,7 +23,7 @@ Quand vous ouvrez une box (depuis la carte, un projet ou **Ctrl K**), c'est son 
 
 ## Documents
 
-La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo installation**, ou autre. L'ajout et la modification dépendent de votre rôle.
+La fiche affiche aussi les **documents du projet** de la box (voir [Documents](/portal/projects/documents/)). Rattachez à la box ses documents utiles : **plan électrique**, **analyse fonctionnelle**, **manuel / notice**, **photo installation**, ou autre. L'ajout, la modification et la suppression sont ouverts aux administrateurs et aux gestionnaires dont le périmètre couvre la box.
 
 1. Section **Documents**, bouton **+ Ajouter**.
 2. Choisissez le fichier, son type et, si besoin, une description.

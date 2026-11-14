@@ -26,7 +26,7 @@ The **Météo** block shows the weather at the **box's address**: now, next 24 h
 
 The **Commande** block sends a setpoint or a start/stop order to a box's PLC.
 
-**Prepare it** (manager or administrator): in edit mode, **+ Bloc ▸ Commande (bêta)**, then choose the **controlled box** and, for each field, the **writable variable** announced by the box. Depending on the field type, set the label, the **Min** / **Max** bounds, the **Pas** (step), the unit, decimals, or the "run" / "stop" labels and values, or a button's value. **Demander confirmation avant l'envoi** (ask for confirmation before sending) adds a validation step. **Save** the dashboard to activate the command.
+**Prepare it** (administrator, or manager within their scope): in edit mode, **+ Bloc ▸ Commande (bêta)**, then choose the **controlled box** and, for each field, the **writable variable** announced by the box. Depending on the field type, set the label, the **Min** / **Max** bounds, the **Pas** (step), the unit, decimals, or the "run" / "stop" labels and values, or a button's value. **Demander confirmation avant l'envoi** (ask for confirmation before sending) adds a validation step. **Save** the dashboard to activate the command.
 
 **Use it** (operator and above): enter the value, **Envoyer** (Send), and confirm if asked. The box writes the value to the PLC then **reads it back**: the block shows **Appliquée · relu : …** (applied, read back), or **Non appliquée** (not applied) if the PLC stayed at another value, or "La box n'a pas répondu à temps" (the box did not answer in time).
 

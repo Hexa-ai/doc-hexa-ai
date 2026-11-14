@@ -5,7 +5,7 @@ sidebar:
   order: 6
 ---
 
-**Role needed**: Manager or Administrator, to set the dashboard.
+**Role needed**: Administrator, or Manager whose scope covers the dashboard, to set it.
 
 1. Open the dashboard to display and click **Modifier**.
 2. Tick **affichage permanent (écran mural)**: values update about every 10 seconds, with no time limit. **Enregistrer**.

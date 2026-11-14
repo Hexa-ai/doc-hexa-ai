@@ -5,7 +5,7 @@ sidebar:
   order: 6
 ---
 
-**Rôle nécessaire** : Gestionnaire ou Administrateur, pour régler le tableau.
+**Rôle nécessaire** : Administrateur, ou Gestionnaire dont le périmètre couvre le tableau, pour le régler.
 
 1. Ouvrez le tableau à afficher et cliquez sur **Modifier**.
 2. Cochez **affichage permanent (écran mural)** : les valeurs se mettent à jour toutes les 10 secondes environ, sans limite de durée. **Enregistrer**.

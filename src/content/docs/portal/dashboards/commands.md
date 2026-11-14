@@ -26,7 +26,7 @@ Le bloc **Météo** affiche la météo à l'**adresse de la box** : maintenant, 
 
 Le bloc **Commande** envoie une consigne ou un ordre de marche/arrêt à l'automate d'une box.
 
-**Le préparer** (gestionnaire ou administrateur) : en mode édition, **+ Bloc ▸ Commande (bêta)**, puis choisissez la **box pilotée** et, pour chaque champ, la **variable écrivable** annoncée par la box. Selon le type de champ, réglez le libellé, les bornes **Min** / **Max**, le **Pas**, l'unité, les décimales, ou les libellés et valeurs « marche » / « arrêt », ou la valeur d'un bouton. **Demander confirmation avant l'envoi** ajoute une étape de validation. **Enregistrez** le tableau pour activer la commande.
+**Le préparer** (administrateur, ou gestionnaire dans son périmètre) : en mode édition, **+ Bloc ▸ Commande (bêta)**, puis choisissez la **box pilotée** et, pour chaque champ, la **variable écrivable** annoncée par la box. Selon le type de champ, réglez le libellé, les bornes **Min** / **Max**, le **Pas**, l'unité, les décimales, ou les libellés et valeurs « marche » / « arrêt », ou la valeur d'un bouton. **Demander confirmation avant l'envoi** ajoute une étape de validation. **Enregistrez** le tableau pour activer la commande.
 
 **L'utiliser** (opérateur et au-delà) : saisissez la valeur, **Envoyer** (et confirmez si demandé). La box écrit la valeur dans l'automate puis la **relit** : le bloc affiche **Appliquée · relu : …**, ou **Non appliquée** si l'automate est resté à une autre valeur, ou « La box n'a pas répondu à temps ».
 

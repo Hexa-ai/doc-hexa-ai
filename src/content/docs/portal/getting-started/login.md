@@ -37,7 +37,7 @@ Ce que le portail affiche dépend de votre rôle :
 
 - **Lecteur** : consulte les box, l'historique, les tableaux de bord, les alarmes et les documents de son périmètre ;
 - **Opérateur** : en plus, acquitte les alarmes et envoie des commandes là où le pilotage est activé ;
-- **Gestionnaire** : en plus, modifie synoptiques, tableaux de bord et documents ;
+- **Gestionnaire** : en plus, modifie synoptiques, tableaux de bord et documents de son périmètre, et gère les abonnements d'alarme de ses box ;
 - **Administrateur** : en plus, gère les utilisateurs, les abonnements et les réglages de l'entreprise.
 
 Le **périmètre** (toute l'entreprise, des projets ou des box) limite ce que vous voyez. Un client sans box voit un menu réduit à **Projets**. Voir [Rôles et périmètres](/portal/administration/roles/) et [Se repérer dans le portail](/portal/getting-started/navigation/).

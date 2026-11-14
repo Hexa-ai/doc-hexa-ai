@@ -12,7 +12,7 @@ sidebar:
 3. Choisissez le **rôle** adapté à ce qu'il doit faire :
    - suivre seulement : **Lecteur** ;
    - acquitter les alarmes et piloter : **Opérateur** ;
-   - modifier tableaux, synoptiques, documents : **Gestionnaire** ;
+   - modifier tableaux, synoptiques, documents et abonnements d'alarme de son périmètre : **Gestionnaire** ;
    - tout gérer : **Administrateur**.
 4. Choisissez le **périmètre** : toute l'entreprise, certains **projets**, ou certaines **box**.
 5. **Créer + envoyer l'invitation**. Il reçoit un e-mail pour choisir son mot de passe.

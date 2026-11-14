@@ -12,7 +12,7 @@ sidebar:
 3. Choose the **role** that fits what they must do:
    - only follow: **Lecteur** (Viewer);
    - acknowledge alarms and control: **Opérateur** (Operator);
-   - edit dashboards, synoptics, documents: **Gestionnaire** (Manager);
+   - edit dashboards, synoptics, documents and alarm subscriptions within their scope: **Gestionnaire** (Manager);
    - manage everything: **Administrateur**.
 4. Choose the **scope**: whole company, some **projects**, or some **boxes**.
 5. **Créer + envoyer l'invitation**. They receive an e-mail to choose their password.

@@ -37,7 +37,7 @@ What the portal shows depends on your role:
 
 - **Lecteur** (Viewer): views boxes, history, dashboards, alarms and documents within their scope;
 - **Opérateur** (Operator): also acknowledges alarms and sends commands where remote control is enabled;
-- **Gestionnaire** (Manager): also edits synoptics, dashboards and documents;
+- **Gestionnaire** (Manager): also edits synoptics, dashboards and documents within their scope, and manages the alarm subscriptions of their boxes;
 - **Administrateur** (Administrator): also manages users, subscriptions and company settings.
 
 The **scope** (whole company, projects or boxes) limits what you see. A client without a box sees a menu reduced to **Projets**. See [Roles and scopes](/en/portal/administration/roles/) and [Finding your way around](/en/portal/getting-started/navigation/).

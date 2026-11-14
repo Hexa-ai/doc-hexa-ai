@@ -10,14 +10,14 @@ Ce sont **les box qui préviennent** les personnes en cas d'alarme. Le portail s
 ![Destinataires d'alarme](./alarm_recipients.png)
 
 :::note
-Seuls les administrateurs modifient ces réglages ; les autres utilisateurs les consultent. Une box dont le logiciel ne permet pas ce réglage à distance est marquée **firmware non compatible**.
+Les administrateurs modifient l'ensemble de ces réglages. Un **gestionnaire** modifie les destinataires, l'escalade, l'envoi, la copie et la maintenance des box de son périmètre ; les autres utilisateurs consultent. Une box dont le logiciel ne permet pas ce réglage à distance est marquée **firmware non compatible**.
 :::
 
 La page s'ouvre par **Administration ▸ Destinataires ▸ onglet Alertes**, qui contient deux sous-onglets : **Alarmes procédé** (envoyées par les box, décrites ci-dessous) et **Alarmes box**.
 
 ## Alarmes box : perte de liaison et récapitulatif
 
-Ces e-mails sont envoyés par le **portail**, pas par les box. Ils sont réservés à la consultation sauf pour les administrateurs.
+Ces e-mails sont envoyés par le **portail**, pas par les box. Les réglages de l'entreprise (délai, qui reçoit, récapitulatif) sont réservés aux administrateurs. Les **abonnements** par box et la **Maintenance** sont aussi ouverts aux gestionnaires, sur les box de leur périmètre ; les autres rôles consultent.
 
 - **Perte de liaison d'une box** : une box coupée ne peut pas prévenir elle-même. Le portail envoie un e-mail quand elle n'a plus donné de nouvelles depuis le **délai** choisi (**4 heures**, **24 heures** ou **7 jours**), puis un autre à son retour. Un seul e-mail par personne regroupe les box concernées. Choisissez **qui reçoit** (tous les administrateurs, tous les membres, ou personne) et mettez une box en **Maintenance** pour suspendre ses alertes, puis **Reprendre**.
 - **Récapitulatif d'état** : un e-mail qui résume l'état des box (en ligne, hors ligne, alarmes actives), avec un lien vers le portail.
@@ -32,16 +32,18 @@ Une personne sans accès au portail peut recevoir les e-mails de perte de liaiso
 
 **+ Personne** ajoute quelqu'un à prévenir : nom, e-mail, téléphone. Une personne d'astreinte n'a pas forcément besoin d'un accès au portail :
 
-- **Accès au portail : oui** : elle est invitée comme lecteur ou administrateur ;
+- **Accès au portail : oui** : elle est invitée avec le rôle choisi (**Inviter au portail**, réservé aux administrateurs) ;
 - **Accès au portail : non** : elle reçoit seulement les alarmes des box qui la préviennent.
 
-**Importer depuis les box** reprend les destinataires déjà configurés sur les box.
+Un gestionnaire peut ajouter, modifier et supprimer les personnes **sans** accès au portail. **Importer depuis les box** reprend les destinataires déjà configurés sur les box (réservé aux administrateurs).
 
 ## Affecter les personnes aux box
 
 - Vue **Par box** : pour chaque box, la liste des personnes prévenues, leurs canaux (**mail**, **SMS**, **appel**) et les types d'alarme reçus (error, warning, info).
 - Vue **Tableau** : toutes les box et toutes les personnes, pour un réglage en masse.
 - **Copier les destinataires** d'une box vers d'autres box.
+
+Un gestionnaire n'agit que sur les box de son périmètre : les autres box restent en consultation.
 
 ## Escalade
 

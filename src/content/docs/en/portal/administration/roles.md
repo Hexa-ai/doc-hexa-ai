@@ -17,8 +17,8 @@ Roles **add up**: each includes everything the previous one allows.
 |---|---|
 | **Lecteur** (Viewer) | Views measures, alarms, dashboards, documents. Does not acknowledge alarms, send commands or edit anything. |
 | **Opérateur** (Operator) | As viewer, plus **acknowledges alarms** and **sends commands** on boxes where remote control is enabled. Does not edit synoptics, dashboards, documents or alarm settings. |
-| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards and documents within their scope. No users, subscriptions or company settings. |
-| **Administrateur** (Administrator) | The whole company: users, subscriptions, settings. Never restricted. |
+| **Gestionnaire** (Manager) | As operator, plus **edits** synoptics, dashboards and documents within their scope, and manages alarm subscriptions for the boxes in their scope. No users, commercial subscriptions or company alarm settings (details below). |
+| **Administrateur** (Administrator) | The whole company: users, subscriptions, settings (including alarm settings). Never restricted. |
 
 ## The three scopes
 
@@ -30,10 +30,34 @@ Roles **add up**: each includes everything the previous one allows.
 
 An administrator always covers the whole company. The scope also limits what a manager can edit: only within the projects or boxes entrusted to them.
 
+## What a manager can edit
+
+Within their scope, a manager edits what an administrator edits, except what concerns the company itself:
+
+| Action | Manager | Administrator |
+|---|---|---|
+| Synoptics | Yes | Yes |
+| Dashboards, including the **affichage permanent (écran mural)** (permanent display, wall screen) | Yes: dashboards of the projects and boxes in their scope | Yes |
+| Documents (add, edit, delete) | Yes: documents of the boxes and projects in their scope | Yes |
+| Alarm and link-loss subscriptions, sending to the boxes, escalation, copying to other boxes, alert **Maintenance** | Yes: on the boxes in their scope | Yes |
+| People to notify **without portal access** (add, edit, delete) | Yes | Yes |
+| Company alarm settings (link-loss delay, who receives, status summary) and **Importer depuis les box** (Import from boxes) | No | Yes |
+| Users, roles, invitations and sharing (**Destinataires ▸ Accès portail**) | No | Yes |
+| Projects: creation, settings, deletion | No | Yes |
+| **Mon entreprise**, box updates, subscriptions | No | Yes |
+
+Depending on the manager's scope:
+
+- **Toute l'entreprise** (whole company): all boxes and projects, plus the documents **Général** (General) space;
+- **Des projets** (projects): the chosen projects and their boxes (not the General space);
+- **Des box** (boxes): only the ticked boxes, for their documents, dashboards and alarm subscriptions; a project cannot be edited with this scope.
+
+The interface only shows the edit buttons where the portal accepts them.
+
 ## What each role sees in the menu
 
-- **All roles**: Projets, Carte, Alarmes, Interventions, and under **Administration**: Destinataires (alarm settings can be viewed), Mises à jour and, as soon as a subscription is visible, Mes abonnements.
-- **Administrator**: additionally user and sharing management (**Destinataires ▸ Accès portail**), **Mon entreprise**, launching updates and editing alarm settings.
+- **All roles**: Projets, Carte, Alarmes, Interventions, and under **Administration**: Destinataires (alarm settings can be viewed; a manager edits them on the boxes in their scope), Mises à jour and, as soon as a subscription is visible, Mes abonnements.
+- **Administrator**: additionally user and sharing management (**Destinataires ▸ Accès portail**), **Mon entreprise**, launching updates and the company's alarm settings.
 
 ## People outside your company
 
