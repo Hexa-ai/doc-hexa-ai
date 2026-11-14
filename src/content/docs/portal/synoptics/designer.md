@@ -25,11 +25,11 @@ Le **Designer** est l'option qui vous permet de dessiner **vos propres** synopti
 
 La limite est comptée sur l'ensemble de l'entreprise (synoptiques IHM et schémas confondus). Hexa-AI peut la modifier pour votre entreprise. Le filigrane n'est jamais ajouté **à l'écran** : seulement dans les fichiers produits.
 
-![Encart de limite atteinte](./onglet_synoptiques.png)
+![Carte Option Designer de la page Mes abonnements : 2 / 3 synoptiques](../administration/abonnements.png)
 
 ## Où voir l'état de l'option
 
-- Dans la page **Mes abonnements** : une carte **Option Designer** indique la limite et l'échéance (voir [Mes abonnements](/portal/administration/subscriptions/)).
+- Dans la page **Mes abonnements** : une carte **Option Designer** indique le nombre de synoptiques par rapport à la limite (par exemple « 2 / 3 ») et l'échéance (voir [Mes abonnements](/portal/administration/subscriptions/)).
 - Dans les onglets **Synoptiques** et **Schémas**, un encart apparaît quand la limite est atteinte.
 - Avant un export, un avis rappelle que le fichier portera le filigrane.
 

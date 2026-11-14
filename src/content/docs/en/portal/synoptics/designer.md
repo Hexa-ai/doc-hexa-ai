@@ -25,11 +25,11 @@ The **Designer** is the option that lets you draw **your own** synoptics and dia
 
 The limit is counted across the company (HMI synoptics and diagrams together). Hexa-AI can change it for your company. The watermark is never added **on screen**, only in produced files.
 
-![Synoptics tab](../../../portal/synoptics/onglet_synoptiques.png)
+![Option Designer card on the Mes abonnements page: 2 / 3 synoptics](../../../portal/administration/abonnements.png)
 
 ## Where to see the option's status
 
-- On the **Mes abonnements** page: an **Option Designer** card shows the limit and the end date (see [My subscriptions](/en/portal/administration/subscriptions/)).
+- On the **Mes abonnements** page: an **Option Designer** card shows the number of synoptics against the limit (for example "2 / 3") and the end date (see [My subscriptions](/en/portal/administration/subscriptions/)).
 - In the **Synoptiques** and **Schémas** tabs, a banner appears when the limit is reached.
 - Before an export, a notice reminds you that the file will carry the watermark.
 
