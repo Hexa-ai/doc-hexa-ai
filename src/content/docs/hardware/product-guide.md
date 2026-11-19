@@ -116,7 +116,7 @@ Le slot Nano SIM, permet d’installer une carte SIM pour recevoir le signal 4G.
 
 #### 1.6.2 Interface d’Alimentation
 
-L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant continu (9–36 V) via des borniers Phoenix 2 broches (espacement 3,5 mm). Les broches sont définies comme suit :
+L’appareil **HAI-P200-4G** inclut une entrée d’alimentation en courant continu (9–36 V) via des borniers Phoenix 2 broches (espacement 3,5 mm). Sa consommation est de **24 W maximum** : prévoyez une alimentation d’au moins 1 A sous 24 V DC, ou 2 A sous 12 V DC. Les broches sont définies comme suit :
 
 <figure class="detail">
 

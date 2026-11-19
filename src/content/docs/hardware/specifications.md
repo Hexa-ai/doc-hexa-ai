@@ -27,6 +27,7 @@ sidebar:
 | --- | --- |
 | Format | Boîtier aluminium, montage rail DIN |
 | Alimentation | Bornier industriel, plage large, 9–36 V DC sur bornier débrochable 2 points|
+| Consommation | 24 W maximum, soit environ 1 A sous 24 V DC et 2 A sous 12 V DC |
 | Fiabilité | Horloge temps réel, surveillance et relance automatique des services |
 | Température | Fonctionnement : –25 °C à +60 °C · Stockage : –25 °C à +60 °C |
 |Certifications | CE, FCC |

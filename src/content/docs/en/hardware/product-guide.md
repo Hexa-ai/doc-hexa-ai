@@ -116,7 +116,7 @@ The nano-SIM slot takes a SIM card to receive the 4G signal.
 
 #### 1.6.2 Power interface
 
-The **HAI-P200-4G** includes a DC power input (9–36 V) through 2-pin Phoenix terminal blocks (3.5 mm pitch). The pins are defined as follows:
+The **HAI-P200-4G** includes a DC power input (9–36 V) through 2-pin Phoenix terminal blocks (3.5 mm pitch). Its power consumption is **24 W maximum**: use a power supply rated at least 1 A at 24 V DC, or 2 A at 12 V DC. The pins are defined as follows:
 
 <figure class="detail">
 
